@@ -102,7 +102,7 @@ const Home = () => {
       </section>
 
       {/* Join Us Section */}
-      <section className="py-20 bg-gradient-to-r from-hc-green via-hc-green-light to-hc-orange">
+      <section className="py-20 bg-gradient-to-r from-hc-green via-hc-green-light to-hc-orange bg-amber-600">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center text-white">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6 text-white drop-shadow-lg">
@@ -116,7 +116,7 @@ const Home = () => {
               <Button size="lg" variant="secondary" className="bg-white text-hc-green hover:bg-gray-100 shadow-lg font-semibold">
                 Découvrir nos tarifs
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-hc-green shadow-lg font-semibold">
+              <Button size="lg" variant="outline" className="bg-white text-hc-green hover:bg-gray-100 shadow-lg font-semibold ">
                 Nous contacter
               </Button>
             </div>
