@@ -1,20 +1,14 @@
-
 import { Calendar, MapPin, Users, Trophy } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-
 const Home = () => {
-  return (
-    <div className="w-full">
+  return <div className="w-full">
       {/* Hero Section */}
       <section className="relative h-[70vh] bg-gradient-to-r from-hc-green via-hc-green to-hc-orange overflow-hidden">
         <div className="absolute inset-0 bg-black/40"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=1920&h=1080&fit=crop')"
-          }}
-        ></div>
+        <div className="absolute inset-0 bg-cover bg-center" style={{
+        backgroundImage: "url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=1920&h=1080&fit=crop')"
+      }}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-hc-green/70 via-hc-green/60 to-hc-orange/70"></div>
         
         <div className="relative flex h-full items-center justify-center px-6">
@@ -42,7 +36,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-hc-green/10 via-white to-hc-orange/10">
+      <section className="py-20 bg-gradient-to-r from-hc-green/10 via-white to-hc-orange/10 bg-green-800">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             <div className="text-center">
@@ -52,13 +46,7 @@ const Home = () => {
               <div className="text-4xl font-bold text-hc-green mb-2">85</div>
               <div className="text-gray-700 font-medium">Joueurs</div>
             </div>
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-hc-orange rounded-xl mb-6 shadow-lg">
-                <Trophy className="h-8 w-8 text-white" />
-              </div>
-              <div className="text-4xl font-bold text-hc-orange mb-2">12</div>
-              <div className="text-gray-700 font-medium">Trophées</div>
-            </div>
+            
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-hc-green rounded-xl mb-6 shadow-lg">
                 <Calendar className="h-8 w-8 text-white" />
@@ -103,11 +91,7 @@ const Home = () => {
               </div>
             </div>
             <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop"
-                alt="Équipe de handball"
-                className="rounded-2xl shadow-xl"
-              />
+              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop" alt="Équipe de handball" className="rounded-2xl shadow-xl" />
               <div className="absolute -bottom-6 -right-6 bg-hc-orange text-white p-6 rounded-xl shadow-lg">
                 <div className="text-2xl font-bold">25 ans</div>
                 <div className="text-sm">d'expérience</div>
@@ -139,8 +123,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
