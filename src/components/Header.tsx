@@ -40,7 +40,7 @@ const Header = () => {
         {/* Social Links */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
           <Button variant="ghost" size="sm" asChild>
-            <a href="https://www.facebook.com/HCMouscron" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-200 drop-shadow-md" aria-label="Facebook">
+            <a href="https://www.facebook.com/HCMouscron" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-white hover:text-white-200 drop-shadow-md">
               <Facebook className="h-6 w-6" />
             </a>
           </Button>
