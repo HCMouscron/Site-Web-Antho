@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Facebook, Instagram } from 'lucide-react';
@@ -5,6 +6,7 @@ import { Button } from '@/components/ui/button';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  // Retirer la navigation "Planning"
   const navigation = [{
     name: 'Accueil',
     href: '/'
@@ -14,9 +16,6 @@ const Header = () => {
   }, {
     name: 'Infos',
     href: '/infos'
-  }, {
-    name: 'Planning',
-    href: '/planning'
   }, {
     name: 'Contact',
     href: '/contact'
