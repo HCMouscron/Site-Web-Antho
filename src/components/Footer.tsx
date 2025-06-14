@@ -1,10 +1,7 @@
-
 import { Facebook, Instagram, MapPin, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 const Footer = () => {
-  return (
-    <footer className="bg-gradient-to-r from-hc-green via-hc-green to-hc-orange border-t shadow-lg">
+  return <footer className="bg-gradient-to-r from-hc-green via-hc-green to-hc-orange border-t shadow-lg bg-green-900">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
           {/* Logo et description */}
@@ -18,22 +15,12 @@ const Footer = () => {
             </p>
             <div className="flex gap-x-4 mt-6">
               <Button variant="ghost" size="sm" asChild>
-                <a
-                  href="https://www.facebook.com/HCMouscron"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-yellow-200 drop-shadow-md"
-                >
+                <a href="https://www.facebook.com/HCMouscron" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-200 drop-shadow-md">
                   <Facebook className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="sm" asChild>
-                <a
-                  href="https://www.instagram.com/hcmouscron/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-yellow-200 drop-shadow-md"
-                >
+                <a href="https://www.instagram.com/hcmouscron/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-200 drop-shadow-md">
                   <Instagram className="h-5 w-5" />
                 </a>
               </Button>
@@ -93,8 +80,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
