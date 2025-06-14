@@ -48,7 +48,7 @@ const Home = () => {
             </div>
             
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-hc-green rounded-xl mb-6 shadow-lg">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-hc-orange rounded-xl mb-6 shadow-lg">
                 <Calendar className="h-8 w-8 text-white" />
               </div>
               <div className="text-4xl font-bold text-hc-green mb-2">25</div>
