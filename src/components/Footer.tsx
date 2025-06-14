@@ -60,7 +60,8 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center space-x-2 text-white">
                 <MapPin className="h-4 w-4 flex-shrink-0" />
-                <span className="text-sm drop-shadow-md">Salle Omnisports, Rue du Stade, 7700 Mouscron</span>
+                <span className="text-sm drop-shadow-md">🏟️ Hall Max Lessines
+Rue des Prés 84B, 7700 Mouscron</span>
               </li>
               <li className="flex items-center space-x-2 text-white">
                 <Phone className="h-4 w-4 flex-shrink-0" />
