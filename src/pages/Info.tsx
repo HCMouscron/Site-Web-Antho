@@ -2,38 +2,31 @@ import { Clock, MapPin, Euro, Calendar, UserPlus, FileText } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 const Info = () => {
-  const trainingSchedule = [
-    {
-      category: "U16 & U18",
-      day: "Lundi",
-      time: "18:00 - 19:30"
-    },
-    {
-      category: "Seniors & U18",
-      day: "Mercredi",
-      time: "19:30 - 21:00"
-    },
-    {
-      category: "U16 & U18",
-      day: "Vendredi",
-      time: "17:30 - 19:00"
-    },
-    {
-      category: "Seniors & U18",
-      day: "Vendredi",
-      time: "19:00 - 20:30"
-    },
-    {
-      category: "Loisirs",
-      day: "Vendredi",
-      time: "20:30 - 21:30"
-    },
-    {
-      category: "Mini handball",
-      day: "Samedi",
-      time: "10:30 - 12:00"
-    },
-  ];
+  const trainingSchedule = [{
+    category: "U16 & U18",
+    day: "Lundi",
+    time: "18:00 - 19:30"
+  }, {
+    category: "Seniors & U18",
+    day: "Mercredi",
+    time: "19:30 - 21:00"
+  }, {
+    category: "U16 & U18",
+    day: "Vendredi",
+    time: "17:30 - 19:00"
+  }, {
+    category: "Seniors & U18",
+    day: "Vendredi",
+    time: "19:00 - 20:30"
+  }, {
+    category: "Loisirs",
+    day: "Vendredi",
+    time: "20:30 - 21:30"
+  }, {
+    category: "Mini handball",
+    day: "Samedi",
+    time: "10:30 - 12:00"
+  }];
   const seasonEvents = [{
     date: "Septembre 2024",
     event: "Début de saison - Inscriptions"
@@ -77,10 +70,7 @@ const Info = () => {
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6">
             Informations pratiques
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Tout ce que vous devez savoir pour nous rejoindre : horaires, tarifs, 
-            lieu d'entraînement et procédure d'inscription.
-          </p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Tout ce que vous devez savoir pour nous rejoindre : horaires, lieu d'entraînement et procédure d'inscription.</p>
         </div>
 
         {/* Location & Venue */}
