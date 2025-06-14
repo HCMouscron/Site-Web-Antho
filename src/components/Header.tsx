@@ -33,7 +33,7 @@ const Header = () => {
         </div>
         {/* Desktop Navigation */}
         <div className="hidden lg:flex lg:gap-x-8">
-          {navigation.map(item => <Link key={item.name} to={item.href} className="color-withe">
+          {navigation.map(item => <Link key={item.name} to={item.href} className="text-white ">
               {item.name}
             </Link>)}
         </div>
