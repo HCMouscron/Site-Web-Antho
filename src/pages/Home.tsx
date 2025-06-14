@@ -27,7 +27,7 @@ const Home = () => {
               <Button size="lg" className="bg-hc-orange hover:bg-hc-orange-light text-white shadow-lg">
                 Nous rejoindre
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-hc-green shadow-lg">
+              <Button size="lg" variant="outline" className="bg-white text-hc-green hover:bg-gray-100 shadow-lg font-semibold ">
                 Découvrir l'équipe
               </Button>
             </div>
