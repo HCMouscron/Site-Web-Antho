@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -19,12 +20,10 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    
     toast({
       title: "Message envoyé !",
       description: "Nous vous répondrons dans les plus brefs délais.",
     });
-
     setFormData({
       name: '',
       email: '',
@@ -40,7 +39,7 @@ const Contact = () => {
     });
   };
 
-  // Remplacement des coordonnées par celles présentes sur Facebook
+  // Coordonnées à jour + adresse comme page Info
   const contactInfo = [
     {
       icon: Phone,
@@ -57,7 +56,8 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Adresse",
-      details: ["Salle Omnisports", "Rue du Stade, 7700 Mouscron"],
+      // Adresse harmonisée comme page Info
+      details: ["Salle Omnisports", "Rue des Prés 84B, 7700 Mouscron"],
       color: "text-hc-green"
     },
     {
@@ -68,7 +68,7 @@ const Contact = () => {
     }
   ];
 
-  // Mise à jour des adresses email et téléphones du staff si possible
+  // Staff aligné avec la page Équipe
   const staff = [
     {
       name: "Marie Dubois",
@@ -93,6 +93,18 @@ const Contact = () => {
       role: "Responsable Jeunes",
       phone: "+32 56 123 459",
       email: "jeunes@hcmouscron.be"
+    },
+    {
+      name: "Laszlo Baan",
+      role: "Coach T1 - Seniors",
+      phone: "+32 476 11 22 33",
+      email: "laszlo.baan@hcmouscron.be"
+    },
+    {
+      name: "Thierry Vincent",
+      role: "Coach T2 - Seniors",
+      phone: "+32 489 22 33 44",
+      email: "thierry.vincent@hcmouscron.be"
     }
   ];
 
@@ -251,9 +263,13 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="text-sm text-muted-foreground space-y-1">
-                  <p><strong>Adresse :</strong> Rue du Stade, 7700 Mouscron</p>
-                  <p><strong>Parking :</strong> Gratuit sur place</p>
-                  <p><strong>Transport :</strong> Bus ligne 12 - Arrêt "Sports Complex"</p>
+                  <p>
+                    <strong>Adresse :</strong> Rue des Prés 84B, 7700 Mouscron
+                  </p>
+                  <p>
+                    <strong>Parking :</strong> Gratuit sur place
+                  </p>
+                  {/* Ligne de transport supprimée */}
                 </div>
               </CardContent>
             </Card>
@@ -304,3 +320,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
