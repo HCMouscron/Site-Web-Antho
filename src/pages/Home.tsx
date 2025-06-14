@@ -40,7 +40,7 @@ const Home = () => {
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-r from-hc-green/10 via-white to-hc-orange/10 bg-green-800">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-4 place-items-center">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 place-items-center max-w-4xl mx-auto">
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-hc-green rounded-xl mb-6 shadow-lg mx-auto">
                 <Users className="h-8 w-8 text-white" />
@@ -63,14 +63,6 @@ const Home = () => {
               </div>
               <div className="text-4xl font-bold text-hc-green mb-2">1</div>
               <div className="text-white">Salle</div>
-            </div>
-
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-hc-orange rounded-xl mb-6 shadow-lg mx-auto">
-                <Trophy className="h-8 w-8 text-white" />
-              </div>
-              <div className="text-4xl font-bold text-hc-orange mb-2">12</div>
-              <div className="text-white">Équipes</div>
             </div>
           </div>
         </div>
