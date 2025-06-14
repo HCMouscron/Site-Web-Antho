@@ -1,47 +1,107 @@
-
 import { Clock, MapPin, Euro, Calendar, UserPlus, FileText } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-
 const Info = () => {
-  const trainingSchedule = [
-    { category: "Seniors Hommes", day: "Mardi", time: "20:00 - 22:00" },
-    { category: "Seniors Hommes", day: "Jeudi", time: "20:00 - 22:00" },
-    { category: "Seniors Dames", day: "Lundi", time: "19:00 - 21:00" },
-    { category: "Seniors Dames", day: "Mercredi", time: "19:00 - 21:00" },
-    { category: "Juniors -18 ans", day: "Mercredi", time: "17:00 - 18:30" },
-    { category: "Juniors -18 ans", day: "Vendredi", time: "17:00 - 18:30" },
-    { category: "Cadets -15 ans", day: "Samedi", time: "14:00 - 15:30" },
-    { category: "École de Handball", day: "Samedi", time: "10:00 - 11:30" },
-  ];
-
-  const fees = [
-    { category: "Seniors", price: "250€", period: "/an", includes: "License + Assurance + Équipement" },
-    { category: "Juniors (-18 ans)", price: "200€", period: "/an", includes: "License + Assurance + Équipement" },
-    { category: "Cadets (-15 ans)", price: "150€", period: "/an", includes: "License + Assurance + Équipement" },
-    { category: "École de Handball", price: "100€", period: "/an", includes: "License + Assurance" },
-    { category: "Famille (3+ membres)", price: "500€", period: "/an", includes: "Réduction famille nombreuse" },
-  ];
-
-  const seasonEvents = [
-    { date: "Septembre 2024", event: "Début de saison - Inscriptions" },
-    { date: "Octobre 2024", event: "Tournoi de rentrée" },
-    { date: "Décembre 2024", event: "Tournoi de Noël" },
-    { date: "Février 2025", event: "Match de gala" },
-    { date: "Avril 2025", event: "Tournoi de Pâques" },
-    { date: "Juin 2025", event: "Fête du club - Remise des prix" },
-  ];
-
-  const registrationSteps = [
-    { step: 1, title: "Contactez-nous", description: "Par téléphone, email ou via notre formulaire de contact" },
-    { step: 2, title: "Séance d'essai", description: "Venez essayer gratuitement lors d'un entraînement" },
-    { step: 3, title: "Inscription", description: "Remplissez le formulaire d'inscription et fournissez les documents" },
-    { step: 4, title: "Paiement", description: "Réglez la cotisation annuelle" },
-    { step: 5, title: "Équipement", description: "Récupérez votre équipement et commencez à jouer !" },
-  ];
-
-  return (
-    <div className="w-full py-8">
+  const trainingSchedule = [{
+    category: "Seniors Hommes",
+    day: "Mardi",
+    time: "20:00 - 22:00"
+  }, {
+    category: "Seniors Hommes",
+    day: "Jeudi",
+    time: "20:00 - 22:00"
+  }, {
+    category: "Seniors Dames",
+    day: "Lundi",
+    time: "19:00 - 21:00"
+  }, {
+    category: "Seniors Dames",
+    day: "Mercredi",
+    time: "19:00 - 21:00"
+  }, {
+    category: "Juniors -18 ans",
+    day: "Mercredi",
+    time: "17:00 - 18:30"
+  }, {
+    category: "Juniors -18 ans",
+    day: "Vendredi",
+    time: "17:00 - 18:30"
+  }, {
+    category: "Cadets -15 ans",
+    day: "Samedi",
+    time: "14:00 - 15:30"
+  }, {
+    category: "École de Handball",
+    day: "Samedi",
+    time: "10:00 - 11:30"
+  }];
+  const fees = [{
+    category: "Seniors",
+    price: "250€",
+    period: "/an",
+    includes: "License + Assurance + Équipement"
+  }, {
+    category: "Juniors (-18 ans)",
+    price: "200€",
+    period: "/an",
+    includes: "License + Assurance + Équipement"
+  }, {
+    category: "Cadets (-15 ans)",
+    price: "150€",
+    period: "/an",
+    includes: "License + Assurance + Équipement"
+  }, {
+    category: "École de Handball",
+    price: "100€",
+    period: "/an",
+    includes: "License + Assurance"
+  }, {
+    category: "Famille (3+ membres)",
+    price: "500€",
+    period: "/an",
+    includes: "Réduction famille nombreuse"
+  }];
+  const seasonEvents = [{
+    date: "Septembre 2024",
+    event: "Début de saison - Inscriptions"
+  }, {
+    date: "Octobre 2024",
+    event: "Tournoi de rentrée"
+  }, {
+    date: "Décembre 2024",
+    event: "Tournoi de Noël"
+  }, {
+    date: "Février 2025",
+    event: "Match de gala"
+  }, {
+    date: "Avril 2025",
+    event: "Tournoi de Pâques"
+  }, {
+    date: "Juin 2025",
+    event: "Fête du club - Remise des prix"
+  }];
+  const registrationSteps = [{
+    step: 1,
+    title: "Contactez-nous",
+    description: "Par téléphone, email ou via notre formulaire de contact"
+  }, {
+    step: 2,
+    title: "Séance d'essai",
+    description: "Venez essayer gratuitement lors d'un entraînement"
+  }, {
+    step: 3,
+    title: "Inscription",
+    description: "Remplissez le formulaire d'inscription et fournissez les documents"
+  }, {
+    step: 4,
+    title: "Paiement",
+    description: "Réglez la cotisation annuelle"
+  }, {
+    step: 5,
+    title: "Équipement",
+    description: "Récupérez votre équipement et commencez à jouer !"
+  }];
+  return <div className="w-full py-8">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -70,8 +130,8 @@ const Info = () => {
                   <div className="space-y-2 text-muted-foreground">
                     <p>📍 Rue des Prés 84B, 7700 Mouscron</p>
                     <p>🚗 Parking gratuit sur place</p>
-                    <p>🚌 Arrêt de bus "Sports Complex" ligne 12</p>
-                    <p>♿ Accès PMR</p>
+                    
+                    
                     <p>🚿 Vestiaires avec douches</p>
                     <p>☕ Cafétéria ouverte les soirs d'entraînement</p>
                   </div>
@@ -90,8 +150,7 @@ const Info = () => {
             Horaires d'entraînement
           </h2>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {trainingSchedule.map((training, index) => (
-              <Card key={index} className="hover:shadow-md transition-shadow">
+            {trainingSchedule.map((training, index) => <Card key={index} className="hover:shadow-md transition-shadow">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between">
                     <div>
@@ -109,8 +168,7 @@ const Info = () => {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </section>
 
@@ -120,8 +178,7 @@ const Info = () => {
             Tarifs des cotisations
           </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {fees.map((fee, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow border-2 hover:border-hc-green">
+            {fees.map((fee, index) => <Card key={index} className="hover:shadow-lg transition-shadow border-2 hover:border-hc-green">
                 <CardHeader className="text-center">
                   <CardTitle className="text-hc-orange">{fee.category}</CardTitle>
                 </CardHeader>
@@ -136,8 +193,7 @@ const Info = () => {
                     {fee.includes}
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
           <div className="mt-8 p-6 bg-muted/50 rounded-lg text-center">
             <p className="text-sm text-muted-foreground">
@@ -154,8 +210,7 @@ const Info = () => {
           </h2>
           <div className="max-w-4xl mx-auto">
             <div className="space-y-4">
-              {seasonEvents.map((event, index) => (
-                <Card key={index} className="hover:shadow-md transition-shadow">
+              {seasonEvents.map((event, index) => <Card key={index} className="hover:shadow-md transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4">
                       <div className="w-24 text-center">
@@ -168,8 +223,7 @@ const Info = () => {
                       </div>
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </section>
@@ -181,8 +235,7 @@ const Info = () => {
           </h2>
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6">
-              {registrationSteps.map((step, index) => (
-                <Card key={index} className="hover:shadow-md transition-shadow">
+              {registrationSteps.map((step, index) => <Card key={index} className="hover:shadow-md transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-hc-green rounded-full flex items-center justify-center text-white font-bold">
@@ -194,8 +247,7 @@ const Info = () => {
                       </div>
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
             
             <div className="mt-12 p-6 bg-gradient-to-r from-hc-green to-hc-orange rounded-lg text-center text-white">
@@ -216,8 +268,6 @@ const Info = () => {
           </div>
         </section>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Info;
