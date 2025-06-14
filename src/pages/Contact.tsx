@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -39,32 +38,25 @@ const Contact = () => {
     });
   };
 
-  // Coordonnées à jour + adresse comme page Info
+  // Coordonnées à jour : synchronisé avec le footer
   const contactInfo = [
     {
       icon: Phone,
       title: "Téléphone",
-      details: ["+32 476 83 29 12", "Lun-Ven 18h-21h"],
+      details: ["+XX XX XX XX XX"],
       color: "text-hc-green"
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["info@hcmouscron.be", "Réponse rapide par email"],
+      details: ["handballmouscron@gmail.com", "Réponse rapide par email"],
       color: "text-hc-orange"
     },
     {
       icon: MapPin,
       title: "Adresse",
-      // Adresse harmonisée comme page Info
-      details: ["Salle Omnisports", "Rue des Prés 84B, 7700 Mouscron"],
+      details: ["Hall Max Lessines", "Rue des Prés 84B, 7700 Mouscron"],
       color: "text-hc-green"
-    },
-    {
-      icon: Clock,
-      title: "Horaires secrétariat",
-      details: ["Lundi à Vendredi: 18h-21h", "Samedi: 9h-12h"],
-      color: "text-hc-orange"
     }
   ];
 
@@ -259,12 +251,12 @@ const Contact = () => {
                   <div className="text-center text-muted-foreground">
                     <MapPin className="h-12 w-12 mx-auto mb-2" />
                     <p>Carte Google Maps</p>
-                    <p className="text-sm">Salle Omnisports de Mouscron</p>
+                    <p className="text-sm">Hall Max Lessines</p>
                   </div>
                 </div>
                 <div className="text-sm text-muted-foreground space-y-1">
                   <p>
-                    <strong>Adresse :</strong> Rue des Prés 84B, 7700 Mouscron
+                    <strong>Adresse :</strong> Hall Max Lessines, Rue des Prés 84B, 7700 Mouscron
                   </p>
                   <p>
                     <strong>Parking :</strong> Gratuit sur place
@@ -320,4 +312,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
