@@ -60,44 +60,26 @@ const Contact = () => {
     }
   ];
 
-  // Staff aligné avec la page Équipe
+  // Staff aligné avec la page Équipe : 3 membres principaux du bureau seulement
   const staff = [
     {
-      name: "Marie Dubois",
-      role: "Présidente",
-      phone: "+32 476 83 29 12",
-      email: "info@hcmouscron.be"
-    },
-    {
-      name: "Jean Leroy", 
+      name: "David Macarez",
       role: "Secrétaire",
-      phone: "+32 56 123 457",
-      email: "secretaire@hcmouscron.be"
+      phone: "+XX XX XX XX XX",
+      email: "handballmouscron@gmail.com"
     },
     {
-      name: "Sophie Martin",
-      role: "Trésorière",
-      phone: "+32 56 123 458",
-      email: "tresorier@hcmouscron.be"
+      name: "Damien Cockenpot",
+      role: "Trésorier",
+      phone: "+XX XX XX XX XX",
+      email: "handballmouscron@gmail.com"
     },
     {
-      name: "Pierre Moreau",
-      role: "Responsable Jeunes",
-      phone: "+32 56 123 459",
-      email: "jeunes@hcmouscron.be"
+      name: "Joaquim Vercruysse",
+      role: "Trésorier",
+      phone: "+XX XX XX XX XX",
+      email: "handballmouscron@gmail.com"
     },
-    {
-      name: "Laszlo Baan",
-      role: "Coach T1 - Seniors",
-      phone: "+32 476 11 22 33",
-      email: "laszlo.baan@hcmouscron.be"
-    },
-    {
-      name: "Thierry Vincent",
-      role: "Coach T2 - Seniors",
-      phone: "+32 489 22 33 44",
-      email: "thierry.vincent@hcmouscron.be"
-    }
   ];
 
   return (
