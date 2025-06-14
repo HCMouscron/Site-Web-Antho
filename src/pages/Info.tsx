@@ -68,7 +68,7 @@ const Info = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-4">Salle Omnisports de Mouscron</h3>
                   <div className="space-y-2 text-muted-foreground">
-                    <p>📍 Rue du Sport 1, 7700 Mouscron</p>
+                    <p>📍 Rue des Prés 84B, 7700 Mouscron</p>
                     <p>🚗 Parking gratuit sur place</p>
                     <p>🚌 Arrêt de bus "Sports Complex" ligne 12</p>
                     <p>♿ Accès PMR</p>
