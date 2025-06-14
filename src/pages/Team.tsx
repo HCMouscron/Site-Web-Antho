@@ -10,7 +10,7 @@ const bureau = [
   },
   {
     name: "Damien Cockenpot",
-    role: "Trésorier",
+    role: "Président",
     image: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=200&h=200&fit=crop&crop=face"
   },
   {

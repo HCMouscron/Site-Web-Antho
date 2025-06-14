@@ -10,7 +10,7 @@ const staff = [
   },
   {
     name: "Damien Cockenpot",
-    role: "Trésorier",
+    role: "Président",
     phone: "+XX XX XX XX XX",
     email: "handballmouscron@gmail.com"
   },
