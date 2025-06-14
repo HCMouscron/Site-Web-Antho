@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -29,8 +28,6 @@ const Team = () => {
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face"
     }
   ];
-
-  // Les catégories et palmarès ne sont plus utilisées, mais on garde la structure pour une éventuelle réutilisation.
 
   return (
     <div className="w-full py-8">
@@ -77,12 +74,28 @@ const Team = () => {
           </div>
         </section>
 
-        {/* Players by Category - SECTION VIDE */}
+        {/* Players by Category - AJOUT DES CATÉGORIES */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-12 text-hc-green">
             Nos équipes
           </h2>
-          {/* Section intentionnellement laissée vide */}
+          <div className="flex flex-col items-center gap-5">
+            <span className="px-6 py-3 rounded-full bg-hc-green text-white text-lg font-semibold shadow text-shadow">
+              Seniors
+            </span>
+            <span className="px-6 py-3 rounded-full bg-hc-green-light text-white text-lg font-semibold shadow text-shadow">
+              U18
+            </span>
+            <span className="px-6 py-3 rounded-full bg-hc-green text-white text-lg font-semibold shadow text-shadow">
+              U16
+            </span>
+            <span className="px-6 py-3 rounded-full bg-hc-green-light text-white text-lg font-semibold shadow text-shadow">
+              U14
+            </span>
+            <span className="px-6 py-3 rounded-full bg-hc-orange text-white text-lg font-semibold shadow text-shadow">
+              Vétérans / Loisir
+            </span>
+          </div>
         </section>
 
         {/* Section Palmarès SUPPRIMÉE */}
@@ -92,4 +105,3 @@ const Team = () => {
 };
 
 export default Team;
-
