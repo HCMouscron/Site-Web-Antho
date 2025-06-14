@@ -69,10 +69,6 @@ const Info = () => {
     step: 4,
     title: "Paiement",
     description: "Réglez la cotisation annuelle"
-  }, {
-    step: 5,
-    title: "Équipement",
-    description: "Récupérez votre équipement et commencez à jouer !"
   }];
   return <div className="w-full py-8">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
