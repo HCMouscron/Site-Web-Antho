@@ -6,6 +6,11 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
+import ContactForm from "@/components/contact/ContactForm";
+import ContactInfoCards from "@/components/contact/ContactInfoCards";
+import StaffContacts from "@/components/contact/StaffContacts";
+import MapSection from "@/components/contact/MapSection";
+import SocialMediaLinks from "@/components/contact/SocialMediaLinks";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -95,197 +100,17 @@ const Contact = () => {
             Une question ? Envie de nous rejoindre ? Notre équipe vous répond rapidement pour tout renseignement sur le club ou le handball à Mouscron !
           </p>
         </div>
-
         <div className="grid gap-8 lg:grid-cols-2">
           {/* Contact Form */}
           <section>
-            <Card className="h-fit">
-              <CardHeader>
-                <CardTitle className="text-2xl text-hc-green">
-                  Envoyez-nous un message
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <Label htmlFor="name">Nom complet *</Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      type="text"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="mt-1"
-                      placeholder="Votre nom et prénom"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="email">Email *</Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="mt-1"
-                      placeholder="votre.email@exemple.com"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="subject">Sujet *</Label>
-                    <Input
-                      id="subject"
-                      name="subject"
-                      type="text"
-                      required
-                      value={formData.subject}
-                      onChange={handleChange}
-                      className="mt-1"
-                      placeholder="Objet de votre message"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="message">Message *</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      required
-                      value={formData.message}
-                      onChange={handleChange}
-                      className="mt-1"
-                      rows={6}
-                      placeholder="Votre message..."
-                    />
-                  </div>
-
-                  <Button type="submit" className="w-full bg-hc-green hover:bg-hc-green-light">
-                    Envoyer le message
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+            <ContactForm />
           </section>
-
-          {/* Contact Information */}
+          {/* Contact Info, Staff, Map, Social, tout dans l'ordre */}
           <section className="space-y-8">
-            {/* Contact Info Cards */}
-            <div className="grid gap-6 sm:grid-cols-2">
-              {contactInfo.map((info, index) => (
-                <Card key={index} className="hover:shadow-md transition-shadow">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-3">
-                      <info.icon className={`h-6 w-6 mt-1 ${info.color}`} />
-                      <div>
-                        <h3 className="font-semibold mb-2">{info.title}</h3>
-                        {info.details.map((detail, detailIndex) => (
-                          <p key={detailIndex} className="text-sm text-muted-foreground">
-                            {detail}
-                          </p>
-                        ))}
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            {/* Staff Contacts */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-xl text-hc-orange">
-                  Contacts du bureau
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {staff.map((member, index) => (
-                    <div key={index} className="p-4 bg-muted/50 rounded-lg">
-                      <div className="flex justify-between items-start">
-                        <div>
-                          <h4 className="font-semibold">{member.name}</h4>
-                          <p className="text-sm text-hc-green">{member.role}</p>
-                        </div>
-                        <div className="text-right text-sm text-muted-foreground">
-                          <p>{member.phone}</p>
-                          <p>{member.email}</p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Map Placeholder */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-xl text-hc-green">
-                  Comment nous trouver
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="h-64 bg-muted rounded-lg flex items-center justify-center mb-4">
-                  <div className="text-center text-muted-foreground">
-                    <MapPin className="h-12 w-12 mx-auto mb-2" />
-                    <p>Carte Google Maps</p>
-                    <p className="text-sm">Hall Max Lessines</p>
-                  </div>
-                </div>
-                <div className="text-sm text-muted-foreground space-y-1">
-                  <p>
-                    <strong>Adresse :</strong> Hall Max Lessines, Rue des Prés 84B, 7700 Mouscron
-                  </p>
-                  <p>
-                    <strong>Parking :</strong> Gratuit sur place
-                  </p>
-                  {/* Ligne de transport supprimée */}
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Social Media */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-xl text-hc-orange">
-                  Suivez-nous
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Restez connectés avec nous sur les réseaux sociaux pour ne rien manquer 
-                  de l'actualité du club !
-                </p>
-                <div className="flex gap-4">
-                  <Button variant="outline" size="lg" asChild>
-                    <a
-                      href="https://www.facebook.com/HCMouscron"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2"
-                    >
-                      <Facebook className="h-5 w-5" />
-                      Facebook
-                    </a>
-                  </Button>
-                  <Button variant="outline" size="lg" asChild>
-                    <a
-                      href="https://www.instagram.com/hcmouscron/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2"
-                    >
-                      <Instagram className="h-5 w-5" />
-                      Instagram
-                    </a>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+            <ContactInfoCards />
+            <StaffContacts />
+            <MapSection />
+            <SocialMediaLinks />
           </section>
         </div>
       </div>
