@@ -1,14 +1,16 @@
 import { Calendar, MapPin, Users, Trophy } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+
 const Home = () => {
-  return <div className="w-full">
+  return (
+    <div className="w-full">
       {/* Hero Section */}
       <section className="relative h-[70vh] bg-gradient-to-r from-hc-green via-hc-green to-hc-orange overflow-hidden">
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="absolute inset-0 bg-cover bg-center" style={{
-        backgroundImage: "url('/lovable-uploads/1ea96fdc-8535-4f8b-a3f9-b4f3755f6633.png')"
-      }}></div>
+          backgroundImage: "url('/lovable-uploads/1ea96fdc-8535-4f8b-a3f9-b4f3755f6633.png')"
+        }}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-hc-green/60 via-hc-green/50 to-hc-orange/60"></div>
         
         <div className="relative flex h-full items-center justify-center px-6">
@@ -38,28 +40,37 @@ const Home = () => {
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-r from-hc-green/10 via-white to-hc-orange/10 bg-green-800">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-4 place-items-center">
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-hc-green rounded-xl mb-6 shadow-lg">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-hc-green rounded-xl mb-6 shadow-lg mx-auto">
                 <Users className="h-8 w-8 text-white" />
               </div>
               <div className="text-4xl font-bold text-hc-green mb-2">85</div>
-              <div className="text-white ">Joueurs</div>
+              <div className="text-white">Joueurs</div>
             </div>
             
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-hc-orange rounded-xl mb-6 shadow-lg">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-hc-orange rounded-xl mb-6 shadow-lg mx-auto">
                 <Calendar className="h-8 w-8 text-white" />
               </div>
               <div className="text-4xl font-bold text-hc-orange mb-2">25</div>
-              <div className="text-white ">Années</div>
+              <div className="text-white">Années</div>
             </div>
+            
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-hc-green rounded-xl mb-6 shadow-lg">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-hc-green rounded-xl mb-6 shadow-lg mx-auto">
                 <MapPin className="h-8 w-8 text-white" />
               </div>
               <div className="text-4xl font-bold text-hc-green mb-2">1</div>
-              <div className="text-white ">Salle</div>
+              <div className="text-white">Salle</div>
+            </div>
+
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-hc-orange rounded-xl mb-6 shadow-lg mx-auto">
+                <Trophy className="h-8 w-8 text-white" />
+              </div>
+              <div className="text-4xl font-bold text-hc-orange mb-2">12</div>
+              <div className="text-white">Équipes</div>
             </div>
           </div>
         </div>
@@ -123,6 +134,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Home;

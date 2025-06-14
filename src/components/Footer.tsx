@@ -1,13 +1,20 @@
+
 import { Facebook, Instagram, MapPin, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+
 const Footer = () => {
-  return <footer className="bg-gradient-to-r from-hc-green via-hc-green to-hc-orange border-t shadow-lg bg-green-900">
+  return (
+    <footer className="bg-gradient-to-r from-hc-green via-hc-green to-hc-orange border-t shadow-lg">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
           {/* Logo et description */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <img src="/lovable-uploads/7f5485a2-eaa0-4a73-8e50-8de5813ec2f3.png" alt="HC Mouscron logo" className="h-14 w-14 rounded-full bg-white p-1 shadow-lg" />
+              <img 
+                src="/lovable-uploads/7f5485a2-eaa0-4a73-8e50-8de5813ec2f3.png" 
+                alt="HC Mouscron logo" 
+                className="h-14 w-14 rounded-full bg-white p-1 shadow-lg" 
+              />
               <span className="text-xl font-bold text-white drop-shadow-lg">HC Mouscron</span>
             </div>
             <p className="text-white max-w-md drop-shadow-md text-base">
@@ -15,12 +22,22 @@ const Footer = () => {
             </p>
             <div className="flex gap-x-4 mt-6">
               <Button variant="ghost" size="sm" asChild>
-                <a href="https://www.facebook.com/HCMouscron" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-200 drop-shadow-md">
+                <a 
+                  href="https://www.facebook.com/HCMouscron" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-white hover:text-hc-orange drop-shadow-md"
+                >
                   <Facebook className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="sm" asChild>
-                <a href="https://www.instagram.com/hcmouscron/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-200 drop-shadow-md">
+                <a 
+                  href="https://www.instagram.com/hcmouscron/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-white hover:text-hc-orange drop-shadow-md"
+                >
                   <Instagram className="h-5 w-5" />
                 </a>
               </Button>
@@ -32,22 +49,22 @@ const Footer = () => {
             <h3 className="text-sm font-semibold text-white mb-4 drop-shadow-md">Navigation</h3>
             <ul className="space-y-3">
               <li>
-                <a href="/" className="text-white hover:text-yellow-200 transition-colors drop-shadow-md">
+                <a href="/" className="text-white hover:text-hc-orange transition-colors drop-shadow-md">
                   Accueil
                 </a>
               </li>
               <li>
-                <a href="/equipe" className="text-white hover:text-yellow-200 transition-colors drop-shadow-md">
+                <a href="/equipe" className="text-white hover:text-hc-orange transition-colors drop-shadow-md">
                   Équipe
                 </a>
               </li>
               <li>
-                <a href="/infos" className="text-white hover:text-yellow-200 transition-colors drop-shadow-md">
+                <a href="/infos" className="text-white hover:text-hc-orange transition-colors drop-shadow-md">
                   Infos pratiques
                 </a>
               </li>
               <li>
-                <a href="/planning" className="text-white hover:text-yellow-200 transition-colors drop-shadow-md">
+                <a href="/planning" className="text-white hover:text-hc-orange transition-colors drop-shadow-md">
                   Planning
                 </a>
               </li>
@@ -58,10 +75,12 @@ const Footer = () => {
           <div>
             <h3 className="text-sm font-semibold text-white mb-4 drop-shadow-md">Contact</h3>
             <ul className="space-y-3">
-              <li className="flex items-center space-x-2 text-white">
-                <MapPin className="h-4 w-4 flex-shrink-0" />
-                <span className="text-sm drop-shadow-md">🏟️ Hall Max Lessines
- Rue des Prés 84B, 7700 Mouscron</span>
+              <li className="flex items-start space-x-2 text-white">
+                <MapPin className="h-4 w-4 flex-shrink-0 mt-1" />
+                <div className="text-sm drop-shadow-md">
+                  <div className="font-medium">Hall Max Lessines</div>
+                  <div>Rue des Prés 84B, 7700 Mouscron</div>
+                </div>
               </li>
               <li className="flex items-center space-x-2 text-white">
                 <Phone className="h-4 w-4 flex-shrink-0" />
@@ -81,6 +100,8 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
