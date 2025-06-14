@@ -52,7 +52,7 @@ const Home = () => {
                 <Calendar className="h-8 w-8 text-white" />
               </div>
               <div className="text-4xl font-bold text-hc-green mb-2">25</div>
-              <div className="text-gray-700 font-medium">Années</div>
+              <div className="text-white ">Années</div>
             </div>
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-hc-orange rounded-xl mb-6 shadow-lg">
