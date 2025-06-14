@@ -5,11 +5,11 @@ const Home = () => {
   return <div className="w-full">
       {/* Hero Section */}
       <section className="relative h-[70vh] bg-gradient-to-r from-hc-green via-hc-green to-hc-orange overflow-hidden">
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
         <div className="absolute inset-0 bg-cover bg-center" style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=1920&h=1080&fit=crop')"
+        backgroundImage: "url('/lovable-uploads/1ea96fdc-8535-4f8b-a3f9-b4f3755f6633.png')"
       }}></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-hc-green/70 via-hc-green/60 to-hc-orange/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-hc-green/60 via-hc-green/50 to-hc-orange/60"></div>
         
         <div className="relative flex h-full items-center justify-center px-6">
           <div className="text-center text-white max-w-4xl animate-fade-in">
