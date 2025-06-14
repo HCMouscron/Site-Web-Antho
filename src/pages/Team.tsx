@@ -23,12 +23,12 @@ const bureau = [
 const entraineursSeniors = [
   {
     name: "Laszlo Baan",
-    role: "Entraîneur principal Seniors",
+    role: "Coach T1",
     image: "https://images.unsplash.com/photo-1519340333755-c55307049130?w=200&h=200&fit=crop&crop=face"
   },
   {
     name: "Thierry Vincent",
-    role: "Entraîneur secondaire Seniors",
+    role: "Coach T2",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face"
   },
 ];
