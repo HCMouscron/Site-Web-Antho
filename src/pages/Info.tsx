@@ -2,65 +2,38 @@ import { Clock, MapPin, Euro, Calendar, UserPlus, FileText } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 const Info = () => {
-  const trainingSchedule = [{
-    category: "Seniors Hommes",
-    day: "Mardi",
-    time: "20:00 - 22:00"
-  }, {
-    category: "Seniors Hommes",
-    day: "Jeudi",
-    time: "20:00 - 22:00"
-  }, {
-    category: "Seniors Dames",
-    day: "Lundi",
-    time: "19:00 - 21:00"
-  }, {
-    category: "Seniors Dames",
-    day: "Mercredi",
-    time: "19:00 - 21:00"
-  }, {
-    category: "Juniors -18 ans",
-    day: "Mercredi",
-    time: "17:00 - 18:30"
-  }, {
-    category: "Juniors -18 ans",
-    day: "Vendredi",
-    time: "17:00 - 18:30"
-  }, {
-    category: "Cadets -15 ans",
-    day: "Samedi",
-    time: "14:00 - 15:30"
-  }, {
-    category: "École de Handball",
-    day: "Samedi",
-    time: "10:00 - 11:30"
-  }];
-  const fees = [{
-    category: "Seniors",
-    price: "250€",
-    period: "/an",
-    includes: "License + Assurance + Équipement"
-  }, {
-    category: "Juniors (-18 ans)",
-    price: "200€",
-    period: "/an",
-    includes: "License + Assurance + Équipement"
-  }, {
-    category: "Cadets (-15 ans)",
-    price: "150€",
-    period: "/an",
-    includes: "License + Assurance + Équipement"
-  }, {
-    category: "École de Handball",
-    price: "100€",
-    period: "/an",
-    includes: "License + Assurance"
-  }, {
-    category: "Famille (3+ membres)",
-    price: "500€",
-    period: "/an",
-    includes: "Réduction famille nombreuse"
-  }];
+  const trainingSchedule = [
+    {
+      category: "U16 & U18",
+      day: "Lundi",
+      time: "18:00 - 19:30"
+    },
+    {
+      category: "Seniors & U18",
+      day: "Mercredi",
+      time: "19:30 - 21:00"
+    },
+    {
+      category: "U16 & U18",
+      day: "Vendredi",
+      time: "17:30 - 19:00"
+    },
+    {
+      category: "Seniors & U18",
+      day: "Vendredi",
+      time: "19:00 - 20:30"
+    },
+    {
+      category: "Loisirs",
+      day: "Vendredi",
+      time: "20:30 - 21:30"
+    },
+    {
+      category: "Mini handball",
+      day: "Samedi",
+      time: "10:30 - 12:00"
+    },
+  ];
   const seasonEvents = [{
     date: "Septembre 2024",
     event: "Début de saison - Inscriptions"
@@ -169,37 +142,6 @@ const Info = () => {
                   </div>
                 </CardContent>
               </Card>)}
-          </div>
-        </section>
-
-        {/* Fees */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12 text-hc-green">
-            Tarifs des cotisations
-          </h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {fees.map((fee, index) => <Card key={index} className="hover:shadow-lg transition-shadow border-2 hover:border-hc-green">
-                <CardHeader className="text-center">
-                  <CardTitle className="text-hc-orange">{fee.category}</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <div className="mb-4">
-                    <span className="text-3xl font-bold text-hc-green">
-                      {fee.price}
-                    </span>
-                    <span className="text-muted-foreground">{fee.period}</span>
-                  </div>
-                  <div className="text-sm text-muted-foreground">
-                    {fee.includes}
-                  </div>
-                </CardContent>
-              </Card>)}
-          </div>
-          <div className="mt-8 p-6 bg-muted/50 rounded-lg text-center">
-            <p className="text-sm text-muted-foreground">
-              💡 <strong>Bon à savoir :</strong> Paiement possible en 3 fois sans frais • 
-              Réduction de 20% pour les étudiants • Première séance d'essai gratuite
-            </p>
           </div>
         </section>
 
