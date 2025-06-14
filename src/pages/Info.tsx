@@ -146,23 +146,10 @@ const Info = () => {
           <h2 className="text-3xl font-bold text-center mb-12 text-hc-green">
             Calendrier de la saison
           </h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-4">
-              {seasonEvents.map((event, index) => <Card key={index} className="hover:shadow-md transition-shadow">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-4">
-                      <div className="w-24 text-center">
-                        <div className="text-sm font-semibold text-hc-orange">
-                          {event.date}
-                        </div>
-                      </div>
-                      <div className="flex-1">
-                        <div className="font-semibold">{event.event}</div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>)}
-            </div>
+          <div className="max-w-4xl mx-auto text-center py-12">
+            <span className="text-lg text-muted-foreground">
+              Le calendrier de la saison est à venir.
+            </span>
           </div>
         </section>
 
