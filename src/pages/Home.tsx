@@ -59,7 +59,7 @@ const Home = () => {
                 <MapPin className="h-8 w-8 text-white" />
               </div>
               <div className="text-4xl font-bold text-hc-orange mb-2">1</div>
-              <div className="text-gray-700 font-medium">Salle</div>
+              <div className="text-white ">Salle</div>
             </div>
           </div>
         </div>
