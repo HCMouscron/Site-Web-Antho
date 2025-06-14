@@ -44,7 +44,7 @@ const Home = () => {
                 <Users className="h-8 w-8 text-white" />
               </div>
               <div className="text-4xl font-bold text-hc-green mb-2">85</div>
-              <div className="text-white-700">Joueurs</div>
+              <div className="text-white ">Joueurs</div>
             </div>
             
             <div className="text-center">
