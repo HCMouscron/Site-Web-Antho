@@ -1,6 +1,7 @@
 import { Clock, MapPin, Euro, Calendar, UserPlus, FileText } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+
 const Info = () => {
   const trainingSchedule = [{
     category: "U16 & U18",
@@ -63,7 +64,8 @@ const Info = () => {
     title: "Paiement",
     description: "Réglez la cotisation annuelle"
   }];
-  return <div className="w-full py-8">
+  return (
+    <div className="w-full py-8">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -83,20 +85,24 @@ const Info = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
+              <div className="flex flex-col md:flex-row gap-8 md:items-stretch">
+                {/* Infos salle - à gauche sur desktop */}
+                <div className="flex-1 flex flex-col justify-center">
                   <h3 className="text-xl font-semibold mb-4">Salle Omnisports de Mouscron</h3>
                   <div className="space-y-2 text-muted-foreground">
                     <p>📍 Rue des Prés 84B, 7700 Mouscron</p>
                     <p>🚗 Parking gratuit sur place</p>
-                    
-                    
                     <p>🚿 Vestiaires avec douches</p>
                     <p>☕ Cafétéria ouverte les soirs d'entraînement</p>
                   </div>
                 </div>
-                <div className="h-64 bg-muted rounded-lg flex items-center justify-center">
-                  <p className="text-muted-foreground text-center w-full">Carte Google Maps intégrée</p>
+                {/* Bloc de carte dummy - au centre à droite sur desktop */}
+                <div className="flex-1 flex items-center justify-center">
+                  <div className="h-64 w-full bg-muted rounded-lg flex items-center justify-center">
+                    <p className="text-muted-foreground text-center w-full">
+                      Carte Google Maps intégrée
+                    </p>
+                  </div>
                 </div>
               </div>
             </CardContent>
@@ -183,6 +189,7 @@ const Info = () => {
           </div>
         </section>
       </div>
-    </div>;
+    </div>
+  );
 };
 export default Info;
