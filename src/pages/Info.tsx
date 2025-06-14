@@ -106,7 +106,7 @@ const Info = () => {
                   </div>
                 </div>
                 <div className="h-64 bg-muted rounded-lg flex items-center justify-center">
-                  <p className="text-muted-foreground">Carte Google Maps intégrée</p>
+                  <p className="text-muted-foreground text-center w-full">Carte Google Maps intégrée</p>
                 </div>
               </div>
             </CardContent>
