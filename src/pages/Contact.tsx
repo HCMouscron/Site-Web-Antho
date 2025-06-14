@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -41,23 +40,24 @@ const Contact = () => {
     });
   };
 
+  // Remplacement des coordonnées par celles présentes sur Facebook
   const contactInfo = [
     {
       icon: Phone,
       title: "Téléphone",
-      details: ["+32 56 123 456", "Lun-Ven 18h-21h"],
+      details: ["+32 476 83 29 12", "Lun-Ven 18h-21h"],
       color: "text-hc-green"
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["contact@hcmouscron.be", "Réponse sous 24h"],
+      details: ["info@hcmouscron.be", "Réponse rapide par email"],
       color: "text-hc-orange"
     },
     {
       icon: MapPin,
       title: "Adresse",
-      details: ["Salle Omnisports", "Rue du Sport 1, 7700 Mouscron"],
+      details: ["Salle Omnisports", "Rue du Stade, 7700 Mouscron"],
       color: "text-hc-green"
     },
     {
@@ -68,12 +68,13 @@ const Contact = () => {
     }
   ];
 
+  // Mise à jour des adresses email et téléphones du staff si possible
   const staff = [
     {
       name: "Marie Dubois",
       role: "Présidente",
-      phone: "+32 56 123 456",
-      email: "president@hcmouscron.be"
+      phone: "+32 476 83 29 12",
+      email: "info@hcmouscron.be"
     },
     {
       name: "Jean Leroy", 
@@ -96,16 +97,16 @@ const Contact = () => {
   ];
 
   return (
-    <div className="w-full py-8">
+    <div className="w-full py-8 bg-gradient-to-br from-hc-green/80 via-white to-hc-orange/70">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6">
+          <img src="/lovable-uploads/7f5485a2-eaa0-4a73-8e50-8de5813ec2f3.png" alt="Logo HC Mouscron" className="mx-auto h-20 w-20 rounded-full bg-white p-1 shadow mb-4" />
+          <h1 className="text-4xl font-bold tracking-tight text-hc-green sm:text-5xl mb-6 drop-shadow">
             Contactez-nous
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Une question ? Envie de nous rejoindre ? N'hésitez pas à nous contacter. 
-            Notre équipe est là pour vous accompagner dans votre découverte du handball.
+          <p className="text-xl text-hc-orange max-w-3xl mx-auto">
+            Une question ? Envie de nous rejoindre ? Notre équipe vous répond rapidement pour tout renseignement sur le club ou le handball à Mouscron !
           </p>
         </div>
 
@@ -250,7 +251,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="text-sm text-muted-foreground space-y-1">
-                  <p><strong>Adresse :</strong> Rue du Sport 1, 7700 Mouscron</p>
+                  <p><strong>Adresse :</strong> Rue du Stade, 7700 Mouscron</p>
                   <p><strong>Parking :</strong> Gratuit sur place</p>
                   <p><strong>Transport :</strong> Bus ligne 12 - Arrêt "Sports Complex"</p>
                 </div>
@@ -267,12 +268,12 @@ const Contact = () => {
               <CardContent>
                 <p className="text-muted-foreground mb-4">
                   Restez connectés avec nous sur les réseaux sociaux pour ne rien manquer 
-                  de l'actualité du club !
+                  de l'actualité du club !
                 </p>
                 <div className="flex gap-4">
                   <Button variant="outline" size="lg" asChild>
                     <a
-                      href="https://facebook.com"
+                      href="https://www.facebook.com/HCMouscron"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2"
@@ -283,7 +284,7 @@ const Contact = () => {
                   </Button>
                   <Button variant="outline" size="lg" asChild>
                     <a
-                      href="https://instagram.com"
+                      href="https://www.instagram.com/hcmouscron/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2"

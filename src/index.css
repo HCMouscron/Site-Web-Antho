@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -47,10 +46,10 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
 
     /* Custom colors for HC Mouscron */
-    --hc-green: 150 100% 35%;
-    --hc-orange: 25 95% 53%;
-    --hc-green-light: 150 100% 45%;
-    --hc-orange-light: 25 95% 63%;
+    --hc-green: 150 100% 32%;
+    --hc-orange: 25 98% 54%;
+    --hc-green-light: 150 57% 44%;
+    --hc-orange-light: 25 90% 67%;
   }
 
   .dark {
