@@ -4,84 +4,36 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
 const Home = () => {
-  const news = [
-    {
-      id: 1,
-      title: "Victoire éclatante contre Tournai",
-      date: "15 Mars 2024",
-      excerpt: "Notre équipe première a remporté une belle victoire 28-22 contre HC Tournai lors du dernier match à domicile.",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=200&fit=crop"
-    },
-    {
-      id: 2,
-      title: "Tournoi jeunes ce weekend",
-      date: "12 Mars 2024",
-      excerpt: "Nos équipes -15 et -17 ans participent au tournoi régional ce weekend. Venez les encourager !",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=200&fit=crop"
-    },
-    {
-      id: 3,
-      title: "Nouveaux équipements",
-      date: "8 Mars 2024",
-      excerpt: "Le club a reçu de nouveaux maillots et équipements grâce au soutien de nos sponsors locaux.",
-      image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=200&fit=crop"
-    }
-  ];
-
-  const nextMatches = [
-    {
-      date: "23 Mars 2024",
-      time: "20:00",
-      opponent: "HC Kortrijk",
-      location: "Domicile",
-      category: "Seniors"
-    },
-    {
-      date: "30 Mars 2024", 
-      time: "15:00",
-      opponent: "HC Ypres",
-      location: "Extérieur",
-      category: "-18 ans"
-    },
-    {
-      date: "6 Avril 2024",
-      time: "18:30",
-      opponent: "HC Ostende",
-      location: "Domicile",
-      category: "Seniors"
-    }
-  ];
-
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative h-[70vh] bg-gradient-to-r from-hc-green via-hc-green-light to-hc-orange overflow-hidden">
-        <div className="absolute inset-0 bg-black/30"></div>
+      <section className="relative h-[70vh] bg-gradient-to-r from-hc-green via-hc-green to-hc-orange overflow-hidden">
+        <div className="absolute inset-0 bg-black/40"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: "url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=1920&h=1080&fit=crop')"
           }}
         ></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-hc-green/80 to-hc-orange/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-hc-green/70 via-hc-green/60 to-hc-orange/70"></div>
         
         <div className="relative flex h-full items-center justify-center px-6">
           <div className="text-center text-white max-w-4xl animate-fade-in">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6 text-white drop-shadow-lg">
               HC Mouscron
             </h1>
-            <p className="text-xl sm:text-2xl mb-8 font-medium">
+            <p className="text-xl sm:text-2xl mb-8 font-medium text-white drop-shadow-md">
               Passion • Équipe • Excellence
             </p>
-            <p className="text-lg mb-10 max-w-2xl mx-auto">
+            <p className="text-lg mb-10 max-w-2xl mx-auto text-white drop-shadow-md">
               Rejoignez le plus dynamique club de handball de Mouscron. 
               Découvrez l'esprit d'équipe et la passion du handball dans une ambiance conviviale.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-hc-orange hover:bg-hc-orange-light text-white">
+              <Button size="lg" className="bg-hc-orange hover:bg-hc-orange-light text-white shadow-lg">
                 Nous rejoindre
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-hc-green">
+              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-hc-green shadow-lg">
                 Découvrir l'équipe
               </Button>
             </div>
@@ -90,147 +42,97 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-muted/50">
+      <section className="py-20 bg-gradient-to-r from-hc-green/10 via-white to-hc-orange/10">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-hc-green rounded-lg mb-4">
-                <Users className="h-6 w-6 text-white" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-hc-green rounded-xl mb-6 shadow-lg">
+                <Users className="h-8 w-8 text-white" />
               </div>
-              <div className="text-3xl font-bold text-hc-green mb-2">85</div>
-              <div className="text-muted-foreground">Joueurs</div>
+              <div className="text-4xl font-bold text-hc-green mb-2">85</div>
+              <div className="text-gray-700 font-medium">Joueurs</div>
             </div>
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-hc-orange rounded-lg mb-4">
-                <Trophy className="h-6 w-6 text-white" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-hc-orange rounded-xl mb-6 shadow-lg">
+                <Trophy className="h-8 w-8 text-white" />
               </div>
-              <div className="text-3xl font-bold text-hc-orange mb-2">12</div>
-              <div className="text-muted-foreground">Trophées</div>
+              <div className="text-4xl font-bold text-hc-orange mb-2">12</div>
+              <div className="text-gray-700 font-medium">Trophées</div>
             </div>
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-hc-green rounded-lg mb-4">
-                <Calendar className="h-6 w-6 text-white" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-hc-green rounded-xl mb-6 shadow-lg">
+                <Calendar className="h-8 w-8 text-white" />
               </div>
-              <div className="text-3xl font-bold text-hc-green mb-2">25</div>
-              <div className="text-muted-foreground">Années</div>
+              <div className="text-4xl font-bold text-hc-green mb-2">25</div>
+              <div className="text-gray-700 font-medium">Années</div>
             </div>
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-hc-orange rounded-lg mb-4">
-                <MapPin className="h-6 w-6 text-white" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-hc-orange rounded-xl mb-6 shadow-lg">
+                <MapPin className="h-8 w-8 text-white" />
               </div>
-              <div className="text-3xl font-bold text-hc-orange mb-2">1</div>
-              <div className="text-muted-foreground">Salle</div>
+              <div className="text-4xl font-bold text-hc-orange mb-2">1</div>
+              <div className="text-gray-700 font-medium">Salle</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* News Section */}
-      <section className="py-16">
+      {/* About Section */}
+      <section className="py-20 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">
-              Dernières actualités
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Restez informés de la vie du club
-            </p>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {news.map((article) => (
-              <Card key={article.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="aspect-video">
-                  <img
-                    src={article.image}
-                    alt={article.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardHeader>
-                  <div className="text-sm text-hc-orange font-medium mb-2">
-                    {article.date}
-                  </div>
-                  <CardTitle className="text-xl leading-tight">
-                    {article.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    {article.excerpt}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Next Matches */}
-      <section className="py-16 bg-muted/50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">
-              Prochains matchs
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Venez nous encourager
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {nextMatches.map((match, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <div className="text-sm font-medium text-hc-green mb-1">
-                        {match.category}
-                      </div>
-                      <CardTitle className="text-lg">
-                        HC Mouscron vs {match.opponent}
-                      </CardTitle>
-                    </div>
-                    <div className={`px-2 py-1 rounded text-xs font-medium ${
-                      match.location === 'Domicile' 
-                        ? 'bg-hc-green/10 text-hc-green' 
-                        : 'bg-hc-orange/10 text-hc-orange'
-                    }`}>
-                      {match.location}
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="h-4 w-4" />
-                      {match.date}
-                    </div>
-                    <div>{match.time}</div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid gap-12 lg:grid-cols-2 items-center">
+            <div>
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
+                Bienvenue au <span className="text-hc-green">HC Mouscron</span>
+              </h2>
+              <p className="text-lg text-gray-700 mb-6">
+                Notre club de handball vous accueille dans une ambiance chaleureuse et dynamique. 
+                Que vous soyez débutant ou confirmé, jeune ou adulte, nous avons une place pour vous !
+              </p>
+              <p className="text-lg text-gray-700 mb-8">
+                Venez découvrir la passion du handball avec nous et rejoignez une équipe qui partage 
+                les valeurs de solidarité, de respect et de dépassement de soi.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="bg-hc-green hover:bg-hc-green/90 text-white">
+                  Nous contacter
+                </Button>
+                <Button size="lg" variant="outline" className="border-hc-orange text-hc-orange hover:bg-hc-orange hover:text-white">
+                  Voir nos tarifs
+                </Button>
+              </div>
+            </div>
+            <div className="relative">
+              <img
+                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop"
+                alt="Équipe de handball"
+                className="rounded-2xl shadow-xl"
+              />
+              <div className="absolute -bottom-6 -right-6 bg-hc-orange text-white p-6 rounded-xl shadow-lg">
+                <div className="text-2xl font-bold">25 ans</div>
+                <div className="text-sm">d'expérience</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Join Us Section */}
-      <section className="py-16 bg-gradient-to-r from-hc-green to-hc-orange">
+      <section className="py-20 bg-gradient-to-r from-hc-green via-hc-green-light to-hc-orange">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center text-white">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6 text-white drop-shadow-lg">
               Rejoignez-nous !
             </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Que vous soyez débutant ou expérimenté, jeune ou moins jeune, 
+            <p className="text-xl mb-8 max-w-2xl mx-auto text-white drop-shadow-md">
+              Que vous soyez débutant ou expérimenté, jeune ou adulte, 
               il y a une place pour vous au HC Mouscron.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="bg-white text-hc-green hover:bg-gray-100">
+              <Button size="lg" variant="secondary" className="bg-white text-hc-green hover:bg-gray-100 shadow-lg font-semibold">
                 Découvrir nos tarifs
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-hc-green">
+              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-hc-green shadow-lg font-semibold">
                 Nous contacter
               </Button>
             </div>

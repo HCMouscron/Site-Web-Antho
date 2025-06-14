@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -45,11 +46,11 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* Custom colors for HC Mouscron */
-    --hc-green: 150 100% 32%;
-    --hc-orange: 25 98% 54%;
-    --hc-green-light: 150 57% 44%;
-    --hc-orange-light: 25 90% 67%;
+    /* Custom colors for HC Mouscron - More vibrant */
+    --hc-green: 150 100% 30%;
+    --hc-orange: 25 100% 50%;
+    --hc-green-light: 150 70% 40%;
+    --hc-orange-light: 25 85% 60%;
   }
 
   .dark {
@@ -124,5 +125,18 @@
   
   .border-hc-orange {
     border-color: hsl(var(--hc-orange));
+  }
+
+  /* Text shadow utilities for better visibility */
+  .text-shadow-sm {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
   }
 }

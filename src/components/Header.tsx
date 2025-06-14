@@ -19,13 +19,13 @@ const Header = () => {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-gradient-to-r from-hc-green via-hc-green-light to-hc-orange/90 backdrop-blur">
+    <header className="sticky top-0 z-50 w-full border-b bg-gradient-to-r from-hc-green via-hc-green to-hc-orange backdrop-blur shadow-lg">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
-        {/* Nouveau logo intégré */}
+        {/* Logo */}
         <div className="flex lg:flex-1 items-center space-x-2">
           <Link to="/" className="flex items-center space-x-2">
-            <img src="/lovable-uploads/7f5485a2-eaa0-4a73-8e50-8de5813ec2f3.png" alt="HC Mouscron logo" className="h-12 w-12 rounded-full bg-white p-1 shadow" />
-            <span className="hidden sm:block text-xl font-bold text-hc-green">HC Mouscron</span>
+            <img src="/lovable-uploads/7f5485a2-eaa0-4a73-8e50-8de5813ec2f3.png" alt="HC Mouscron logo" className="h-12 w-12 rounded-full bg-white p-1 shadow-lg" />
+            <span className="hidden sm:block text-xl font-bold text-white drop-shadow-lg">HC Mouscron</span>
           </Link>
         </div>
         {/* Desktop Navigation */}
@@ -34,8 +34,8 @@ const Header = () => {
             <Link
               key={item.name}
               to={item.href}
-              className={`text-sm font-bold transition-colors hover:text-hc-orange ${
-                isActive(item.href) ? 'text-hc-orange' : 'text-white'
+              className={`text-sm font-bold transition-colors hover:text-yellow-200 drop-shadow-md ${
+                isActive(item.href) ? 'text-yellow-200' : 'text-white'
               }`}
             >
               {item.name}
@@ -49,7 +49,7 @@ const Header = () => {
               href="https://www.facebook.com/HCMouscron"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-hc-green hover:text-hc-orange"
+              className="text-white hover:text-yellow-200 drop-shadow-md"
               aria-label="Facebook"
             >
               <Facebook className="h-6 w-6" />
@@ -60,7 +60,7 @@ const Header = () => {
               href="https://www.instagram.com/hcmouscron/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-hc-orange hover:text-hc-green"
+              className="text-white hover:text-yellow-200 drop-shadow-md"
               aria-label="Instagram"
             >
               <Instagram className="h-6 w-6" />
@@ -73,6 +73,7 @@ const Header = () => {
             variant="ghost"
             size="sm"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-white hover:text-yellow-200"
           >
             {isMenuOpen ? (
               <X className="h-6 w-6" />
@@ -85,13 +86,13 @@ const Header = () => {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="lg:hidden animate-slide-in">
-          <div className="space-y-1 px-4 pb-4 pt-2 bg-gradient-to-r from-hc-green via-hc-green-light to-hc-orange/90 border-t">
+          <div className="space-y-1 px-4 pb-4 pt-2 bg-gradient-to-r from-hc-green via-hc-green to-hc-orange border-t border-white/20">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`block px-3 py-2 text-base font-medium transition-colors hover:text-hc-orange ${
-                  isActive(item.href) ? 'text-hc-orange' : 'text-white'
+                className={`block px-3 py-2 text-base font-medium transition-colors hover:text-yellow-200 drop-shadow-md ${
+                  isActive(item.href) ? 'text-yellow-200' : 'text-white'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -104,7 +105,7 @@ const Header = () => {
                   href="https://www.facebook.com/HCMouscron"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-hc-green hover:text-hc-orange"
+                  className="text-white hover:text-yellow-200 drop-shadow-md"
                   aria-label="Facebook"
                 >
                   <Facebook className="h-5 w-5" />
@@ -115,7 +116,7 @@ const Header = () => {
                   href="https://www.instagram.com/hcmouscron/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-hc-orange hover:text-hc-green"
+                  className="text-white hover:text-yellow-200 drop-shadow-md"
                   aria-label="Instagram"
                 >
                   <Instagram className="h-5 w-5" />
