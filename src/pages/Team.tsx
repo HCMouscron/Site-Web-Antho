@@ -12,33 +12,33 @@ const bureau = [{
 }, {
   name: "Joaquim Vercruysse",
   role: "Trésorier",
-  image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=200&h=200&fit=crop&crop=face"
+  image: "/lovable-uploads/72d216f3-cf28-4b99-ae85-2d2b57bfc098.png"
 }, {
   name: "Ghotane Dhont",
   role: "Organisateur événementiel et sportif",
-  image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face"
+  image: "/lovable-uploads/05c919b7-1147-4847-bcc5-854ada55e830.png"
 }, {
   name: "Jean Philippe Fabbri",
   role: "Logistique",
-  image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
+  image: "/lovable-uploads/0f13e7ea-f993-46dc-8267-95ee2db25886.png"
 }, {
   name: "Thierry Vincent",
   role: "Coordinateur Technique",
-  image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face"
+  image: "/lovable-uploads/93f3a0fb-2b5f-470d-a62f-444b94be5fe3.png"
 }, {
   name: "Stijn Tack",
   role: "Community Manager et Graphisme",
-  image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=200&h=200&fit=crop&crop=face"
+  image: "/lovable-uploads/bbcdfd33-ce0e-4c1f-a0f0-07ec59b41083.png"
 }];
 
 const entraineursSeniors = [{
   name: "Laszlo Baan",
   role: "Coach T1",
-  image: "https://images.unsplash.com/photo-1519340333755-c55307049130?w=200&h=200&fit=crop&crop=face"
+  image: "/lovable-uploads/6cc57d8a-8d13-470d-bb22-18ad68c3a9b0.png"
 }, {
   name: "Thierry Vincent",
   role: "Coach T2",
-  image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face"
+  image: "/lovable-uploads/93f3a0fb-2b5f-470d-a62f-444b94be5fe3.png"
 }];
 
 const entraineursJeunes = [{
@@ -52,7 +52,7 @@ const entraineursJeunes = [{
 }, {
   name: "Lucas Vincent",
   role: "Entraîneur U14",
-  image: "https://images.unsplash.com/photo-1502764613149-7f1d229e2306?w=200&h=200&fit=crop&crop=face"
+  image: "/lovable-uploads/2c8382df-401f-4c3d-a641-d0f4e9d5ff47.png"
 }, {
   name: "Antoine Lampole",
   role: "Entraîneur U14",
@@ -60,11 +60,15 @@ const entraineursJeunes = [{
 }, {
   name: "Nino Mancinone",
   role: "Mini handball",
-  image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
+  image: "/lovable-uploads/182dfcb9-c03b-4805-959f-61c773ee2bfe.png"
 }, {
   name: "Dorian Derveaux",
   role: "Mini handball",
   image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=200&h=200&fit=crop&crop=face"
+}, {
+  name: "Stijn Tack",
+  role: "Entraîneur Jeunes",
+  image: "/lovable-uploads/bbcdfd33-ce0e-4c1f-a0f0-07ec59b41083.png"
 }];
 
 // Nouvel ordre : Mini handball, U14, U16, U18, Seniors, Vétérans/Loisir
