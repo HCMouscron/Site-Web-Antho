@@ -67,7 +67,15 @@ const entraineursJeunes = [{
   image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=200&h=200&fit=crop&crop=face"
 }];
 
-const categories = ["Seniors", "U18", "U16", "U14", "Vétérans / Loisir", "Mini handball"];
+// Classement par âge pour les équipes
+const categories = [
+  { name: "Seniors", color: "bg-hc-green" },
+  { name: "Vétérans / Loisir", color: "bg-hc-orange", img: "/lovable-uploads/3f691e54-6444-4b56-966f-fab9bcea6968.png" },
+  { name: "U18", color: "bg-hc-green-light" },
+  { name: "U16", color: "bg-hc-green" },
+  { name: "U14", color: "bg-hc-green-light" },
+  { name: "Mini handball", color: "bg-hc-green-light" },
+];
 
 const Team = () => {
   return (
@@ -153,11 +161,25 @@ const Team = () => {
           <h2 className="text-3xl font-bold text-center mb-12 text-hc-green">
             Nos équipes
           </h2>
-          <div className="flex flex-col items-center gap-5">
+          <div className="flex flex-col items-center gap-10">
             {categories.map((c, idx) => (
-              <span key={c + idx} className={c === "Vétérans / Loisir" ? "px-6 py-3 rounded-full bg-hc-orange text-white text-lg font-semibold shadow text-shadow" : c === "Mini handball" ? "px-6 py-3 rounded-full bg-hc-green-light text-white text-lg font-semibold shadow text-shadow" : idx % 2 === 0 ? "px-6 py-3 rounded-full bg-hc-green text-white text-lg font-semibold shadow text-shadow" : "px-6 py-3 rounded-full bg-hc-green-light text-white text-lg font-semibold shadow text-shadow"}>
-                {c}
-              </span>
+              <div key={c.name} className="flex flex-col items-center gap-2 w-full max-w-xl">
+                <span
+                  className={`px-6 py-3 rounded-full ${c.color} text-white text-lg font-semibold shadow text-shadow`}
+                >
+                  {c.name}
+                </span>
+                {c.name === "Vétérans / Loisir" && c.img && (
+                  <div className="flex flex-col items-center mt-2">
+                    <img
+                      src={c.img}
+                      alt="Équipe Vétérans / Loisir HC Mouscron"
+                      className="w-full max-w-md rounded-2xl shadow-lg border-4 border-hc-orange animate-fade-in"
+                    />
+                    <span className="mt-2 text-sm text-muted-foreground italic">Vétérans / Loisir - Saison 2024</span>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </section>
