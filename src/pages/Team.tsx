@@ -18,42 +18,37 @@ const bureau = [
   {
     name: "Ghotane Dhont",
     role: "Organisateur événementiel et sportif",
-    image: images[0],
+    image: "/lovable-uploads/a354ce54-ad9c-4fbb-b2df-46b56a89e38a.png",
   },
   {
     name: "Jean Philippe Fabbri",
     role: "Logistique",
-    image: images[1],
+    image: "/lovable-uploads/559c316a-dff9-4e14-bf45-28f2dee1e526.png",
   },
   {
     name: "Joaquim Vercruysse",
     role: "Trésorier",
-    image: images[2],
+    image: "/lovable-uploads/6af96ea0-a23d-47cd-b382-99a95c2e1f29.png",
   },
   {
-    name: "Laszlo Baan",
+    name: "Damien Cockenpot",
     role: "Président",
-    image: images[3], // NEW IMAGE for Laszlo
+    image: "/lovable-uploads/ec06dcff-f3e5-41b6-b6bc-eea0263fc2bb.png",
   },
   {
-    name: "Lucas Vincent",
+    name: "David Macarez",
     role: "Secrétaire",
-    image: images[4],
-  },
-  {
-    name: "Nino Mancinone",
-    role: "Trésorier adjoint",
-    image: images[5],
+    image: "/lovable-uploads/cf412527-37a3-4237-aa2e-56a2ba75f23d.png",
   },
   {
     name: "Stijn Tack",
     role: "Community Manager et Graphisme",
-    image: images[6],
+    image: "/lovable-uploads/72e3c65e-375a-4547-b8e9-c6734b94480d.png",
   },
   {
     name: "Thierry Vincent",
     role: "Coordinateur Technique",
-    image: images[7],
+    image: "/lovable-uploads/83cc01cc-825a-4c2b-a74c-6b9425279fb9.png",
   },
 ];
 
