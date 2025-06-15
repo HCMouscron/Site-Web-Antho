@@ -1,5 +1,7 @@
+
 import { Facebook, Instagram, MapPin, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+
 const Footer = () => {
   return <footer className="bg-gradient-to-r from-hc-green via-hc-green to-hc-orange border-t shadow-lg bg-green-800">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
@@ -47,8 +49,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/planning" className="text-white hover:text-hc-orange transition-colors drop-shadow-md">
-                  Planning
+                <a href="/contact" className="text-white hover:text-hc-orange transition-colors drop-shadow-md">
+                  Contact
                 </a>
               </li>
             </ul>
@@ -85,4 +87,5 @@ const Footer = () => {
       </div>
     </footer>;
 };
+
 export default Footer;
