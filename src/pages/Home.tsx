@@ -1,4 +1,3 @@
-
 import { Calendar, MapPin, Users, Trophy } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -94,7 +93,7 @@ const Home = () => {
             </div>
             <div className="relative flex flex-col items-center justify-center">
               <img
-                src="/lovable-uploads/1ea96fdc-8535-4f8b-a3f9-b4f3755f6633.png"
+                src="/lovable-uploads/5842efea-481a-4242-9f84-4a04bd55c7f6.png"
                 alt="Logo HC Mouscron"
                 className="w-72 h-72 object-contain rounded-2xl shadow-xl bg-white"
                 style={{border: '4px solid hsl(var(--hc-green))'}}
