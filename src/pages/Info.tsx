@@ -283,6 +283,39 @@ const Info = () => {
             </div>
           </div>
         </section>
+
+        {/* Téléchargements utiles */}
+        <section className="mt-16 mb-24">
+          <h2 className="text-3xl font-bold text-center mb-8 text-hc-orange">
+            Téléchargements utiles
+          </h2>
+          <div className="flex flex-col md:flex-row justify-center gap-6 mb-4">
+            <a
+              href="https://drive.google.com/file/d/1Z5f29NA636bP7u8egB8dI44vWgYCAQN2/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <button className="bg-hc-orange hover:bg-hc-orange/80 text-white font-medium px-6 py-3 rounded-lg shadow transition-all w-full md:w-auto">
+                Télécharger la fiche d'inscription (PDF)
+              </button>
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1kqxLUl4IiAW-ZD-7Fx7foLRVvnhq9hhu/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <button className="bg-hc-green hover:bg-hc-green/80 text-white font-medium px-6 py-3 rounded-lg shadow transition-all w-full md:w-auto">
+                Télécharger le certificat médical (PDF)
+              </button>
+            </a>
+          </div>
+          <div className="text-center text-muted-foreground text-sm">
+            Documents hébergés sur Google Drive.&nbsp;
+            <span className="italic">Téléchargement public : seul le fichier est accessible, aucun autre document ne l'est.</span>
+          </div>
+        </section>
       </div>
     </div>
   );
