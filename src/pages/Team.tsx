@@ -72,9 +72,9 @@ const categories = [
   { name: "Seniors", color: "bg-hc-green", img: "/lovable-uploads/a4551830-cf39-4d58-bf31-7325e3117da5.png" },
   { name: "Vétérans / Loisir", color: "bg-hc-orange", img: "/lovable-uploads/3f691e54-6444-4b56-966f-fab9bcea6968.png" },
   { name: "U18", color: "bg-hc-green-light", img: "/lovable-uploads/2c5565cf-f45d-4d43-b901-68086906cbad.png" },
-  { name: "U16", color: "bg-hc-green" },
+  { name: "U16", color: "bg-hc-green", img: "/lovable-uploads/faeb26b4-5b82-49e1-8fb0-69a10700de49.png" },
   { name: "U14", color: "bg-hc-green-light" },
-  { name: "Mini handball", color: "bg-hc-green-light" },
+  { name: "Mini handball", color: "bg-hc-green-light" }
 ];
 
 const Team = () => {
@@ -169,7 +169,7 @@ const Team = () => {
                 >
                   {c.name}
                 </span>
-                {c.img && (
+                {"img" in c && c.img ? (
                   <div className="flex flex-col items-center mt-2">
                     <img
                       src={c.img}
@@ -181,6 +181,8 @@ const Team = () => {
                           ? "border-hc-green"
                           : c.name === "U18"
                           ? "border-hc-green-light"
+                          : c.name === "U16"
+                          ? "border-hc-green"
                           : "border-gray-300"
                       } animate-fade-in`}
                     />
@@ -188,6 +190,15 @@ const Team = () => {
                       {c.name} - Saison 2024
                     </span>
                   </div>
+                ) : (
+                  // Message "À venir..." pour U14 et Mini handball
+                  (c.name === "U14" || c.name === "Mini handball") && (
+                    <div className="flex flex-col items-center mt-4">
+                      <span className="italic text-muted-foreground text-md">
+                        À venir...
+                      </span>
+                    </div>
+                  )
                 )}
               </div>
             ))}
