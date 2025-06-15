@@ -172,18 +172,6 @@ const Info = () => {
           </div>
         </section>
 
-        {/* Season Calendar */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12 text-hc-green">
-            Calendrier de la saison
-          </h2>
-          <div className="max-w-4xl mx-auto text-center py-12">
-            <span className="text-lg text-muted-foreground">
-              Le calendrier de la saison est à venir.
-            </span>
-          </div>
-        </section>
-
         {/* Agendas Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-12 text-hc-orange">Agendas</h2>
