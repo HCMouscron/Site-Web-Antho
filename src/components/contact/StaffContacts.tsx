@@ -1,38 +1,27 @@
-
 import { Card, CardHeader, CardContent, CardTitle } from '@/components/ui/card';
-
-const staff = [
-  {
-    name: "David Macarez",
-    role: "Secrétaire",
-    phone: "+XX XX XX XX XX",
-    email: "handballmouscron@gmail.com"
-  },
-  {
-    name: "Damien Cockenpot",
-    role: "Président",
-    phone: "+XX XX XX XX XX",
-    email: "handballmouscron@gmail.com"
-  },
-  {
-    name: "Joaquim Vercruysse",
-    role: "Trésorier",
-    phone: "+XX XX XX XX XX",
-    email: "handballmouscron@gmail.com"
-  },
-];
-
-const StaffContacts = () => (
-  <Card>
+const staff = [{
+  name: "David Macarez",
+  role: "Secrétaire",
+  phone: "+XX XX XX XX XX",
+  email: "handballmouscron@gmail.com"
+}, {
+  name: "Damien Cockenpot",
+  role: "Président",
+  phone: "+XX XX XX XX XX",
+  email: "handballmouscron@gmail.com"
+}, {
+  name: "Joaquim Vercruysse",
+  role: "Trésorier",
+  phone: "+XX XX XX XX XX",
+  email: "handballmouscron@gmail.com"
+}];
+const StaffContacts = () => <Card>
     <CardHeader>
-      <CardTitle className="text-xl text-hc-orange">
-        Contacts du bureau
-      </CardTitle>
+      <CardTitle className="text-xl text-hc-orange">Contacts du comité</CardTitle>
     </CardHeader>
     <CardContent>
       <div className="space-y-4">
-        {staff.map((member, index) => (
-          <div key={index} className="p-4 bg-muted/50 rounded-lg">
+        {staff.map((member, index) => <div key={index} className="p-4 bg-muted/50 rounded-lg">
             <div className="flex justify-between items-start">
               <div>
                 <h4 className="font-semibold">{member.name}</h4>
@@ -43,11 +32,8 @@ const StaffContacts = () => (
                 <p>{member.email}</p>
               </div>
             </div>
-          </div>
-        ))}
+          </div>)}
       </div>
     </CardContent>
-  </Card>
-);
-
+  </Card>;
 export default StaffContacts;
