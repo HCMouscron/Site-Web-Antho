@@ -1,6 +1,7 @@
 import { Calendar, MapPin, Users, Trophy } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Link } from "react-router-dom";
 const Home = () => {
   return <div className="w-full">
       {/* Hero Section */}
@@ -83,12 +84,16 @@ const Home = () => {
                 les valeurs de solidarité, de respect et de dépassement de soi.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-hc-green hover:bg-hc-green/90 text-white">
-                  Nous contacter
-                </Button>
-                <Button size="lg" variant="outline" className="border-hc-orange text-hc-orange hover:bg-hc-orange hover:text-white">
-                  Voir nos tarifs
-                </Button>
+                <Link to="/contact">
+                  <Button size="lg" className="bg-hc-green hover:bg-hc-green/90 text-white w-full sm:w-auto">
+                    Nous contacter
+                  </Button>
+                </Link>
+                <Link to="/infos">
+                  <Button size="lg" variant="outline" className="border-hc-orange text-hc-orange hover:bg-hc-orange hover:text-white w-full sm:w-auto">
+                    Voir nos tarifs
+                  </Button>
+                </Link>
               </div>
             </div>
             <div className="relative flex flex-col items-center justify-center">
