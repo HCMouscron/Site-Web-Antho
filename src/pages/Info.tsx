@@ -1,8 +1,6 @@
-
 import { Clock, MapPin, Euro, Calendar, UserPlus, FileText } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-
 const Info = () => {
   const trainingSchedule = [{
     category: "U16 & U18",
@@ -65,8 +63,7 @@ const Info = () => {
     title: "Paiement",
     description: "Réglez la cotisation annuelle"
   }];
-  return (
-    <div className="w-full py-8">
+  return <div className="w-full py-8">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -152,12 +149,10 @@ const Info = () => {
 
 +       {/* Tarifs Section */}
 +       <section className="mb-16" id="tarifs">
-+         <h2 className="text-3xl font-bold text-center mb-12 text-hc-orange">
-+           Tarifs
-+         </h2>
++         <h2 className="text-3xl font-bold text-center mb-12 text-hc-orange">  Tarifs </h2>
 +         <div className="max-w-3xl mx-auto text-center p-10 rounded-lg bg-white/90 border shadow">
 +           <span className="text-lg text-muted-foreground">
-+             Les informations de tarifs seront bientôt disponibles ici.<br/>
++             Les informations de tarifs seront bientôt disponibles ici.<br />
 +             Vous pourrez retrouver prochainement le PDF de la cotisation à télécharger.
 +           </span>
 +         </div>
@@ -203,7 +198,6 @@ const Info = () => {
           </div>
         </section>
       </div>
-    </div>
-  );
+    </div>;
 };
 export default Info;
