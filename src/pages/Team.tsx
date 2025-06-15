@@ -69,39 +69,34 @@ const entraineursSeniors = [
 const entraineursJeunes = [
   {
     name: "Anthony Delaby",
-    role: "Entraîneur U18",
-    image: "/lovable-uploads/05c919b7-1147-4847-bcc5-854ada55e830.png"
-  },
-  {
-    name: "Antoine Lampole",
-    role: "Entraîneur U14",
-    image: "/lovable-uploads/0f13e7ea-f993-46dc-8267-95ee2db25886.png"
-  },
-  {
-    name: "Dorian Derveaux",
-    role: "Mini handball",
-    image: "/lovable-uploads/5d68f95e-22af-42ea-a6fc-8e9151567c2f.png"
-  },
-  {
-    name: "Laszlo Baan",
-    role: "Entraîneur Jeunes",
-    image: images[3], // NEW IMAGE for Laszlo
-  },
-  {
-    name: "Lucas Vincent",
-    role: "Coordinateur Technique Jeunes",
-    image: "/lovable-uploads/b44b811f-37de-47a2-ac2a-d4ba2d5b0030.png"
-  },
-  {
-    name: "Nino Mancinone",
-    role: "Mini handball",
-    image: "/lovable-uploads/365e0e89-3729-4a6f-b74f-c945d205cd46.png"
+    role: "Coach U18",
+    image: "/lovable-uploads/8215a282-c4df-45c7-b692-b8b2aa829a6a.png", // 1ère image (Anthony)
   },
   {
     name: "Philippe Julien",
-    role: "Entraîneur U16",
-    image: "/lovable-uploads/2c8382df-401f-4c3d-a641-d0f4e9d5ff47.png"
-  }
+    role: "Coach U16",
+    image: "/lovable-uploads/5f0533d7-d3c1-4ae8-a153-7e585203bfc6.png", // 6ème image (Philippe)
+  },
+  {
+    name: "Antoine Lampole",
+    role: "Coach U14",
+    image: "/lovable-uploads/f29993ab-6757-4d56-a558-b6df36eb2feb.png", // 2ème image (Antoine)
+  },
+  {
+    name: "Lucas Vincent",
+    role: "Coach U14",
+    image: "/lovable-uploads/e37d82cb-a636-45f7-92fb-8daedae0eb97.png", // 4ème image (Lucas)
+  },
+  {
+    name: "Dorian Derveaux",
+    role: "Coach Mini Handball",
+    image: "/lovable-uploads/ceeb7c54-23f2-4303-a94f-24a9dbe5f87a.png", // 3ème image (Dorian)
+  },
+  {
+    name: "Nino Mancinone",
+    role: "Coach Mini Handball",
+    image: "/lovable-uploads/15a18034-95af-45fc-b9f1-9db81e00aeb5.png", // 5ème image (Nino)
+  },
 ];
 
 const categories = [
