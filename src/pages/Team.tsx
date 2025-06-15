@@ -67,9 +67,9 @@ const entraineursJeunes = [{
   image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=200&h=200&fit=crop&crop=face"
 }];
 
-// Classement par âge pour les équipes
+// Classement par âge pour les équipes avec images pour seniors et vétérans
 const categories = [
-  { name: "Seniors", color: "bg-hc-green" },
+  { name: "Seniors", color: "bg-hc-green", img: "/lovable-uploads/a4551830-cf39-4d58-bf31-7325e3117da5.png" },
   { name: "Vétérans / Loisir", color: "bg-hc-orange", img: "/lovable-uploads/3f691e54-6444-4b56-966f-fab9bcea6968.png" },
   { name: "U18", color: "bg-hc-green-light" },
   { name: "U16", color: "bg-hc-green" },
@@ -162,21 +162,29 @@ const Team = () => {
             Nos équipes
           </h2>
           <div className="flex flex-col items-center gap-10">
-            {categories.map((c, idx) => (
+            {categories.map((c) => (
               <div key={c.name} className="flex flex-col items-center gap-2 w-full max-w-xl">
                 <span
                   className={`px-6 py-3 rounded-full ${c.color} text-white text-lg font-semibold shadow text-shadow`}
                 >
                   {c.name}
                 </span>
-                {c.name === "Vétérans / Loisir" && c.img && (
+                {c.img && (
                   <div className="flex flex-col items-center mt-2">
                     <img
                       src={c.img}
-                      alt="Équipe Vétérans / Loisir HC Mouscron"
-                      className="w-full max-w-md rounded-2xl shadow-lg border-4 border-hc-orange animate-fade-in"
+                      alt={`Équipe ${c.name} HC Mouscron`}
+                      className={`w-full max-w-md rounded-2xl shadow-lg border-4 ${
+                        c.name === "Vétérans / Loisir"
+                          ? "border-hc-orange"
+                          : c.name === "Seniors"
+                          ? "border-hc-green"
+                          : "border-gray-300"
+                      } animate-fade-in`}
                     />
-                    <span className="mt-2 text-sm text-muted-foreground italic">Vétérans / Loisir - Saison 2024</span>
+                    <span className="mt-2 text-sm text-muted-foreground italic">
+                      {c.name} - Saison 2024
+                    </span>
                   </div>
                 )}
               </div>
