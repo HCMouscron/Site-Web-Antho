@@ -2,68 +2,88 @@ import { Clock, MapPin, Euro, Calendar, UserPlus, FileText } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
+const trainingSchedule = [{
+  category: "U16 & U18",
+  day: "Lundi",
+  time: "18:00 - 19:30"
+}, {
+  category: "Seniors & U18",
+  day: "Mercredi",
+  time: "19:30 - 21:00"
+}, {
+  category: "U16 & U18",
+  day: "Vendredi",
+  time: "17:30 - 19:00"
+}, {
+  category: "Seniors & U18",
+  day: "Vendredi",
+  time: "19:00 - 20:30"
+}, {
+  category: "Loisirs",
+  day: "Vendredi",
+  time: "20:30 - 21:30"
+}, {
+  category: "Mini handball",
+  day: "Samedi",
+  time: "10:30 - 12:00"
+}];
+const seasonEvents = [{
+  date: "Septembre 2024",
+  event: "Début de saison - Inscriptions"
+}, {
+  date: "Octobre 2024",
+  event: "Tournoi de rentrée"
+}, {
+  date: "Décembre 2024",
+  event: "Tournoi de Noël"
+}, {
+  date: "Février 2025",
+  event: "Match de gala"
+}, {
+  date: "Avril 2025",
+  event: "Tournoi de Pâques"
+}, {
+  date: "Juin 2025",
+  event: "Fête du club - Remise des prix"
+}];
+const registrationSteps = [{
+  step: 1,
+  title: "Contactez-nous",
+  description: "Par téléphone, email ou via notre formulaire de contact"
+}, {
+  step: 2,
+  title: "Séance d'essai",
+  description: "Venez essayer gratuitement lors d'un entraînement"
+}, {
+  step: 3,
+  title: "Inscription",
+  description: "Remplissez le formulaire d'inscription et fournissez les documents"
+}, {
+  step: 4,
+  title: "Paiement",
+  description: "Réglez la cotisation annuelle"
+}];
+
+const tarifs = [
+  {
+    label: "Mini-handball (né(e)s en 2014 et après)",
+    price: "100 €"
+  },
+  {
+    label: "Juniors (né(e)s à partir de 2008)",
+    price: "150 €"
+  },
+  {
+    label: "Fratries (à partir du 2ème enfant)",
+    price: "135 €"
+  },
+  {
+    label: "Séniors (né(e)s en 2007 et avant)",
+    price: "200 €"
+  }
+];
+
 const Info = () => {
-  const trainingSchedule = [{
-    category: "U16 & U18",
-    day: "Lundi",
-    time: "18:00 - 19:30"
-  }, {
-    category: "Seniors & U18",
-    day: "Mercredi",
-    time: "19:30 - 21:00"
-  }, {
-    category: "U16 & U18",
-    day: "Vendredi",
-    time: "17:30 - 19:00"
-  }, {
-    category: "Seniors & U18",
-    day: "Vendredi",
-    time: "19:00 - 20:30"
-  }, {
-    category: "Loisirs",
-    day: "Vendredi",
-    time: "20:30 - 21:30"
-  }, {
-    category: "Mini handball",
-    day: "Samedi",
-    time: "10:30 - 12:00"
-  }];
-  const seasonEvents = [{
-    date: "Septembre 2024",
-    event: "Début de saison - Inscriptions"
-  }, {
-    date: "Octobre 2024",
-    event: "Tournoi de rentrée"
-  }, {
-    date: "Décembre 2024",
-    event: "Tournoi de Noël"
-  }, {
-    date: "Février 2025",
-    event: "Match de gala"
-  }, {
-    date: "Avril 2025",
-    event: "Tournoi de Pâques"
-  }, {
-    date: "Juin 2025",
-    event: "Fête du club - Remise des prix"
-  }];
-  const registrationSteps = [{
-    step: 1,
-    title: "Contactez-nous",
-    description: "Par téléphone, email ou via notre formulaire de contact"
-  }, {
-    step: 2,
-    title: "Séance d'essai",
-    description: "Venez essayer gratuitement lors d'un entraînement"
-  }, {
-    step: 3,
-    title: "Inscription",
-    description: "Remplissez le formulaire d'inscription et fournissez les documents"
-  }, {
-    step: 4,
-    title: "Paiement",
-    description: "Réglez la cotisation annuelle"
-  }];
   return (
     <div className="w-full py-8">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -152,11 +172,34 @@ const Info = () => {
         {/* Tarifs Section */}
         <section className="mb-16" id="tarifs">
           <h2 className="text-3xl font-bold text-center mb-12 text-hc-orange">Tarifs</h2>
-          <div className="max-w-3xl mx-auto text-center p-10 rounded-lg bg-white/90 border shadow">
-            <span className="text-lg text-muted-foreground">
-              Les informations de tarifs seront bientôt disponibles ici.<br />
-              Vous pourrez retrouver prochainement le PDF de la cotisation à télécharger.
-            </span>
+          <div className="max-w-3xl mx-auto text-center p-10 rounded-lg bg-white/90 border shadow space-y-6">
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              {tarifs.map((t, idx) => (
+                <div
+                  key={t.label}
+                  className="flex flex-col items-center justify-center bg-hc-green-light/10 rounded-lg p-4 shadow-sm"
+                >
+                  <div className="text-lg font-semibold text-hc-green mb-1">{t.label}</div>
+                  <div className="text-2xl font-bold text-hc-orange mb-1">{t.price}</div>
+                </div>
+              ))}
+            </div>
+            <div className="bg-hc-green/10 p-4 rounded-lg shadow mb-4">
+              <div className="font-medium mb-1">
+                <Euro className="inline-block mr-2" /> Règlement par virement bancaire :
+              </div>
+              <div className="font-mono text-md text-hc-green font-semibold">
+                BE07 1261 1084 1566
+              </div>
+              <div className="mt-2 text-sm text-muted-foreground">
+                Merci d'indiquer le nom et prénom du joueur en communication.<br />
+                Paiement avant le <span className="font-semibold text-hc-orange">30/09/25</span>
+              </div>
+            </div>
+            <div className="italic text-muted-foreground text-sm">
+              Les montants des cotisations peuvent être revus à la baisse en cas d’arrivée tardive en cours de saison,
+              sur décision du comité du club.
+            </div>
           </div>
         </section>
 
