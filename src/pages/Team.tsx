@@ -57,12 +57,12 @@ const entraineursSeniors = [
   {
     name: "Laszlo Baan",
     role: "Coach T1",
-    image: "/lovable-uploads/6cc57d8a-8d13-470d-bb22-18ad68c3a9b0.png", // Première image uploadée
+    image: "/lovable-uploads/440e2391-e038-4985-b7d5-52736d473196.png", // Nouvelle image uploadée pour Laszlo
   },
   {
     name: "Thierry Vincent",
     role: "Coach T2",
-    image: "/lovable-uploads/93f3a0fb-2b5f-470d-a62f-444b94be5fe3.png", // Seconde image uploadée
+    image: "/lovable-uploads/93f3a0fb-2b5f-470d-a62f-444b94be5fe3.png",
   },
 ];
 
