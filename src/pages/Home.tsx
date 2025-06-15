@@ -1,9 +1,7 @@
-
 import { Calendar, MapPin, Users, Trophy } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from "react-router-dom";
-
 const Home = () => {
   return <div className="w-full">
       {/* Hero Section */}
@@ -46,8 +44,8 @@ const Home = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-hc-green rounded-xl mb-6 shadow-lg mx-auto">
                 <Users className="h-8 w-8 text-white" />
               </div>
-              <div className="text-4xl font-bold text-hc-green mb-2">85</div>
-              <div className="text-white">Joueurs</div>
+              <div className="text-4xl font-bold text-hc-green mb-2">65</div>
+              <div className="text-white">Affiliés</div>
             </div>
             
             <div className="text-center">
@@ -99,12 +97,9 @@ const Home = () => {
               </div>
             </div>
             <div className="relative flex flex-col items-center justify-center">
-              <img
-                src="/lovable-uploads/5842efea-481a-4242-9f84-4a04bd55c7f6.png"
-                alt="Logo HC Mouscron"
-                className="w-72 h-72 object-contain rounded-2xl shadow-xl bg-white"
-                style={{border: '4px solid hsl(var(--hc-green))'}}
-              />
+              <img src="/lovable-uploads/5842efea-481a-4242-9f84-4a04bd55c7f6.png" alt="Logo HC Mouscron" className="w-72 h-72 object-contain rounded-2xl shadow-xl bg-white" style={{
+              border: '4px solid hsl(var(--hc-green))'
+            }} />
               <div className="absolute -bottom-6 -right-6 bg-hc-orange text-white p-6 rounded-xl shadow-lg">
                 <div className="text-2xl font-bold">10 ans</div>
                 <div className="text-sm">d'expérience</div>
@@ -142,5 +137,4 @@ const Home = () => {
       </section>
     </div>;
 };
-
 export default Home;
