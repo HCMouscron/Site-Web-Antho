@@ -84,7 +84,7 @@ const entraineursJeunes = [
   {
     name: "Dorian Derveaux",
     role: "Mini handball",
-    image: "/lovable-uploads/72d216f3-cf28-4b99-ae85-2d2b57bfc098.png"
+    image: "/lovable-uploads/5d68f95e-22af-42ea-a6fc-8e9151567c2f.png"
   },
   {
     name: "Laszlo Baan",
