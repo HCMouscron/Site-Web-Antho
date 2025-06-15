@@ -1,7 +1,9 @@
+
 import { Calendar, MapPin, Users, Trophy } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from "react-router-dom";
+
 const Home = () => {
   return <div className="w-full">
       {/* Hero Section */}
@@ -124,16 +126,21 @@ const Home = () => {
               il y a une place pour vous au HC Mouscron.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="bg-white text-hc-green hover:bg-gray-100 shadow-lg font-semibold">
-                Découvrir nos tarifs
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white text-hc-green hover:bg-gray-100 shadow-lg font-semibold ">
-                Nous contacter
-              </Button>
+              <Link to="/infos">
+                <Button size="lg" variant="secondary" className="bg-white text-hc-green hover:bg-gray-100 shadow-lg font-semibold w-full sm:w-auto">
+                  Découvrir nos tarifs
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button size="lg" variant="outline" className="bg-white text-hc-green hover:bg-gray-100 shadow-lg font-semibold w-full sm:w-auto">
+                  Nous contacter
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
     </div>;
 };
+
 export default Home;
