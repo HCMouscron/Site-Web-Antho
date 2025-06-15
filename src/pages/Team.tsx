@@ -1,77 +1,115 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
-const bureau = [{
-  name: "David Macarez",
-  role: "Secrétaire",
-  image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=200&h=200&fit=crop&crop=face"
-}, {
-  name: "Damien Cockenpot",
-  role: "Président",
-  image: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=200&h=200&fit=crop&crop=face"
-}, {
-  name: "Joaquim Vercruysse",
-  role: "Trésorier",
-  image: "/lovable-uploads/72d216f3-cf28-4b99-ae85-2d2b57bfc098.png"
-}, {
-  name: "Ghotane Dhont",
-  role: "Organisateur événementiel et sportif",
-  image: "/lovable-uploads/05c919b7-1147-4847-bcc5-854ada55e830.png"
-}, {
-  name: "Jean Philippe Fabbri",
-  role: "Logistique",
-  image: "/lovable-uploads/0f13e7ea-f993-46dc-8267-95ee2db25886.png"
-}, {
-  name: "Thierry Vincent",
-  role: "Coordinateur Technique",
-  image: "/lovable-uploads/93f3a0fb-2b5f-470d-a62f-444b94be5fe3.png"
-}, {
-  name: "Stijn Tack",
-  role: "Community Manager et Graphisme",
-  image: "/lovable-uploads/bbcdfd33-ce0e-4c1f-a0f0-07ec59b41083.png"
-}];
+// Attribution images :
+const images = [
+  "/lovable-uploads/41bb9730-94a9-4c03-9d26-41eec3e20d2a.png", // 1. Gothane
+  "/lovable-uploads/c65c089e-74e7-498b-bb79-bfbb16be852f.png",   // 2. JP Fabbri
+  "/lovable-uploads/56312c99-84e1-456e-b1a1-0c57fa1fe4d5.png",   // 3. Joaquim
+  "/lovable-uploads/034cfb6a-b3cd-4529-b3c9-c074b6f702cd.png",   // 4. Laszlo
+  "/lovable-uploads/b44b811f-37de-47a2-ac2a-d4ba2d5b0030.png",   // 5. Lucas
+  "/lovable-uploads/365e0e89-3729-4a6f-b74f-c945d205cd46.png",   // 6. Nino
+  "/lovable-uploads/f1b2cda2-2794-414e-8253-3598892a0a4b.png",   // 7. Stijn
+  "/lovable-uploads/41bb9730-94a9-4c03-9d26-41eec3e20d2a.png",   // 8. Thierry (corriger si besoin)
+];
 
-const entraineursSeniors = [{
-  name: "Laszlo Baan",
-  role: "Coach T1",
-  image: "/lovable-uploads/6cc57d8a-8d13-470d-bb22-18ad68c3a9b0.png"
-}, {
-  name: "Thierry Vincent",
-  role: "Coach T2",
-  image: "/lovable-uploads/93f3a0fb-2b5f-470d-a62f-444b94be5fe3.png"
-}];
+// MAPPING :
+const bureau = [
+  {
+    name: "Ghotane Dhont",
+    role: "Organisateur événementiel et sportif",
+    image: images[0],
+  },
+  {
+    name: "Jean Philippe Fabbri",
+    role: "Logistique",
+    image: images[1],
+  },
+  {
+    name: "Joaquim Vercruysse",
+    role: "Trésorier",
+    image: images[2],
+  },
+  {
+    name: "Laszlo Baan",
+    role: "Président",
+    image: images[3],
+  },
+  {
+    name: "Lucas Vincent",
+    role: "Secrétaire",
+    image: images[4],
+  },
+  {
+    name: "Nino Mancinone",
+    role: "Trésorier adjoint",
+    image: images[5],
+  },
+  {
+    name: "Stijn Tack",
+    role: "Community Manager et Graphisme",
+    image: images[6],
+  },
+  {
+    name: "Thierry Vincent",
+    role: "Coordinateur Technique",
+    image: images[7],
+  },
+];
 
-const entraineursJeunes = [{
-  name: "Anthony Delaby",
-  role: "Entraîneur U18",
-  image: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&h=200&fit=crop&crop=face"
-}, {
-  name: "Philippe Julien",
-  role: "Entraîneur U16",
-  image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&h=200&fit=crop&crop=face"
-}, {
-  name: "Lucas Vincent",
-  role: "Entraîneur U14",
-  image: "/lovable-uploads/2c8382df-401f-4c3d-a641-d0f4e9d5ff47.png"
-}, {
-  name: "Antoine Lampole",
-  role: "Entraîneur U14",
-  image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=face"
-}, {
-  name: "Nino Mancinone",
-  role: "Mini handball",
-  image: "/lovable-uploads/182dfcb9-c03b-4805-959f-61c773ee2bfe.png"
-}, {
-  name: "Dorian Derveaux",
-  role: "Mini handball",
-  image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=200&h=200&fit=crop&crop=face"
-}, {
-  name: "Stijn Tack",
-  role: "Entraîneur Jeunes",
-  image: "/lovable-uploads/bbcdfd33-ce0e-4c1f-a0f0-07ec59b41083.png"
-}];
+const entraineursSeniors = [
+  {
+    name: "Laszlo Baan",
+    role: "Coach T1",
+    image: images[3],
+  },
+  {
+    name: "Thierry Vincent",
+    role: "Coach T2",
+    image: images[7],
+  },
+];
 
-// Nouvel ordre : Mini handball, U14, U16, U18, Seniors, Vétérans/Loisir
+const entraineursJeunes = [
+  {
+    name: "Lucas Vincent",
+    role: "Entraîneur U14",
+    image: images[4],
+  },
+  {
+    name: "Nino Mancinone",
+    role: "Mini handball",
+    image: images[5],
+  },
+  {
+    name: "Stijn Tack",
+    role: "Entraîneur Jeunes",
+    image: images[6],
+  },
+  // On garde les autres entraîneurs jeunes non cités pour ne pas perdre d’info :
+  {
+    name: "Anthony Delaby",
+    role: "Entraîneur U18",
+    image: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&h=200&fit=crop&crop=face"
+  },
+  {
+    name: "Philippe Julien",
+    role: "Entraîneur U16",
+    image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&h=200&fit=crop&crop=face"
+  },
+  {
+    name: "Antoine Lampole",
+    role: "Entraîneur U14",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=face"
+  },
+  {
+    name: "Dorian Derveaux",
+    role: "Mini handball",
+    image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=200&h=200&fit=crop&crop=face"
+  },
+];
+
 const categories = [
   { name: "Mini handball", color: "bg-hc-green-light" },
   { name: "U14", color: "bg-hc-green-light" },
@@ -215,3 +253,4 @@ const Team = () => {
 };
 
 export default Team;
+
