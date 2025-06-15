@@ -52,16 +52,17 @@ const bureau = [
   },
 ];
 
+// Remplacement des images pour Laszlo et Thierry :
 const entraineursSeniors = [
   {
     name: "Laszlo Baan",
     role: "Coach T1",
-    image: images[3], // NEW IMAGE for Laszlo
+    image: "/lovable-uploads/6cc57d8a-8d13-470d-bb22-18ad68c3a9b0.png", // Première image uploadée
   },
   {
     name: "Thierry Vincent",
     role: "Coach T2",
-    image: images[7],
+    image: "/lovable-uploads/93f3a0fb-2b5f-470d-a62f-444b94be5fe3.png", // Seconde image uploadée
   },
 ];
 
