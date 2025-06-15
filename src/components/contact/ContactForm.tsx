@@ -15,20 +15,55 @@ const ContactForm = () => {
     message: ''
   });
   const { toast } = useToast();
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    toast({
-      title: "Message envoyé !",
-      description: "Nous vous répondrons dans les plus brefs délais.",
-    });
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
+    setLoading(true);
+
+    try {
+      const response = await fetch(
+        'https://posfjtzhypekptobqiep.functions.supabase.co/contact-form',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
+        }
+      );
+      const data = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: "Message envoyé !",
+          description: "Nous vous répondrons dans les plus brefs délais.",
+        });
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        toast({
+          title: "Erreur lors de l'envoi",
+          description:
+            data?.error
+              ? `Détail : ${data.error}`
+              : "Une erreur est survenue. Merci d'essayer plus tard.",
+          variant: "destructive",
+        });
+      }
+    } catch (error: any) {
+      toast({
+        title: "Erreur réseau",
+        description: "Impossible d'envoyer le message. Vérifiez votre connexion.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -58,6 +93,7 @@ const ContactForm = () => {
               onChange={handleChange}
               className="mt-1"
               placeholder="Votre nom et prénom"
+              disabled={loading}
             />
           </div>
           <div>
@@ -71,6 +107,7 @@ const ContactForm = () => {
               onChange={handleChange}
               className="mt-1"
               placeholder="votre.email@exemple.com"
+              disabled={loading}
             />
           </div>
           <div>
@@ -84,6 +121,7 @@ const ContactForm = () => {
               onChange={handleChange}
               className="mt-1"
               placeholder="Objet de votre message"
+              disabled={loading}
             />
           </div>
           <div>
@@ -97,10 +135,15 @@ const ContactForm = () => {
               className="mt-1"
               rows={6}
               placeholder="Votre message..."
+              disabled={loading}
             />
           </div>
-          <Button type="submit" className="w-full bg-hc-green hover:bg-hc-green-light">
-            Envoyer le message
+          <Button
+            type="submit"
+            className="w-full bg-hc-green hover:bg-hc-green-light"
+            disabled={loading}
+          >
+            {loading ? "Envoi..." : "Envoyer le message"}
           </Button>
         </form>
       </CardContent>
