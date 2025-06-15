@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -73,41 +72,40 @@ const entraineursSeniors = [
 
 const entraineursJeunes = [
   {
-    name: "Lucas Vincent",
-    role: "Entraîneur U14",
-    image: images[4],
-  },
-  {
-    name: "Nino Mancinone",
-    role: "Mini handball",
-    image: images[5],
-  },
-  {
-    name: "Stijn Tack",
-    role: "Entraîneur Jeunes",
-    image: images[6],
-  },
-  // On garde les autres entraîneurs jeunes non cités pour ne pas perdre d’info :
-  {
     name: "Anthony Delaby",
     role: "Entraîneur U18",
-    image: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&h=200&fit=crop&crop=face"
-  },
-  {
-    name: "Philippe Julien",
-    role: "Entraîneur U16",
-    image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&h=200&fit=crop&crop=face"
+    image: "/lovable-uploads/05c919b7-1147-4847-bcc5-854ada55e830.png"
   },
   {
     name: "Antoine Lampole",
     role: "Entraîneur U14",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=face"
+    image: "/lovable-uploads/0f13e7ea-f993-46dc-8267-95ee2db25886.png"
   },
   {
     name: "Dorian Derveaux",
     role: "Mini handball",
-    image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=200&h=200&fit=crop&crop=face"
+    image: "/lovable-uploads/72d216f3-cf28-4b99-ae85-2d2b57bfc098.png"
   },
+  {
+    name: "Laszlo Baan",
+    role: "Entraîneur Jeunes",
+    image: "/lovable-uploads/034cfb6a-b3cd-4529-b3c9-c074b6f702cd.png"
+  },
+  {
+    name: "Lucas Vincent",
+    role: "Coordinateur Technique Jeunes",
+    image: "/lovable-uploads/b44b811f-37de-47a2-ac2a-d4ba2d5b0030.png"
+  },
+  {
+    name: "Nino Mancinone",
+    role: "Mini handball",
+    image: "/lovable-uploads/365e0e89-3729-4a6f-b74f-c945d205cd46.png"
+  },
+  {
+    name: "Philippe Julien",
+    role: "Entraîneur U16",
+    image: "/lovable-uploads/2c8382df-401f-4c3d-a641-d0f4e9d5ff47.png"
+  }
 ];
 
 const categories = [
@@ -253,4 +251,3 @@ const Team = () => {
 };
 
 export default Team;
-
