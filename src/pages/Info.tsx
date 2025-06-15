@@ -297,7 +297,7 @@ const Info = () => {
               className="inline-block"
             >
               <button className="bg-hc-orange hover:bg-hc-orange/80 text-white font-medium px-6 py-3 rounded-lg shadow transition-all w-full md:w-auto">
-                Télécharger la fiche d'inscription (PDF)
+                Télécharger la fiche d'affiliation (PDF)
               </button>
             </a>
             <a
@@ -307,7 +307,7 @@ const Info = () => {
               className="inline-block"
             >
               <button className="bg-hc-green hover:bg-hc-green/80 text-white font-medium px-6 py-3 rounded-lg shadow transition-all w-full md:w-auto">
-                Télécharger le certificat médical (PDF)
+                Télécharger le formulaire de transfert international (PDF)
               </button>
             </a>
           </div>
