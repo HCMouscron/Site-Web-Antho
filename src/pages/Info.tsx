@@ -83,6 +83,21 @@ const tarifs = [
   }
 ];
 
+const calendars = [
+  {
+    label: "Séniors",
+    url: "https://calendar.google.com/calendar/u/0?cid=NzY5YWQzNDhkYjc2YTRlODg5NGYwZDRhNjhkOTVjZWUxOWJmMTZmZThmMDEwNjY5OWUzOGZjMzI1MDkzYzU5ZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
+  },
+  {
+    label: "U18",
+    url: "https://calendar.google.com/calendar/u/0?cid=ZGJiOGZlOTA1YjgwZGQ5YTc5MTdlZmFlYTkyOTQ1YTZiYTk5MmZmMGU2ODQ3YzI4MGZhNzRhYjhmZGVlMzk1M0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
+  },
+  {
+    label: "U16",
+    url: "https://calendar.google.com/calendar/u/0?cid=YmI0NTc5ODdkMGViMzQ3MmQzYjZjZDc1ODk3ZTliNTdmMjMxNTVlNTMzNzlmNzUyZDM0YjYyNjRiZDlmNTY5YkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
+  },
+];
+
 const Info = () => {
   return (
     <div className="w-full py-8">
@@ -166,6 +181,32 @@ const Info = () => {
             <span className="text-lg text-muted-foreground">
               Le calendrier de la saison est à venir.
             </span>
+          </div>
+        </section>
+
+        {/* Agendas Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-center mb-12 text-hc-orange">Agendas</h2>
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {calendars.map((cal) => (
+              <div
+                key={cal.label}
+                className="flex flex-col items-center bg-hc-green-light/10 p-6 rounded-lg shadow-sm"
+              >
+                <div className="text-xl font-semibold text-hc-green mb-4">{cal.label}</div>
+                <a
+                  href={cal.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-hc-orange text-white px-4 py-2 rounded hover:bg-hc-orange/80 transition-colors font-medium mt-auto"
+                >
+                  Ouvrir l'agenda
+                </a>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-6 text-muted-foreground text-sm">
+            Accès direct aux calendriers Google des matchs pour chaque catégorie.
           </div>
         </section>
 
