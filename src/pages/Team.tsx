@@ -13,23 +13,8 @@ const images = [
   "/lovable-uploads/41bb9730-94a9-4c03-9d26-41eec3e20d2a.png",   // 8. Thierry (corriger si besoin)
 ];
 
-// MAPPING :
+// MAPPING : COMITÉ (ordre modifié)
 const bureau = [
-  {
-    name: "Ghotane Dhont",
-    role: "Organisateur événementiel et sportif",
-    image: "/lovable-uploads/a354ce54-ad9c-4fbb-b2df-46b56a89e38a.png",
-  },
-  {
-    name: "Jean Philippe Fabbri",
-    role: "Logistique",
-    image: "/lovable-uploads/559c316a-dff9-4e14-bf45-28f2dee1e526.png",
-  },
-  {
-    name: "Joaquim Vercruysse",
-    role: "Trésorier",
-    image: "/lovable-uploads/6af96ea0-a23d-47cd-b382-99a95c2e1f29.png",
-  },
   {
     name: "Damien Cockenpot",
     role: "Président",
@@ -39,6 +24,21 @@ const bureau = [
     name: "David Macarez",
     role: "Secrétaire",
     image: "/lovable-uploads/cf412527-37a3-4237-aa2e-56a2ba75f23d.png",
+  },
+  {
+    name: "Joaquim Vercruysse",
+    role: "Trésorier",
+    image: "/lovable-uploads/6af96ea0-a23d-47cd-b382-99a95c2e1f29.png",
+  },
+  {
+    name: "Ghotane Dhont",
+    role: "Organisateur événementiel et sportif",
+    image: "/lovable-uploads/a354ce54-ad9c-4fbb-b2df-46b56a89e38a.png",
+  },
+  {
+    name: "Jean Philippe Fabbri",
+    role: "Logistique",
+    image: "/lovable-uploads/559c316a-dff9-4e14-bf45-28f2dee1e526.png",
   },
   {
     name: "Stijn Tack",
