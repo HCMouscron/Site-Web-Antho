@@ -1,3 +1,4 @@
+
 import { Calendar, MapPin, Users, Trophy } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -91,8 +92,13 @@ const Home = () => {
                 </Button>
               </div>
             </div>
-            <div className="relative">
-              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop" alt="Équipe de handball" className="rounded-2xl shadow-xl" />
+            <div className="relative flex flex-col items-center justify-center">
+              <img
+                src="/lovable-uploads/1ea96fdc-8535-4f8b-a3f9-b4f3755f6633.png"
+                alt="Logo HC Mouscron"
+                className="w-72 h-72 object-contain rounded-2xl shadow-xl bg-white"
+                style={{border: '4px solid hsl(var(--hc-green))'}}
+              />
               <div className="absolute -bottom-6 -right-6 bg-hc-orange text-white p-6 rounded-xl shadow-lg">
                 <div className="text-2xl font-bold">10 ans</div>
                 <div className="text-sm">d'expérience</div>
