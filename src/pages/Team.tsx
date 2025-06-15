@@ -49,7 +49,8 @@ const entraineursJeunes = [{
 }];
 const categories = ["Seniors", "U18", "U16", "U14", "Vétérans / Loisir", "Mini handball"];
 const Team = () => {
-  return <div className="w-full py-8">
+  return (
+    <div className="w-full py-8">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -62,11 +63,12 @@ const Team = () => {
           </p>
         </div>
 
-        {/* Staff Technique - Bureau */}
+        {/* Staff Technique - Comité */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-center mb-8 text-hc-green">Comité</h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 justify-center">
-            {bureau.map((member, index) => <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+            {bureau.map((member, index) => (
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden">
                     <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
@@ -76,8 +78,8 @@ const Team = () => {
                     {member.role}
                   </Badge>
                 </CardHeader>
-                {/* Pas d'expérience à afficher dans le bureau */}
-              </Card>)}
+              </Card>
+            ))}
           </div>
         </section>
 
@@ -87,7 +89,8 @@ const Team = () => {
             Entraîneurs Seniors
           </h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 justify-center">
-            {entraineursSeniors.map((coach, index) => <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+            {entraineursSeniors.map((coach, index) => (
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden">
                     <img src={coach.image} alt={coach.name} className="w-full h-full object-cover" />
@@ -97,7 +100,8 @@ const Team = () => {
                     {coach.role}
                   </Badge>
                 </CardHeader>
-              </Card>)}
+              </Card>
+            ))}
           </div>
         </section>
 
@@ -107,7 +111,8 @@ const Team = () => {
             Entraîneurs Jeunes & Mini handball
           </h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 justify-center">
-            {entraineursJeunes.map((coach, index) => <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+            {entraineursJeunes.map((coach, index) => (
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden">
                     <img src={coach.image} alt={coach.name} className="w-full h-full object-cover" />
@@ -117,7 +122,8 @@ const Team = () => {
                     {coach.role}
                   </Badge>
                 </CardHeader>
-              </Card>)}
+              </Card>
+            ))}
           </div>
         </section>
 
@@ -127,13 +133,17 @@ const Team = () => {
             Nos équipes
           </h2>
           <div className="flex flex-col items-center gap-5">
-            {categories.map((c, idx) => <span key={c + idx} className={c === "Vétérans / Loisir" ? "px-6 py-3 rounded-full bg-hc-orange text-white text-lg font-semibold shadow text-shadow" : c === "Mini handball" ? "px-6 py-3 rounded-full bg-hc-green-light text-white text-lg font-semibold shadow text-shadow" : idx % 2 === 0 ? "px-6 py-3 rounded-full bg-hc-green text-white text-lg font-semibold shadow text-shadow" : "px-6 py-3 rounded-full bg-hc-green-light text-white text-lg font-semibold shadow text-shadow"}>
+            {categories.map((c, idx) => (
+              <span key={c + idx} className={c === "Vétérans / Loisir" ? "px-6 py-3 rounded-full bg-hc-orange text-white text-lg font-semibold shadow text-shadow" : c === "Mini handball" ? "px-6 py-3 rounded-full bg-hc-green-light text-white text-lg font-semibold shadow text-shadow" : idx % 2 === 0 ? "px-6 py-3 rounded-full bg-hc-green text-white text-lg font-semibold shadow text-shadow" : "px-6 py-3 rounded-full bg-hc-green-light text-white text-lg font-semibold shadow text-shadow"}>
                 {c}
-              </span>)}
+              </span>
+            ))}
           </div>
         </section>
         {/* Section Palmarès supprimée */}
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default Team;
