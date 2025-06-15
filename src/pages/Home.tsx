@@ -94,7 +94,7 @@ const Home = () => {
             <div className="relative">
               <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop" alt="Équipe de handball" className="rounded-2xl shadow-xl" />
               <div className="absolute -bottom-6 -right-6 bg-hc-orange text-white p-6 rounded-xl shadow-lg">
-                <div className="text-2xl font-bold">25 ans</div>
+                <div className="text-2xl font-bold">10 ans</div>
                 <div className="text-sm">d'expérience</div>
               </div>
             </div>
