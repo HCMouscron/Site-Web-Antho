@@ -67,11 +67,11 @@ const entraineursJeunes = [{
   image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=200&h=200&fit=crop&crop=face"
 }];
 
-// Classement par âge pour les équipes avec images pour seniors et vétérans
+// Classement par âge pour les équipes avec images pour seniors et vétérans et maintenant U18
 const categories = [
   { name: "Seniors", color: "bg-hc-green", img: "/lovable-uploads/a4551830-cf39-4d58-bf31-7325e3117da5.png" },
   { name: "Vétérans / Loisir", color: "bg-hc-orange", img: "/lovable-uploads/3f691e54-6444-4b56-966f-fab9bcea6968.png" },
-  { name: "U18", color: "bg-hc-green-light" },
+  { name: "U18", color: "bg-hc-green-light", img: "/lovable-uploads/2c5565cf-f45d-4d43-b901-68086906cbad.png" },
   { name: "U16", color: "bg-hc-green" },
   { name: "U14", color: "bg-hc-green-light" },
   { name: "Mini handball", color: "bg-hc-green-light" },
@@ -179,6 +179,8 @@ const Team = () => {
                           ? "border-hc-orange"
                           : c.name === "Seniors"
                           ? "border-hc-green"
+                          : c.name === "U18"
+                          ? "border-hc-green-light"
                           : "border-gray-300"
                       } animate-fade-in`}
                     />
