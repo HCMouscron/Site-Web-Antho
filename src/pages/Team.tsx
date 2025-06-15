@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+
 const bureau = [{
   name: "David Macarez",
   role: "Secrétaire",
@@ -12,7 +13,24 @@ const bureau = [{
   name: "Joaquim Vercruysse",
   role: "Trésorier",
   image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=200&h=200&fit=crop&crop=face"
+}, {
+  name: "Ghotane Dhont",
+  role: "Organisateur événementiel et sportif",
+  image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face"
+}, {
+  name: "Jean Philippe Fabbri",
+  role: "Logistique",
+  image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
+}, {
+  name: "Thierry Vincent",
+  role: "Coordinateur Technique",
+  image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face"
+}, {
+  name: "Stijn Tack",
+  role: "Community Manager et Graphisme",
+  image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=200&h=200&fit=crop&crop=face"
 }];
+
 const entraineursSeniors = [{
   name: "Laszlo Baan",
   role: "Coach T1",
@@ -22,6 +40,7 @@ const entraineursSeniors = [{
   role: "Coach T2",
   image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face"
 }];
+
 const entraineursJeunes = [{
   name: "Anthony Delaby",
   role: "Entraîneur U18",
@@ -47,7 +66,9 @@ const entraineursJeunes = [{
   role: "Mini handball",
   image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=200&h=200&fit=crop&crop=face"
 }];
+
 const categories = ["Seniors", "U18", "U16", "U14", "Vétérans / Loisir", "Mini handball"];
+
 const Team = () => {
   return (
     <div className="w-full py-8">
@@ -66,7 +87,7 @@ const Team = () => {
         {/* Staff Technique - Comité */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-center mb-8 text-hc-green">Comité</h2>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 justify-center">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center">
             {bureau.map((member, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                 <CardHeader>
