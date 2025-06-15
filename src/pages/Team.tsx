@@ -6,7 +6,7 @@ const images = [
   "/lovable-uploads/41bb9730-94a9-4c03-9d26-41eec3e20d2a.png", // 1. Gothane
   "/lovable-uploads/c65c089e-74e7-498b-bb79-bfbb16be852f.png",   // 2. JP Fabbri
   "/lovable-uploads/56312c99-84e1-456e-b1a1-0c57fa1fe4d5.png",   // 3. Joaquim
-  "/lovable-uploads/034cfb6a-b3cd-4529-b3c9-c074b6f702cd.png",   // 4. Laszlo
+  "/lovable-uploads/fbc8d64b-b67d-4b11-b658-189c6b6cf531.png",   // 4. Laszlo (NEW IMAGE)
   "/lovable-uploads/b44b811f-37de-47a2-ac2a-d4ba2d5b0030.png",   // 5. Lucas
   "/lovable-uploads/365e0e89-3729-4a6f-b74f-c945d205cd46.png",   // 6. Nino
   "/lovable-uploads/f1b2cda2-2794-414e-8253-3598892a0a4b.png",   // 7. Stijn
@@ -33,7 +33,7 @@ const bureau = [
   {
     name: "Laszlo Baan",
     role: "Président",
-    image: images[3],
+    image: images[3], // NEW IMAGE for Laszlo
   },
   {
     name: "Lucas Vincent",
@@ -61,7 +61,7 @@ const entraineursSeniors = [
   {
     name: "Laszlo Baan",
     role: "Coach T1",
-    image: images[3],
+    image: images[3], // NEW IMAGE for Laszlo
   },
   {
     name: "Thierry Vincent",
@@ -89,7 +89,7 @@ const entraineursJeunes = [
   {
     name: "Laszlo Baan",
     role: "Entraîneur Jeunes",
-    image: "/lovable-uploads/034cfb6a-b3cd-4529-b3c9-c074b6f702cd.png"
+    image: images[3], // NEW IMAGE for Laszlo
   },
   {
     name: "Lucas Vincent",
