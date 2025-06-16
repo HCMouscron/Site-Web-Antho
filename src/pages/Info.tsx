@@ -100,8 +100,12 @@ const calendars = [
 
 const Info = () => {
   return (
-    <div className="w-full py-8">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="w-full py-8 relative min-h-screen">
+      {/* Dégradé en arrière-plan */}
+      <div className="absolute inset-0 bg-gradient-to-br from-hc-green/10 via-background to-hc-orange/10 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-tr from-hc-orange/5 via-transparent to-hc-green/8 pointer-events-none"></div>
+      
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6">
@@ -112,7 +116,7 @@ const Info = () => {
 
         {/* Location & Venue */}
         <section className="mb-16">
-          <Card className="mb-8">
+          <Card className="mb-8 bg-white/80 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-hc-green text-2xl">
                 <MapPin className="h-6 w-6" />
@@ -133,7 +137,7 @@ const Info = () => {
                 </div>
                 {/* Bloc de carte dummy - au centre à droite sur desktop */}
                 <div className="flex-1 flex items-center justify-center">
-                  <div className="h-64 w-full bg-muted rounded-lg flex items-center justify-center">
+                  <div className="h-64 w-full bg-muted/50 rounded-lg flex items-center justify-center backdrop-blur-sm">
                     <p className="text-muted-foreground text-center w-full">
                       Carte Google Maps intégrée
                     </p>
@@ -150,7 +154,7 @@ const Info = () => {
             Horaires d'entraînement
           </h2>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {trainingSchedule.map((training, index) => <Card key={index} className="hover:shadow-md transition-shadow">
+            {trainingSchedule.map((training, index) => <Card key={index} className="hover:shadow-md transition-shadow bg-white/70 backdrop-blur-sm">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between">
                     <div>
@@ -179,7 +183,7 @@ const Info = () => {
             {calendars.map((cal) => (
               <div
                 key={cal.label}
-                className="flex flex-col items-center bg-hc-green-light/10 p-6 rounded-lg shadow-sm"
+                className="flex flex-col items-center bg-hc-green-light/20 backdrop-blur-sm p-6 rounded-lg shadow-sm"
               >
                 <div className="text-xl font-semibold text-hc-green mb-4">{cal.label}</div>
                 <a
@@ -201,19 +205,19 @@ const Info = () => {
         {/* Tarifs Section */}
         <section className="mb-16" id="tarifs">
           <h2 className="text-3xl font-bold text-center mb-12 text-hc-orange">Tarifs</h2>
-          <div className="max-w-3xl mx-auto text-center p-10 rounded-lg bg-white/90 border shadow space-y-6">
+          <div className="max-w-3xl mx-auto text-center p-10 rounded-lg bg-white/80 backdrop-blur-sm border shadow space-y-6">
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               {tarifs.map((t, idx) => (
                 <div
                   key={t.label}
-                  className="flex flex-col items-center justify-center bg-hc-green-light/10 rounded-lg p-4 shadow-sm"
+                  className="flex flex-col items-center justify-center bg-hc-green-light/20 backdrop-blur-sm rounded-lg p-4 shadow-sm"
                 >
                   <div className="text-lg font-semibold text-hc-green mb-1">{t.label}</div>
                   <div className="text-2xl font-bold text-hc-orange mb-1">{t.price}</div>
                 </div>
               ))}
             </div>
-            <div className="bg-hc-green/10 p-4 rounded-lg shadow mb-4">
+            <div className="bg-hc-green/20 backdrop-blur-sm p-4 rounded-lg shadow mb-4">
               <div className="font-medium mb-1">
                 <Euro className="inline-block mr-2" /> Règlement par virement bancaire :
               </div>
@@ -226,7 +230,7 @@ const Info = () => {
               </div>
             </div>
             <div className="italic text-muted-foreground text-sm">
-              Les montants des cotisations peuvent être revus à la baisse en cas d’arrivée tardive en cours de saison,
+              Les montants des cotisations peuvent être revus à la baisse en cas d'arrivée tardive en cours de saison,
               sur décision du comité du club.
             </div>
           </div>
@@ -239,7 +243,7 @@ const Info = () => {
           </h2>
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6">
-              {registrationSteps.map((step, index) => <Card key={index} className="hover:shadow-md transition-shadow">
+              {registrationSteps.map((step, index) => <Card key={index} className="hover:shadow-md transition-shadow bg-white/70 backdrop-blur-sm">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-hc-green rounded-full flex items-center justify-center text-white font-bold">
@@ -254,7 +258,7 @@ const Info = () => {
                 </Card>)}
             </div>
             
-            <div className="mt-12 p-6 bg-gradient-to-r from-hc-green to-hc-orange rounded-lg text-center text-white">
+            <div className="mt-12 p-6 bg-gradient-to-r from-hc-green/90 to-hc-orange/90 backdrop-blur-sm rounded-lg text-center text-white">
               <h3 className="text-xl font-bold mb-4">Documents nécessaires pour l'inscription</h3>
               <div className="grid md:grid-cols-2 gap-4 text-sm">
                 <div>
@@ -301,7 +305,7 @@ const Info = () => {
           </div>
           <div className="text-center text-muted-foreground text-sm">
             Documents hébergés sur Google Drive.&nbsp;
-            <span className="italic">Téléchargement public : seul le fichier est accessible, aucun autre document ne l'est.</span>
+            <span className="italic">Téléchargement public : seul le fichier est accessible, aucun autre document ne l'est.</span>
           </div>
         </section>
       </div>
