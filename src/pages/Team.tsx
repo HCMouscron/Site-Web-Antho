@@ -1,7 +1,8 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
-// Attribution images :
+// Attribution images :
 const images = [
   "/lovable-uploads/41bb9730-94a9-4c03-9d26-41eec3e20d2a.png", // 1. Gothane
   "/lovable-uploads/c65c089e-74e7-498b-bb79-bfbb16be852f.png",   // 2. JP Fabbri
@@ -100,7 +101,7 @@ const entraineursJeunes = [
 ];
 
 const categories = [
-  { name: "Mini handball", color: "bg-hc-green-light" },
+  { name: "Mini handball", color: "bg-hc-green-light", img: "/lovable-uploads/33033b5b-5d7a-464e-9eb2-7894f00e2b26.png" },
   { name: "U14", color: "bg-hc-green-light" },
   { name: "U16", color: "bg-hc-green", img: "/lovable-uploads/faeb26b4-5b82-49e1-8fb0-69a10700de49.png" },
   { name: "U18", color: "bg-hc-green-light", img: "/lovable-uploads/2c5565cf-f45d-4d43-b901-68086906cbad.png" },
@@ -214,6 +215,8 @@ const Team = () => {
                           ? "border-hc-green-light"
                           : c.name === "U16"
                           ? "border-hc-green"
+                          : c.name === "Mini handball"
+                          ? "border-hc-green-light"
                           : "border-gray-300"
                       } animate-fade-in`}
                     />
@@ -222,8 +225,8 @@ const Team = () => {
                     </span>
                   </div>
                 ) : (
-                  // Message "À venir..." pour U14 et Mini handball
-                  (c.name === "U14" || c.name === "Mini handball") && (
+                  // Message "À venir..." pour U14 seulement maintenant
+                  c.name === "U14" && (
                     <div className="flex flex-col items-center mt-4">
                       <span className="italic text-muted-foreground text-md">
                         À venir...
