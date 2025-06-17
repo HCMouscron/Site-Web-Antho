@@ -25,12 +25,20 @@ const Home = () => {
               Découvrez l'esprit d'équipe et la passion du handball dans une ambiance conviviale.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-hc-orange hover:bg-hc-orange-light text-white shadow-lg">
-                Nous rejoindre
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white text-hc-green hover:bg-gray-100 shadow-lg font-semibold ">
-                Découvrir l'équipe
-              </Button>
+              <a 
+                href="https://drive.google.com/file/d/1Z5f29NA636bP7u8egB8dI44vWgYCAQN2/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button size="lg" className="bg-hc-orange hover:bg-hc-orange-light text-white shadow-lg w-full sm:w-auto">
+                  Nous rejoindre
+                </Button>
+              </a>
+              <Link to="/equipe">
+                <Button size="lg" variant="outline" className="bg-white text-hc-green hover:bg-gray-100 shadow-lg font-semibold w-full sm:w-auto">
+                  Découvrir l'équipe
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
