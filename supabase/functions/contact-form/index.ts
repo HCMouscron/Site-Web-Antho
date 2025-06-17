@@ -25,10 +25,10 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const { name, email, subject, message }: ContactEmailRequest = await req.json();
 
-    // On force le destinataire à antho.mcrz@gmail.com
+    // Envoi à ton email étudiant vérifié dans Resend
     const emailResponse = await resend.emails.send({
       from: "HC Mouscron <onboarding@resend.dev>",
-      to: ["antho.mcrz@gmail.com"],
+      to: ["la238361@student.helha.be"],
       subject: subject || "Nouveau message via le formulaire de contact",
       html: `
         <h1>Nouveau message de ${name}</h1>
@@ -38,7 +38,7 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    console.log("Email envoyé à antho.mcrz@gmail.com :", emailResponse);
+    console.log("Email envoyé à la238361@student.helha.be :", emailResponse);
 
     return new Response(JSON.stringify(emailResponse), {
       status: 200,
@@ -60,4 +60,3 @@ const handler = async (req: Request): Promise<Response> => {
 };
 
 serve(handler);
-
