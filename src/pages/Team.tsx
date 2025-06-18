@@ -32,7 +32,7 @@ const bureau = [
   },
   {
     name: "Gothane Dhondt",
-    role: "Organisateur événementiel et sportif",
+    role: "Organisateur événementiel sportif",
     image: "/lovable-uploads/a354ce54-ad9c-4fbb-b2df-46b56a89e38a.png",
   },
   {
