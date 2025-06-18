@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -32,7 +31,7 @@ const bureau = [
     image: "/lovable-uploads/6af96ea0-a23d-47cd-b382-99a95c2e1f29.png",
   },
   {
-    name: "Ghotane Dhont",
+    name: "Gothane Dhondt",
     role: "Organisateur événementiel et sportif",
     image: "/lovable-uploads/a354ce54-ad9c-4fbb-b2df-46b56a89e38a.png",
   },
