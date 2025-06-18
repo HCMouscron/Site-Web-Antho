@@ -131,13 +131,13 @@ const Info = () => {
                     <p>☕ Cafétéria ouverte les soirs d'entraînement</p>
                   </div>
                 </div>
-                {/* Bloc de carte dummy - au centre à droite sur desktop */}
+                {/* Image du hall - au centre à droite sur desktop */}
                 <div className="flex-1 flex items-center justify-center">
-                  <div className="h-64 w-full bg-muted rounded-lg flex items-center justify-center">
-                    <p className="text-muted-foreground text-center w-full">
-                      Carte Google Maps intégrée
-                    </p>
-                  </div>
+                  <img 
+                    src="/lovable-uploads/4842a4f3-cca0-44aa-bd40-458e7b9d1cf7.png" 
+                    alt="Hall Max Lessines - Salle omnisports de Mouscron" 
+                    className="h-64 w-full object-cover rounded-lg shadow-lg"
+                  />
                 </div>
               </div>
             </CardContent>
@@ -150,7 +150,8 @@ const Info = () => {
             Horaires d'entraînement
           </h2>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {trainingSchedule.map((training, index) => <Card key={index} className="hover:shadow-md transition-shadow">
+            {trainingSchedule.map((training, index) => (
+              <Card key={index} className="hover:shadow-md transition-shadow">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between">
                     <div>
@@ -168,7 +169,8 @@ const Info = () => {
                     </div>
                   </div>
                 </CardContent>
-              </Card>)}
+              </Card>
+            ))}
           </div>
         </section>
 
@@ -226,7 +228,7 @@ const Info = () => {
               </div>
             </div>
             <div className="italic text-muted-foreground text-sm">
-              Les montants des cotisations peuvent être revus à la baisse en cas d’arrivée tardive en cours de saison,
+              Les montants des cotisations peuvent être revus à la baisse en cas d'arrivée tardive en cours de saison,
               sur décision du comité du club.
             </div>
           </div>
@@ -239,7 +241,8 @@ const Info = () => {
           </h2>
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6">
-              {registrationSteps.map((step, index) => <Card key={index} className="hover:shadow-md transition-shadow">
+              {registrationSteps.map((step, index) => (
+                <Card key={index} className="hover:shadow-md transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-hc-green rounded-full flex items-center justify-center text-white font-bold">
@@ -251,7 +254,8 @@ const Info = () => {
                       </div>
                     </div>
                   </CardContent>
-                </Card>)}
+                </Card>
+              ))}
             </div>
             
             <div className="mt-12 p-6 bg-gradient-to-r from-hc-green to-hc-orange rounded-lg text-center text-white">
@@ -301,7 +305,7 @@ const Info = () => {
           </div>
           <div className="text-center text-muted-foreground text-sm">
             Documents hébergés sur Google Drive.&nbsp;
-            <span className="italic">Téléchargement public : seul le fichier est accessible, aucun autre document ne l'est.</span>
+            <span className="italic">Téléchargement public : seul le fichier est accessible, aucun autre document ne l'est.</span>
           </div>
         </section>
       </div>
