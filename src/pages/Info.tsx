@@ -1,7 +1,6 @@
 import { Clock, MapPin, Euro, Calendar, UserPlus, FileText } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-
 const trainingSchedule = [{
   category: "U16 & U18",
   day: "Lundi",
@@ -63,44 +62,31 @@ const registrationSteps = [{
   title: "Paiement",
   description: "Réglez la cotisation annuelle"
 }];
-
-const tarifs = [
-  {
-    label: "Mini-handball (né(e)s en 2014 et après)",
-    price: "100 €"
-  },
-  {
-    label: "Juniors (né(e)s à partir de 2008)",
-    price: "150 €"
-  },
-  {
-    label: "Fratries (à partir du 2ème enfant)",
-    price: "135 €"
-  },
-  {
-    label: "Séniors (né(e)s en 2007 et avant)",
-    price: "200 €"
-  }
-];
-
-const calendars = [
-  {
-    label: "Séniors",
-    url: "https://calendar.google.com/calendar/u/0?cid=NzY5YWQzNDhkYjc2YTRlODg5NGYwZDRhNjhkOTVjZWUxOWJmMTZmZThmMDEwNjY5OWUzOGZjMzI1MDkzYzU5ZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
-  },
-  {
-    label: "U18",
-    url: "https://calendar.google.com/calendar/u/0?cid=ZGJiOGZlOTA1YjgwZGQ5YTc5MTdlZmFlYTkyOTQ1YTZiYTk5MmZmMGU2ODQ3YzI4MGZhNzRhYjhmZGVlMzk1M0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
-  },
-  {
-    label: "U16",
-    url: "https://calendar.google.com/calendar/u/0?cid=YmI0NTc5ODdkMGViMzQ3MmQzYjZjZDc1ODk3ZTliNTdmMjMxNTVlNTMzNzlmNzUyZDM0YjYyNjRiZDlmNTY5YkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
-  },
-];
-
+const tarifs = [{
+  label: "Mini-handball (né(e)s en 2014 et après)",
+  price: "100 €"
+}, {
+  label: "Juniors (né(e)s à partir de 2008)",
+  price: "150 €"
+}, {
+  label: "Fratries (à partir du 2ème enfant)",
+  price: "135 €"
+}, {
+  label: "Séniors (né(e)s en 2007 et avant)",
+  price: "200 €"
+}];
+const calendars = [{
+  label: "Séniors",
+  url: "https://calendar.google.com/calendar/u/0?cid=NzY5YWQzNDhkYjc2YTRlODg5NGYwZDRhNjhkOTVjZWUxOWJmMTZmZThmMDEwNjY5OWUzOGZjMzI1MDkzYzU5ZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
+}, {
+  label: "U18",
+  url: "https://calendar.google.com/calendar/u/0?cid=ZGJiOGZlOTA1YjgwZGQ5YTc5MTdlZmFlYTkyOTQ1YTZiYTk5MmZmMGU2ODQ3YzI4MGZhNzRhYjhmZGVlMzk1M0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
+}, {
+  label: "U16",
+  url: "https://calendar.google.com/calendar/u/0?cid=YmI0NTc5ODdkMGViMzQ3MmQzYjZjZDc1ODk3ZTliNTdmMjMxNTVlNTMzNzlmNzUyZDM0YjYyNjRiZDlmNTY5YkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
+}];
 const Info = () => {
-  return (
-    <div className="w-full py-8">
+  return <div className="w-full py-8">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -123,7 +109,7 @@ const Info = () => {
               <div className="flex flex-col md:flex-row gap-8 md:items-stretch">
                 {/* Infos salle - à gauche sur desktop */}
                 <div className="flex-1 flex flex-col justify-center">
-                  <h3 className="text-xl font-semibold mb-4">Salle Omnisports de Mouscron</h3>
+                  <h3 className="text-xl font-semibold mb-4">Hall Max Lessines de Mouscron</h3>
                   <div className="space-y-2 text-muted-foreground">
                     <p>📍 Rue des Prés 84B, 7700 Mouscron</p>
                     <p>🚗 Parking gratuit sur place</p>
@@ -133,11 +119,7 @@ const Info = () => {
                 </div>
                 {/* Image du hall - au centre à droite sur desktop */}
                 <div className="flex-1 flex items-center justify-center">
-                  <img 
-                    src="/lovable-uploads/4842a4f3-cca0-44aa-bd40-458e7b9d1cf7.png" 
-                    alt="Hall Max Lessines - Salle omnisports de Mouscron" 
-                    className="h-64 w-full object-cover rounded-lg shadow-lg"
-                  />
+                  <img src="/lovable-uploads/4842a4f3-cca0-44aa-bd40-458e7b9d1cf7.png" alt="Hall Max Lessines - Salle omnisports de Mouscron" className="h-64 w-full object-cover rounded-lg shadow-lg" />
                 </div>
               </div>
             </CardContent>
@@ -150,8 +132,7 @@ const Info = () => {
             Horaires d'entraînement
           </h2>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {trainingSchedule.map((training, index) => (
-              <Card key={index} className="hover:shadow-md transition-shadow">
+            {trainingSchedule.map((training, index) => <Card key={index} className="hover:shadow-md transition-shadow">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between">
                     <div>
@@ -169,8 +150,7 @@ const Info = () => {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </section>
 
@@ -178,22 +158,12 @@ const Info = () => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-12 text-hc-orange">Agendas</h2>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {calendars.map((cal) => (
-              <div
-                key={cal.label}
-                className="flex flex-col items-center bg-hc-green-light/10 p-6 rounded-lg shadow-sm"
-              >
+            {calendars.map(cal => <div key={cal.label} className="flex flex-col items-center bg-hc-green-light/10 p-6 rounded-lg shadow-sm">
                 <div className="text-xl font-semibold text-hc-green mb-4">{cal.label}</div>
-                <a
-                  href={cal.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-hc-orange text-white px-4 py-2 rounded hover:bg-hc-orange/80 transition-colors font-medium mt-auto"
-                >
+                <a href={cal.url} target="_blank" rel="noopener noreferrer" className="bg-hc-orange text-white px-4 py-2 rounded hover:bg-hc-orange/80 transition-colors font-medium mt-auto">
                   Ouvrir l'agenda
                 </a>
-              </div>
-            ))}
+              </div>)}
           </div>
           <div className="text-center mt-6 text-muted-foreground text-sm">
             Accès direct aux calendriers Google des matchs pour chaque catégorie.
@@ -205,15 +175,10 @@ const Info = () => {
           <h2 className="text-3xl font-bold text-center mb-12 text-hc-orange">Tarifs</h2>
           <div className="max-w-3xl mx-auto text-center p-10 rounded-lg bg-white/90 border shadow space-y-6">
             <div className="grid md:grid-cols-2 gap-6 mb-8">
-              {tarifs.map((t, idx) => (
-                <div
-                  key={t.label}
-                  className="flex flex-col items-center justify-center bg-hc-green-light/10 rounded-lg p-4 shadow-sm"
-                >
+              {tarifs.map((t, idx) => <div key={t.label} className="flex flex-col items-center justify-center bg-hc-green-light/10 rounded-lg p-4 shadow-sm">
                   <div className="text-lg font-semibold text-hc-green mb-1">{t.label}</div>
                   <div className="text-2xl font-bold text-hc-orange mb-1">{t.price}</div>
-                </div>
-              ))}
+                </div>)}
             </div>
             <div className="bg-hc-green/10 p-4 rounded-lg shadow mb-4">
               <div className="font-medium mb-1">
@@ -241,8 +206,7 @@ const Info = () => {
           </h2>
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6">
-              {registrationSteps.map((step, index) => (
-                <Card key={index} className="hover:shadow-md transition-shadow">
+              {registrationSteps.map((step, index) => <Card key={index} className="hover:shadow-md transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-hc-green rounded-full flex items-center justify-center text-white font-bold">
@@ -254,8 +218,7 @@ const Info = () => {
                       </div>
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
             
             <div className="mt-12 p-6 bg-gradient-to-r from-hc-green to-hc-orange rounded-lg text-center text-white">
@@ -282,22 +245,12 @@ const Info = () => {
             Téléchargements utiles
           </h2>
           <div className="flex flex-col md:flex-row justify-center gap-6 mb-4">
-            <a
-              href="https://drive.google.com/file/d/1Z5f29NA636bP7u8egB8dI44vWgYCAQN2/view?usp=drive_link"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block"
-            >
+            <a href="https://drive.google.com/file/d/1Z5f29NA636bP7u8egB8dI44vWgYCAQN2/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="inline-block">
               <button className="bg-hc-orange hover:bg-hc-orange/80 text-white font-medium px-6 py-3 rounded-lg shadow transition-all w-full md:w-auto">
                 Télécharger la fiche d'affiliation (PDF)
               </button>
             </a>
-            <a
-              href="https://drive.google.com/file/d/1kqxLUl4IiAW-ZD-7Fx7foLRVvnhq9hhu/view?usp=drive_link"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block"
-            >
+            <a href="https://drive.google.com/file/d/1kqxLUl4IiAW-ZD-7Fx7foLRVvnhq9hhu/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="inline-block">
               <button className="bg-hc-green hover:bg-hc-green/80 text-white font-medium px-6 py-3 rounded-lg shadow transition-all w-full md:w-auto">
                 Télécharger le formulaire de transfert international (PDF)
               </button>
@@ -309,8 +262,6 @@ const Info = () => {
           </div>
         </section>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Info;
