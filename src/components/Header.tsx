@@ -28,15 +28,15 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-gradient-to-r from-hc-green via-hc-green to-hc-orange backdrop-blur shadow-lg bg-amber-600">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
-        {/* Logo - Logo agrandi de h-12 w-12 à h-16 w-16 */}
-        <div className="flex lg:flex-1 items-center space-x-2">
-          <Link to="/" className="flex items-center space-x-2">
+        {/* Logo - Encore plus agrandi pour PC */}
+        <div className="flex lg:flex-1 items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/7f5485a2-eaa0-4a73-8e50-8de5813ec2f3.png" 
               alt="HC Mouscron logo" 
-              className="h-16 w-16 rounded-full bg-white p-1 shadow-lg" 
+              className="h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 rounded-full bg-white p-1 shadow-lg" 
             />
-            <span className="hidden sm:block text-xl font-bold text-white drop-shadow-lg">HC Mouscron</span>
+            <span className="hidden sm:block text-xl lg:text-2xl font-bold text-white drop-shadow-lg">HC Mouscron</span>
           </Link>
         </div>
 
