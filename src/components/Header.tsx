@@ -28,7 +28,7 @@ const Header = () => {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-gradient-to-r from-hc-green via-hc-green to-hc-orange backdrop-blur shadow-lg">
+    <header className="sticky top-0 z-50 w-full border-b bg-hc-orange backdrop-blur shadow-lg">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
         {/* Logo - Encore plus visible */}
         <div className="flex lg:flex-1 items-center space-x-4">
@@ -36,7 +36,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/7f5485a2-eaa0-4a73-8e50-8de5813ec2f3.png" 
               alt="HC Mouscron logo" 
-              className="h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 rounded-full bg-white p-1 shadow-xl" 
+              className="h-20 w-20 sm:h-24 sm:w-24 lg:h-28 lg:w-28 rounded-full bg-white p-1 shadow-xl" 
             />
             <span className="hidden sm:block text-2xl lg:text-3xl font-bold text-white drop-shadow-lg tracking-wide">
               HC Mouscron
@@ -109,7 +109,7 @@ const Header = () => {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="lg:hidden animate-slide-in">
-          <div className="space-y-1 px-4 pb-4 pt-2 bg-gradient-to-r from-hc-green via-hc-green to-hc-orange border-t border-white/20">
+          <div className="space-y-1 px-4 pb-4 pt-2 bg-hc-orange border-t border-white/20">
             {navigation.map(item => (
               <Link 
                 key={item.name} 

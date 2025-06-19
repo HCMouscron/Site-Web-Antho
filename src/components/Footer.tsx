@@ -1,16 +1,15 @@
-
 import { MapPin, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-hc-green via-hc-green to-hc-orange border-t shadow-lg">
+    <footer className="bg-hc-green border-t shadow-lg">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
           {/* Logo et description */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <img src="/lovable-uploads/7f5485a2-eaa0-4a73-8e50-8de5813ec2f3.png" alt="HC Mouscron logo" className="h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 rounded-full bg-white p-1 shadow-lg" />
+              <img src="/lovable-uploads/7f5485a2-eaa0-4a73-8e50-8de5813ec2f3.png" alt="HC Mouscron logo" className="h-20 w-20 sm:h-24 sm:w-24 lg:h-28 lg:w-28 rounded-full bg-white p-1 shadow-lg" />
               <span className="text-xl lg:text-2xl font-bold text-white drop-shadow-lg">HC Mouscron</span>
             </div>
             <p className="text-white max-w-md drop-shadow-md text-base">
