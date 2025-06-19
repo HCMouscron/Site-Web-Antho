@@ -1,9 +1,7 @@
 import { MapPin, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 const Footer = () => {
-  return (
-    <footer className="bg-hc-green border-t shadow-lg">
+  return <footer className="bg-hc-green border-t shadow-lg bg-green-800">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
           {/* Logo et description */}
@@ -17,31 +15,13 @@ const Footer = () => {
             </p>
             <div className="flex gap-x-4 mt-6">
               <Button variant="ghost" size="sm" asChild>
-                <a 
-                  href="https://www.facebook.com/HCMouscron" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full"
-                >
-                  <img 
-                    src="/lovable-uploads/b2e8bfa2-ec84-4d63-8d58-503664da7229.png" 
-                    alt="Facebook" 
-                    className="h-5 w-5"
-                  />
+                <a href="https://www.facebook.com/HCMouscron" target="_blank" rel="noopener noreferrer" className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full">
+                  <img src="/lovable-uploads/b2e8bfa2-ec84-4d63-8d58-503664da7229.png" alt="Facebook" className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="sm" asChild>
-                <a 
-                  href="https://www.instagram.com/hcmouscron/" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full"
-                >
-                  <img 
-                    src="/lovable-uploads/e132c7e8-e206-404e-b6fb-60edb8e0d181.png" 
-                    alt="Instagram" 
-                    className="h-5 w-5"
-                  />
+                <a href="https://www.instagram.com/hcmouscron/" target="_blank" rel="noopener noreferrer" className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full">
+                  <img src="/lovable-uploads/e132c7e8-e206-404e-b6fb-60edb8e0d181.png" alt="Instagram" className="h-5 w-5" />
                 </a>
               </Button>
             </div>
@@ -108,8 +88,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
