@@ -1,3 +1,4 @@
+
 import { ExternalLink } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -5,10 +6,10 @@ import { Button } from '@/components/ui/button';
 const Partners = () => {
   const partners = [
     {
-      name: 'Acta Security',
-      logo: '/lovable-uploads/919c9f3d-5770-47d1-8dcf-445e17bb9d18.png',
-      website: 'https://www.acta-security.be/',
-      description: 'Solutions de sécurité innovantes'
+      name: 'Crack',
+      logo: '/lovable-uploads/d1b8c78d-2adc-4f0c-a684-d108bed1d3c5.png',
+      website: 'https://www.crack.be/fr/',
+      description: 'Meubles & Cuisines - Votre partenaire de confiance'
     },
     {
       name: 'Fred Elec',
@@ -23,10 +24,10 @@ const Partners = () => {
       description: 'Pneus Hollebeke - Votre spécialiste pneumatiques'
     },
     {
-      name: 'Crack',
-      logo: '/lovable-uploads/d1b8c78d-2adc-4f0c-a684-d108bed1d3c5.png',
-      website: 'https://www.crack.be/fr/',
-      description: 'Meubles & Cuisines - Votre partenaire de confiance'
+      name: 'Acta Security',
+      logo: '/lovable-uploads/919c9f3d-5770-47d1-8dcf-445e17bb9d18.png',
+      website: 'https://www.acta-security.be/',
+      description: 'Solutions de sécurité innovantes'
     }
   ];
 
@@ -36,18 +37,12 @@ const Partners = () => {
       <section className="py-20 bg-gradient-to-r from-hc-green via-hc-green to-hc-orange relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center relative z-10">
-          <div className="mb-8">
-            <h1 className="text-5xl sm:text-7xl font-black tracking-tight mb-6">
-              <span className="block bg-gradient-to-r from-white via-yellow-200 to-hc-orange bg-clip-text text-transparent drop-shadow-2xl">
-                NOS
-              </span>
-              <span className="block bg-gradient-to-r from-hc-orange via-yellow-300 to-white bg-clip-text text-transparent drop-shadow-2xl">
-                PARTENAIRES
-              </span>
-            </h1>
-          </div>
-          <div className="bg-white/20 backdrop-blur-md rounded-3xl p-8 mx-auto max-w-4xl border-2 border-white/30 shadow-2xl">
-            <p className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-white to-yellow-100 bg-clip-text text-transparent drop-shadow-lg">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6 drop-shadow-2xl text-shadow-lg">
+            <span className="block text-yellow-200 text-shadow-lg">NOS</span>
+            <span className="block text-white text-shadow-lg">PARTENAIRES</span>
+          </h1>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mx-auto max-w-4xl border border-white/20">
+            <p className="text-xl sm:text-2xl text-yellow-100 font-bold drop-shadow-lg text-shadow">
               Ils nous font confiance et participent à la réussite du club !
             </p>
           </div>
