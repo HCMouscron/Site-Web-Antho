@@ -6,10 +6,22 @@ const PartnersCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   
   const partners = [
-    { name: 'Crack', logo: '/lovable-uploads/placeholder-sponsor.png' },
-    { name: 'Fred Elec', logo: '/lovable-uploads/placeholder-sponsor.png' },
-    { name: 'Holebecque', logo: '/lovable-uploads/placeholder-sponsor.png' },
-    { name: 'Acta Security', logo: '/lovable-uploads/placeholder-sponsor.png' }
+    { 
+      name: 'Crack', 
+      logo: '/lovable-uploads/d1b8c78d-2adc-4f0c-a684-d108bed1d3c5.png'
+    },
+    { 
+      name: 'Fred Elec', 
+      logo: '/lovable-uploads/f847fff1-a2e3-4717-b1d4-85fe3bebe9f7.png'
+    },
+    { 
+      name: 'Holebecque', 
+      logo: '/lovable-uploads/3e0d607f-5f42-442c-927b-96d9671ee3cf.png'
+    },
+    { 
+      name: 'Acta Security', 
+      logo: '/lovable-uploads/919c9f3d-5770-47d1-8dcf-445e17bb9d18.png'
+    }
   ];
 
   // Auto-scroll effect
@@ -42,10 +54,12 @@ const PartnersCarousel = () => {
                       : 'scale-100 opacity-60'
                   }`}
                 >
-                  <div className="w-24 h-24 bg-gray-100 rounded-lg flex items-center justify-center border border-gray-200 group-hover:border-hc-green transition-colors">
-                    <span className="text-gray-600 font-medium text-sm text-center px-2">
-                      {partner.name}
-                    </span>
+                  <div className="w-32 h-24 bg-white rounded-lg flex items-center justify-center border border-gray-200 group-hover:border-hc-green transition-colors p-2">
+                    <img 
+                      src={partner.logo} 
+                      alt={`${partner.name} logo`}
+                      className="max-w-full max-h-full object-contain"
+                    />
                   </div>
                 </div>
               ))}

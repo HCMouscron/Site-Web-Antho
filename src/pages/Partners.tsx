@@ -7,26 +7,26 @@ const Partners = () => {
   const partners = [
     {
       name: 'Crack',
-      logo: '/lovable-uploads/placeholder-sponsor.png', // Placeholder - à remplacer par les vrais logos
-      website: 'https://crack-example.com',
-      description: 'Notre partenaire de confiance depuis plusieurs années'
+      logo: '/lovable-uploads/d1b8c78d-2adc-4f0c-a684-d108bed1d3c5.png',
+      website: 'https://www.crack.be/fr/',
+      description: 'Meubles & Cuisines - Votre partenaire de confiance'
     },
     {
       name: 'Fred Elec',
-      logo: '/lovable-uploads/placeholder-sponsor.png', // Placeholder - à remplacer par les vrais logos
-      website: 'https://fredelec-example.com',
+      logo: '/lovable-uploads/f847fff1-a2e3-4717-b1d4-85fe3bebe9f7.png',
+      website: 'https://www.fred-electrique.com/fr/accueil',
       description: 'Solutions électriques professionnelles'
     },
     {
       name: 'Holebecque',
-      logo: '/lovable-uploads/placeholder-sponsor.png', // Placeholder - à remplacer par les vrais logos
-      website: 'https://holebecque-example.com',
-      description: 'Partenaire local engagé'
+      logo: '/lovable-uploads/3e0d607f-5f42-442c-927b-96d9671ee3cf.png',
+      website: 'https://pneus-hollebeke.be/index.html',
+      description: 'Pneus Hollebeke - Votre spécialiste pneumatiques'
     },
     {
       name: 'Acta Security',
-      logo: '/lovable-uploads/placeholder-sponsor.png', // Placeholder - à remplacer par les vrais logos
-      website: 'https://actasecurity-example.com',
+      logo: '/lovable-uploads/919c9f3d-5770-47d1-8dcf-445e17bb9d18.png',
+      website: 'https://www.acta-security.be/',
       description: 'Solutions de sécurité innovantes'
     }
   ];
@@ -34,14 +34,18 @@ const Partners = () => {
   return (
     <div className="w-full min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-hc-green via-hc-green to-hc-orange">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6 drop-shadow-lg">
-            NOS PARTENAIRES
+      <section className="py-20 bg-gradient-to-r from-hc-green via-hc-green to-hc-orange relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center relative z-10">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6 drop-shadow-2xl text-shadow-lg">
+            <span className="block text-yellow-200 text-shadow-lg">NOS</span>
+            <span className="block text-white text-shadow-lg">PARTENAIRES</span>
           </h1>
-          <p className="text-xl sm:text-2xl text-white font-medium drop-shadow-md">
-            Ils nous font confiance et participent à la réussite du club !
-          </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mx-auto max-w-4xl border border-white/20">
+            <p className="text-xl sm:text-2xl text-yellow-100 font-bold drop-shadow-lg text-shadow">
+              Ils nous font confiance et participent à la réussite du club !
+            </p>
+          </div>
         </div>
       </section>
 
@@ -53,8 +57,12 @@ const Partners = () => {
               <Card key={index} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white border-2 hover:border-hc-orange">
                 <CardContent className="p-8 text-center">
                   <div className="mb-6 flex justify-center">
-                    <div className="w-32 h-32 bg-gray-100 rounded-lg flex items-center justify-center border-2 border-gray-200 group-hover:border-hc-green transition-colors">
-                      <span className="text-gray-500 font-semibold text-lg">{partner.name}</span>
+                    <div className="w-40 h-32 bg-white rounded-lg flex items-center justify-center border-2 border-gray-200 group-hover:border-hc-green transition-colors p-2">
+                      <img 
+                        src={partner.logo} 
+                        alt={`${partner.name} logo`}
+                        className="max-w-full max-h-full object-contain"
+                      />
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
