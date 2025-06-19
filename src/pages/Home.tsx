@@ -2,8 +2,11 @@ import { Calendar, MapPin, Users, Trophy } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from "react-router-dom";
+import PartnersCarousel from '@/components/PartnersCarousel';
+
 const Home = () => {
-  return <div className="w-full">
+  return (
+    <div className="w-full">
       {/* Hero Section */}
       <section className="relative h-[70vh] bg-gradient-to-r from-hc-green via-hc-green to-hc-orange overflow-hidden">
         <div className="absolute inset-0 bg-black/30"></div>
@@ -43,6 +46,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Partners Carousel - Placé après le hero */}
+      <PartnersCarousel />
 
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-r from-hc-green/10 via-white to-hc-orange/10 bg-green-800">
@@ -143,6 +149,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Home;

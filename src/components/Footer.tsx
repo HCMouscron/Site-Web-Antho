@@ -3,7 +3,8 @@ import { Facebook, Instagram, MapPin, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Footer = () => {
-  return <footer className="bg-gradient-to-r from-hc-green via-hc-green to-hc-orange border-t shadow-lg bg-green-800">
+  return (
+    <footer className="bg-gradient-to-r from-hc-green via-hc-green to-hc-orange border-t shadow-lg">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
           {/* Logo et description */}
@@ -17,13 +18,23 @@ const Footer = () => {
             </p>
             <div className="flex gap-x-4 mt-6">
               <Button variant="ghost" size="sm" asChild>
-                <a href="https://www.facebook.com/HCMouscron" target="_blank" rel="noopener noreferrer" className="text-white hover:text-hc-orange drop-shadow-md">
-                  <Facebook className="h-5 w-5" />
+                <a 
+                  href="https://www.facebook.com/HCMouscron" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full"
+                >
+                  <Facebook className="h-5 w-5" fill="currentColor" />
                 </a>
               </Button>
               <Button variant="ghost" size="sm" asChild>
-                <a href="https://www.instagram.com/hcmouscron/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-hc-orange drop-shadow-md">
-                  <Instagram className="h-5 w-5" />
+                <a 
+                  href="https://www.instagram.com/hcmouscron/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full"
+                >
+                  <Instagram className="h-5 w-5" fill="currentColor" />
                 </a>
               </Button>
             </div>
@@ -41,6 +52,11 @@ const Footer = () => {
               <li>
                 <a href="/equipe" className="text-white hover:text-hc-orange transition-colors drop-shadow-md">
                   Équipe
+                </a>
+              </li>
+              <li>
+                <a href="/partenaires" className="text-white hover:text-hc-orange transition-colors drop-shadow-md">
+                  Partenaires
                 </a>
               </li>
               <li>
@@ -85,7 +101,8 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
 
 export default Footer;

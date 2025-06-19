@@ -8,13 +8,15 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
-  // Retirer la navigation "Planning"
   const navigation = [{
     name: 'Accueil',
     href: '/'
   }, {
     name: 'Équipe',
     href: '/equipe'
+  }, {
+    name: 'Partenaires',
+    href: '/partenaires'
   }, {
     name: 'Infos',
     href: '/infos'
@@ -26,34 +28,38 @@ const Header = () => {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-gradient-to-r from-hc-green via-hc-green to-hc-orange backdrop-blur shadow-lg bg-amber-600">
+    <header className="sticky top-0 z-50 w-full border-b bg-gradient-to-r from-hc-green via-hc-green to-hc-orange backdrop-blur shadow-lg">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
-        {/* Logo - Encore plus agrandi pour PC */}
-        <div className="flex lg:flex-1 items-center space-x-3">
-          <Link to="/" className="flex items-center space-x-3">
+        {/* Logo - Encore plus visible */}
+        <div className="flex lg:flex-1 items-center space-x-4">
+          <Link to="/" className="flex items-center space-x-4">
             <img 
               src="/lovable-uploads/7f5485a2-eaa0-4a73-8e50-8de5813ec2f3.png" 
               alt="HC Mouscron logo" 
-              className="h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 rounded-full bg-white p-1 shadow-lg" 
+              className="h-16 w-16 sm:h-20 sm:w-20 lg:h-28 lg:w-28 rounded-full bg-white p-1 shadow-xl" 
             />
-            <span className="hidden sm:block text-xl lg:text-2xl font-bold text-white drop-shadow-lg">HC Mouscron</span>
+            <span className="hidden sm:block text-2xl lg:text-3xl font-bold text-white drop-shadow-lg tracking-wide">
+              HC Mouscron
+            </span>
           </Link>
         </div>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation - Police plus grande et en gras */}
         <div className="hidden lg:flex lg:gap-x-8">
           {navigation.map(item => (
             <Link 
               key={item.name} 
               to={item.href} 
-              className="text-white"
+              className={`text-white font-bold text-lg hover:text-yellow-200 transition-colors drop-shadow-md px-2 py-1 rounded ${
+                isActive(item.href) ? 'text-yellow-200 bg-white/10' : ''
+              }`}
             >
               {item.name}
             </Link>
           ))}
         </div>
 
-        {/* Social Links */}
+        {/* Social Links - Logos officiels sans recolorisation */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
           <Button variant="ghost" size="sm" asChild>
             <a 
@@ -61,9 +67,9 @@ const Header = () => {
               target="_blank" 
               rel="noopener noreferrer" 
               aria-label="Facebook" 
-              className="text-white hover:text-white-200 drop-shadow-md"
+              className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full"
             >
-              <Facebook className="h-6 w-6" />
+              <Facebook className="h-6 w-6" fill="currentColor" />
             </a>
           </Button>
           <Button variant="ghost" size="sm" asChild>
@@ -71,10 +77,10 @@ const Header = () => {
               href="https://www.instagram.com/hcmouscron/" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-white hover:text-yellow-200 drop-shadow-md" 
+              className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full" 
               aria-label="Instagram"
             >
-              <Instagram className="h-6 w-6" />
+              <Instagram className="h-6 w-6" fill="currentColor" />
             </a>
           </Button>
         </div>
@@ -100,8 +106,8 @@ const Header = () => {
               <Link 
                 key={item.name} 
                 to={item.href} 
-                className={`block px-3 py-2 text-base font-medium transition-colors hover:text-yellow-200 drop-shadow-md ${
-                  isActive(item.href) ? 'text-yellow-200' : 'text-white'
+                className={`block px-3 py-2 text-base font-bold transition-colors hover:text-yellow-200 drop-shadow-md ${
+                  isActive(item.href) ? 'text-yellow-200 bg-white/10 rounded' : 'text-white'
                 }`} 
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -114,10 +120,10 @@ const Header = () => {
                   href="https://www.facebook.com/HCMouscron" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-white hover:text-yellow-200 drop-shadow-md" 
+                  className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full" 
                   aria-label="Facebook"
                 >
-                  <Facebook className="h-5 w-5" />
+                  <Facebook className="h-5 w-5" fill="currentColor" />
                 </a>
               </Button>
               <Button variant="ghost" size="sm" asChild>
@@ -125,10 +131,10 @@ const Header = () => {
                   href="https://www.instagram.com/hcmouscron/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-white hover:text-yellow-200 drop-shadow-md" 
+                  className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full" 
                   aria-label="Instagram"
                 >
-                  <Instagram className="h-5 w-5" />
+                  <Instagram className="h-5 w-5" fill="currentColor" />
                 </a>
               </Button>
             </div>
