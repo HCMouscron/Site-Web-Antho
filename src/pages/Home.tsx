@@ -3,10 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from "react-router-dom";
 import PartnersCarousel from '@/components/PartnersCarousel';
-
 const Home = () => {
-  return (
-    <div className="w-full">
+  return <div className="w-full">
       {/* Hero Section */}
       <section className="relative h-[70vh] bg-gradient-to-r from-hc-green via-hc-green to-hc-orange overflow-hidden">
         <div className="absolute inset-0 bg-black/30"></div>
@@ -28,11 +26,7 @@ const Home = () => {
               Découvrez l'esprit d'équipe et la passion du handball dans une ambiance conviviale.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://drive.google.com/file/d/1Z5f29NA636bP7u8egB8dI44vWgYCAQN2/view?usp=drive_link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://drive.google.com/file/d/1Z5f29NA636bP7u8egB8dI44vWgYCAQN2/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-hc-orange hover:bg-hc-orange-light text-white shadow-lg w-full sm:w-auto">
                   Nous rejoindre
                 </Button>
@@ -149,8 +143,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
