@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Facebook, Instagram } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
@@ -36,7 +36,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/7f5485a2-eaa0-4a73-8e50-8de5813ec2f3.png" 
               alt="HC Mouscron logo" 
-              className="h-16 w-16 sm:h-20 sm:w-20 lg:h-28 lg:w-28 rounded-full bg-white p-1 shadow-xl" 
+              className="h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 rounded-full bg-white p-1 shadow-xl" 
             />
             <span className="hidden sm:block text-2xl lg:text-3xl font-bold text-white drop-shadow-lg tracking-wide">
               HC Mouscron
@@ -59,7 +59,7 @@ const Header = () => {
           ))}
         </div>
 
-        {/* Social Links - Logos officiels sans recolorisation */}
+        {/* Social Links - Vrais logos officiels */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
           <Button variant="ghost" size="sm" asChild>
             <a 
@@ -69,7 +69,11 @@ const Header = () => {
               aria-label="Facebook" 
               className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full"
             >
-              <Facebook className="h-6 w-6" fill="currentColor" />
+              <img 
+                src="/lovable-uploads/b2e8bfa2-ec84-4d63-8d58-503664da7229.png" 
+                alt="Facebook" 
+                className="h-6 w-6"
+              />
             </a>
           </Button>
           <Button variant="ghost" size="sm" asChild>
@@ -80,7 +84,11 @@ const Header = () => {
               className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full" 
               aria-label="Instagram"
             >
-              <Instagram className="h-6 w-6" fill="currentColor" />
+              <img 
+                src="/lovable-uploads/e132c7e8-e206-404e-b6fb-60edb8e0d181.png" 
+                alt="Instagram" 
+                className="h-6 w-6"
+              />
             </a>
           </Button>
         </div>
@@ -123,7 +131,11 @@ const Header = () => {
                   className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full" 
                   aria-label="Facebook"
                 >
-                  <Facebook className="h-5 w-5" fill="currentColor" />
+                  <img 
+                    src="/lovable-uploads/b2e8bfa2-ec84-4d63-8d58-503664da7229.png" 
+                    alt="Facebook" 
+                    className="h-5 w-5"
+                  />
                 </a>
               </Button>
               <Button variant="ghost" size="sm" asChild>
@@ -134,7 +146,11 @@ const Header = () => {
                   className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full" 
                   aria-label="Instagram"
                 >
-                  <Instagram className="h-5 w-5" fill="currentColor" />
+                  <img 
+                    src="/lovable-uploads/e132c7e8-e206-404e-b6fb-60edb8e0d181.png" 
+                    alt="Instagram" 
+                    className="h-5 w-5"
+                  />
                 </a>
               </Button>
             </div>

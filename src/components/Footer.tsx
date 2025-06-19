@@ -1,5 +1,5 @@
 
-import { Facebook, Instagram, MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Footer = () => {
@@ -24,7 +24,11 @@ const Footer = () => {
                   rel="noopener noreferrer" 
                   className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full"
                 >
-                  <Facebook className="h-5 w-5" fill="currentColor" />
+                  <img 
+                    src="/lovable-uploads/b2e8bfa2-ec84-4d63-8d58-503664da7229.png" 
+                    alt="Facebook" 
+                    className="h-5 w-5"
+                  />
                 </a>
               </Button>
               <Button variant="ghost" size="sm" asChild>
@@ -34,7 +38,11 @@ const Footer = () => {
                   rel="noopener noreferrer" 
                   className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full"
                 >
-                  <Instagram className="h-5 w-5" fill="currentColor" />
+                  <img 
+                    src="/lovable-uploads/e132c7e8-e206-404e-b6fb-60edb8e0d181.png" 
+                    alt="Instagram" 
+                    className="h-5 w-5"
+                  />
                 </a>
               </Button>
             </div>
