@@ -30,23 +30,9 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-amber-600 backdrop-blur shadow-lg">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
-        {/* Logo */}
-        <div className="flex lg:flex-1 items-center space-x-4">
-          <Link to="/" className="flex items-center space-x-4">
-            <img 
-              src="/lovable-uploads/7f5485a2-eaa0-4a73-8e50-8de5813ec2f3.png" 
-              alt="HC Mouscron logo" 
-              className="h-20 w-20 sm:h-24 sm:w-24 lg:h-28 lg:w-28 rounded-full bg-white p-1 shadow-xl" 
-            />
-            <span className="hidden sm:block text-2xl lg:text-3xl font-bold text-white drop-shadow-lg tracking-wide">
-              HC Mouscron
-            </span>
-          </Link>
-        </div>
-
-        {/* Desktop Navigation */}
-        <div className="hidden lg:flex lg:gap-x-8">
-          {navigation.map(item => (
+        {/* Navigation gauche - Desktop */}
+        <div className="hidden lg:flex lg:gap-x-8 lg:flex-1">
+          {navigation.slice(0, 3).map(item => (
             item.submenu ? (
               <div 
                 key={item.name} 
@@ -88,30 +74,58 @@ const Header = () => {
           ))}
         </div>
 
-        {/* Social Links */}
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
-          <Button variant="ghost" size="sm" asChild>
-            <a 
-              href="https://www.facebook.com/HCMouscron" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              aria-label="Facebook" 
-              className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full"
-            >
-              <img src="/lovable-uploads/b2e8bfa2-ec84-4d63-8d58-503664da7229.png" alt="Facebook" className="h-6 w-6" />
-            </a>
-          </Button>
-          <Button variant="ghost" size="sm" asChild>
-            <a 
-              href="https://www.instagram.com/hcmouscron/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full" 
-              aria-label="Instagram"
-            >
-              <img src="/lovable-uploads/e132c7e8-e206-404e-b6fb-60edb8e0d181.png" alt="Instagram" className="h-6 w-6" />
-            </a>
-          </Button>
+        {/* Logo centré */}
+        <div className="flex-shrink-0">
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/lovable-uploads/7f5485a2-eaa0-4a73-8e50-8de5813ec2f3.png" 
+              alt="HC Mouscron logo" 
+              className="h-24 w-24 sm:h-28 sm:w-28 lg:h-32 lg:w-32 rounded-full shadow-xl" 
+            />
+          </Link>
+        </div>
+
+        {/* Navigation droite - Desktop */}
+        <div className="hidden lg:flex lg:gap-x-8 lg:flex-1 lg:justify-end lg:items-center">
+          <div className="flex gap-x-8">
+            {navigation.slice(3).map(item => (
+              <Link 
+                key={item.name} 
+                to={item.href} 
+                className={`text-white font-bold text-lg hover:text-yellow-200 transition-colors drop-shadow-md px-2 py-1 rounded ${
+                  isActive(item.href) ? 'text-yellow-200 bg-white/10' : ''
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+          
+          {/* Social Links */}
+          <div className="flex gap-x-4 ml-6">
+            <Button variant="ghost" size="sm" asChild>
+              <a 
+                href="https://www.facebook.com/HCMouscron" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Facebook" 
+                className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full"
+              >
+                <img src="/lovable-uploads/b2e8bfa2-ec84-4d63-8d58-503664da7229.png" alt="Facebook" className="h-8 w-8" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="sm" asChild>
+              <a 
+                href="https://www.instagram.com/hcmouscron/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full" 
+                aria-label="Instagram"
+              >
+                <img src="/lovable-uploads/e132c7e8-e206-404e-b6fb-60edb8e0d181.png" alt="Instagram" className="h-8 w-8" />
+              </a>
+            </Button>
+          </div>
         </div>
 
         {/* Mobile menu button */}
@@ -172,7 +186,7 @@ const Header = () => {
                   className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full" 
                   aria-label="Facebook"
                 >
-                  <img src="/lovable-uploads/b2e8bfa2-ec84-4d63-8d58-503664da7229.png" alt="Facebook" className="h-5 w-5" />
+                  <img src="/lovable-uploads/b2e8bfa2-ec84-4d63-8d58-503664da7229.png" alt="Facebook" className="h-6 w-6" />
                 </a>
               </Button>
               <Button variant="ghost" size="sm" asChild>
@@ -183,7 +197,7 @@ const Header = () => {
                   className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full" 
                   aria-label="Instagram"
                 >
-                  <img src="/lovable-uploads/e132c7e8-e206-404e-b6fb-60edb8e0d181.png" alt="Instagram" className="h-5 w-5" />
+                  <img src="/lovable-uploads/e132c7e8-e206-404e-b6fb-60edb8e0d181.png" alt="Instagram" className="h-6 w-6" />
                 </a>
               </Button>
             </div>
