@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -20,6 +19,7 @@ const Header = () => {
         { name: 'Scorers', href: '/scorers' }
       ]
     },
+    { name: 'Actualités', href: '/actualites' },
     { name: 'Partenaires', href: '/partenaires' },
     { name: 'Infos', href: '/infos' },
     { name: 'Contact', href: '/contact' }
@@ -28,11 +28,11 @@ const Header = () => {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-gradient-to-r from-amber-600 via-orange-500 to-green-600 backdrop-blur shadow-lg">
+    <header className="sticky top-0 z-50 w-full border-b bg-gradient-to-r from-green-800 via-green-600 to-amber-600 backdrop-blur shadow-lg">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
         {/* Navigation gauche - Desktop */}
         <div className="hidden lg:flex lg:gap-x-8 lg:flex-1">
-          {navigation.slice(0, 3).map(item => (
+          {navigation.slice(0, 4).map(item => (
             item.submenu ? (
               <div 
                 key={item.name} 
@@ -88,7 +88,7 @@ const Header = () => {
         {/* Navigation droite - Desktop */}
         <div className="hidden lg:flex lg:gap-x-8 lg:flex-1 lg:justify-end lg:items-center">
           <div className="flex gap-x-8">
-            {navigation.slice(3).map(item => (
+            {navigation.slice(4).map(item => (
               <Link 
                 key={item.name} 
                 to={item.href} 
@@ -144,7 +144,7 @@ const Header = () => {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="lg:hidden animate-slide-in">
-          <div className="space-y-1 px-4 pb-4 pt-2 bg-gradient-to-r from-amber-600 via-orange-500 to-green-600 border-t border-white/20">
+          <div className="space-y-1 px-4 pb-4 pt-2 bg-gradient-to-r from-green-800 via-green-600 to-amber-600 border-t border-white/20">
             {navigation.map(item => (
               item.submenu ? (
                 <div key={item.name}>
