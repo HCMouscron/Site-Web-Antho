@@ -1,9 +1,10 @@
+
 import { MapPin, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-amber-600 via-amber-500 to-green-800 border-t shadow-lg">
+    <footer className="bg-green-800 border-t shadow-lg">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
           {/* Logo et description */}
@@ -48,42 +49,37 @@ const Footer = () => {
             <h3 className="text-sm font-semibold text-white mb-4 drop-shadow-md">Navigation</h3>
             <ul className="space-y-3">
               <li>
-                <a href="/" className="text-white hover:text-yellow-200 transition-colors drop-shadow-md">
+                <a href="/" className="text-white hover:text-hc-orange transition-colors drop-shadow-md">
                   Accueil
                 </a>
               </li>
               <li>
-                <a href="/equipe" className="text-white hover:text-yellow-200 transition-colors drop-shadow-md">
+                <a href="/equipe" className="text-white hover:text-hc-orange transition-colors drop-shadow-md">
                   Équipe
                 </a>
               </li>
               <li>
-                <a href="/classement" className="text-white hover:text-yellow-200 transition-colors drop-shadow-md">
+                <a href="/classement" className="text-white hover:text-hc-orange transition-colors drop-shadow-md">
                   Classement
                 </a>
               </li>
               <li>
-                <a href="/scorers" className="text-white hover:text-yellow-200 transition-colors drop-shadow-md">
+                <a href="/scorers" className="text-white hover:text-hc-orange transition-colors drop-shadow-md">
                   Scorers
                 </a>
               </li>
               <li>
-                <a href="/actualites" className="text-white hover:text-yellow-200 transition-colors drop-shadow-md">
-                  Actualités
-                </a>
-              </li>
-              <li>
-                <a href="/partenaires" className="text-white hover:text-yellow-200 transition-colors drop-shadow-md">
+                <a href="/partenaires" className="text-white hover:text-hc-orange transition-colors drop-shadow-md">
                   Partenaires
                 </a>
               </li>
               <li>
-                <a href="/infos" className="text-white hover:text-yellow-200 transition-colors drop-shadow-md">
+                <a href="/infos" className="text-white hover:text-hc-orange transition-colors drop-shadow-md">
                   Infos pratiques
                 </a>
               </li>
               <li>
-                <a href="/contact" className="text-white hover:text-yellow-200 transition-colors drop-shadow-md">
+                <a href="/contact" className="text-white hover:text-hc-orange transition-colors drop-shadow-md">
                   Contact
                 </a>
               </li>

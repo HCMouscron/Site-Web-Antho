@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Target, Loader2, Zap, Star } from 'lucide-react';
+import { Target, Loader2 } from 'lucide-react';
 
 interface ScorerData {
   position: number;
@@ -40,28 +40,20 @@ const Scorers = () => {
   }, []);
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-green-50 via-white to-amber-50">
+    <div className="w-full min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 via-emerald-500 to-amber-500 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-green-700/30 to-amber-600/30"></div>
-        </div>
+      <section className="py-20 bg-gradient-to-r from-hc-orange via-hc-orange to-hc-green relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/10"></div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center relative z-10">
-          <div className="flex items-center justify-center mb-8">
-            <div className="bg-white/20 backdrop-blur-sm rounded-full p-4 mr-4 shadow-2xl">
-              <Target className="h-16 w-16 text-yellow-100" />
-            </div>
-            <h1 className="text-5xl font-bold tracking-tight text-white sm:text-7xl drop-shadow-2xl">
+          <div className="flex items-center justify-center mb-6">
+            <Target className="h-12 w-12 text-yellow-200 mr-4" />
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl drop-shadow-2xl">
               SCORERS
             </h1>
           </div>
-          <div className="bg-white/15 backdrop-blur-sm rounded-3xl p-8 mx-auto max-w-4xl border border-white/30 shadow-2xl">
-            <p className="text-2xl sm:text-3xl text-yellow-50 font-bold drop-shadow-lg leading-relaxed">
-              ⚡ Les meilleurs buteurs du championnat
-            </p>
-            <p className="text-lg text-yellow-100 mt-4 drop-shadow-md">
-              Talents exceptionnels • Performances remarquables • Précision redoutable
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mx-auto max-w-4xl border border-white/20">
+            <p className="text-xl sm:text-2xl text-yellow-100 font-bold drop-shadow-lg">
+              Les meilleurs buteurs du championnat
             </p>
           </div>
         </div>
@@ -70,60 +62,53 @@ const Scorers = () => {
       {/* Scorers Table */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <Card className="shadow-2xl border-0 overflow-hidden bg-white/80 backdrop-blur-sm">
-            <CardHeader className="bg-gradient-to-r from-green-600 via-emerald-500 to-amber-500 text-white py-8">
-              <CardTitle className="text-3xl font-bold text-center flex items-center justify-center gap-4">
-                <Zap className="h-8 w-8" />
+          <Card className="shadow-xl">
+            <CardHeader className="bg-gradient-to-r from-hc-orange to-hc-green text-white">
+              <CardTitle className="text-2xl font-bold text-center">
                 Classement des Buteurs
-                <Star className="h-8 w-8" />
               </CardTitle>
             </CardHeader>
             <CardContent className="p-0">
               {loading ? (
-                <div className="flex items-center justify-center py-20 bg-gradient-to-br from-green-50 to-amber-50">
-                  <div className="text-center">
-                    <Loader2 className="h-12 w-12 animate-spin text-green-500 mx-auto mb-4" />
-                    <span className="text-xl text-gray-700 font-medium">Chargement des scorers...</span>
-                  </div>
+                <div className="flex items-center justify-center py-20">
+                  <Loader2 className="h-8 w-8 animate-spin text-hc-orange mr-2" />
+                  <span className="text-lg">Chargement des scorers...</span>
                 </div>
               ) : error ? (
-                <div className="text-center py-20 bg-red-50">
-                  <p className="text-red-600 text-xl font-medium">{error}</p>
+                <div className="text-center py-20">
+                  <p className="text-red-600 text-lg">{error}</p>
                 </div>
               ) : (
                 <div className="overflow-x-auto">
                   <Table>
                     <TableHeader>
-                      <TableRow className="bg-gradient-to-r from-gray-50 to-gray-100 border-b-2 border-gray-200">
-                        <TableHead className="font-bold text-center text-gray-800 py-4">Position</TableHead>
-                        <TableHead className="font-bold text-gray-800 py-4">Nom du Joueur</TableHead>
-                        <TableHead className="font-bold text-gray-800 py-4">Club</TableHead>
-                        <TableHead className="font-bold text-center text-gray-800 py-4">Buts</TableHead>
+                      <TableRow className="bg-gray-50">
+                        <TableHead className="font-bold text-center">Position</TableHead>
+                        <TableHead className="font-bold">Nom du Joueur</TableHead>
+                        <TableHead className="font-bold">Club</TableHead>
+                        <TableHead className="font-bold text-center">Buts</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
                       {scorersData.map((scorer, index) => (
                         <TableRow 
                           key={index}
-                          className={`${index % 2 === 0 ? 'bg-white' : 'bg-gradient-to-r from-green-50/50 to-amber-50/50'} hover:bg-gradient-to-r hover:from-green-100 hover:to-amber-100 transition-all duration-300 border-b border-gray-100`}
+                          className={`${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-hc-orange/10 transition-colors`}
                         >
-                          <TableCell className="text-center font-bold py-4">
-                            <div className={`inline-flex items-center justify-center w-10 h-10 rounded-full text-white font-bold shadow-lg ${
-                              scorer.position === 1 ? 'bg-gradient-to-br from-yellow-400 to-yellow-600' : 
-                              scorer.position === 2 ? 'bg-gradient-to-br from-gray-300 to-gray-500' : 
-                              scorer.position === 3 ? 'bg-gradient-to-br from-orange-400 to-orange-600' : 
-                              'bg-gradient-to-br from-green-500 to-amber-500'
+                          <TableCell className="text-center font-bold">
+                            <div className={`inline-flex items-center justify-center w-8 h-8 rounded-full text-white font-bold ${
+                              scorer.position === 1 ? 'bg-yellow-500' : 
+                              scorer.position === 2 ? 'bg-gray-400' : 
+                              scorer.position === 3 ? 'bg-orange-500' : 
+                              'bg-hc-orange'
                             }`}>
                               {scorer.position}
                             </div>
                           </TableCell>
-                          <TableCell className="font-semibold text-gray-800 py-4 text-lg">{scorer.nom}</TableCell>
-                          <TableCell className="font-medium text-gray-700 py-4">{scorer.club}</TableCell>
-                          <TableCell className="text-center font-bold py-4 text-xl">
-                            <span className="bg-gradient-to-r from-green-600 to-amber-500 bg-clip-text text-transparent flex items-center justify-center gap-2">
-                              <Target className="h-5 w-5 text-green-600" />
-                              {scorer.buts}
-                            </span>
+                          <TableCell className="font-semibold">{scorer.nom}</TableCell>
+                          <TableCell>{scorer.club}</TableCell>
+                          <TableCell className="text-center font-bold text-hc-orange text-lg">
+                            {scorer.buts}
                           </TableCell>
                         </TableRow>
                       ))}

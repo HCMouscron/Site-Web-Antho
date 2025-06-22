@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -42,7 +43,7 @@ const PartnersCarousel = () => {
         </div>
         
         <Link to="/partenaires" className="block group cursor-pointer">
-          <div className="overflow-hidden bg-gradient-to-r from-gray-50 to-white rounded-lg border-2 border-gray-100 group-hover:border-green-600 transition-colors p-8">
+          <div className="overflow-hidden bg-gradient-to-r from-gray-50 to-white rounded-lg border-2 border-gray-100 group-hover:border-hc-orange transition-colors p-8">
             <div className="flex justify-center items-center space-x-12 animate-fade-in">
               {partners.map((partner, index) => (
                 <div 
@@ -53,7 +54,7 @@ const PartnersCarousel = () => {
                       : 'scale-100 opacity-60'
                   }`}
                 >
-                  <div className="w-32 h-24 bg-white rounded-lg flex items-center justify-center border border-gray-200 group-hover:border-green-600 transition-colors p-2">
+                  <div className="w-32 h-24 bg-white rounded-lg flex items-center justify-center border border-gray-200 group-hover:border-hc-green transition-colors p-2">
                     <img 
                       src={partner.logo} 
                       alt={`${partner.name} logo`}
@@ -64,7 +65,7 @@ const PartnersCarousel = () => {
               ))}
             </div>
             <div className="text-center mt-6">
-              <span className="text-sm text-green-600 font-medium group-hover:text-amber-600 transition-colors">
+              <span className="text-sm text-hc-green font-medium group-hover:text-hc-orange transition-colors">
                 Cliquez pour découvrir tous nos partenaires →
               </span>
             </div>

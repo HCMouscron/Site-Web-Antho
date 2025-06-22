@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -19,7 +20,6 @@ const Header = () => {
         { name: 'Scorers', href: '/scorers' }
       ]
     },
-    { name: 'Actualités', href: '/actualites' },
     { name: 'Partenaires', href: '/partenaires' },
     { name: 'Infos', href: '/infos' },
     { name: 'Contact', href: '/contact' }
@@ -28,11 +28,11 @@ const Header = () => {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-gradient-to-r from-green-800 via-green-600 to-amber-600 backdrop-blur shadow-lg">
+    <header className="sticky top-0 z-50 w-full border-b bg-amber-600 backdrop-blur shadow-lg">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
         {/* Navigation gauche - Desktop */}
         <div className="hidden lg:flex lg:gap-x-8 lg:flex-1">
-          {navigation.slice(0, 4).map(item => (
+          {navigation.slice(0, 3).map(item => (
             item.submenu ? (
               <div 
                 key={item.name} 
@@ -45,7 +45,7 @@ const Header = () => {
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
                 {isCompetitionOpen && (
-                  <div className="absolute top-full left-0 mt-1 bg-white rounded-md shadow-lg border border-gray-200 py-2 w-48 z-50">
+                  <div className="absolute top-full left-0 mt-1 bg-white rounded-md shadow-lg border border-gray-200 py-2 w-48">
                     {item.submenu.map(subItem => (
                       <Link
                         key={subItem.name}
@@ -88,7 +88,7 @@ const Header = () => {
         {/* Navigation droite - Desktop */}
         <div className="hidden lg:flex lg:gap-x-8 lg:flex-1 lg:justify-end lg:items-center">
           <div className="flex gap-x-8">
-            {navigation.slice(4).map(item => (
+            {navigation.slice(3).map(item => (
               <Link 
                 key={item.name} 
                 to={item.href} 
@@ -109,9 +109,9 @@ const Header = () => {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="Facebook" 
-                className="text-white hover:bg-white/20 hover:scale-110 drop-shadow-md p-2 rounded-full transition-all duration-300"
+                className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full"
               >
-                <img src="/lovable-uploads/b2e8bfa2-ec84-4d63-8d58-503664da7229.png" alt="Facebook" className="h-10 w-10" />
+                <img src="/lovable-uploads/b2e8bfa2-ec84-4d63-8d58-503664da7229.png" alt="Facebook" className="h-8 w-8" />
               </a>
             </Button>
             <Button variant="ghost" size="sm" asChild>
@@ -119,10 +119,10 @@ const Header = () => {
                 href="https://www.instagram.com/hcmouscron/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-white hover:bg-white/20 hover:scale-110 drop-shadow-md p-2 rounded-full transition-all duration-300" 
+                className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full" 
                 aria-label="Instagram"
               >
-                <img src="/lovable-uploads/e132c7e8-e206-404e-b6fb-60edb8e0d181.png" alt="Instagram" className="h-10 w-10" />
+                <img src="/lovable-uploads/e132c7e8-e206-404e-b6fb-60edb8e0d181.png" alt="Instagram" className="h-8 w-8" />
               </a>
             </Button>
           </div>
@@ -134,7 +134,7 @@ const Header = () => {
             variant="ghost" 
             size="sm" 
             onClick={() => setIsMenuOpen(!isMenuOpen)} 
-            className="text-white hover:text-yellow-200 hover:bg-white/20"
+            className="text-white hover:text-yellow-200"
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
@@ -144,7 +144,7 @@ const Header = () => {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="lg:hidden animate-slide-in">
-          <div className="space-y-1 px-4 pb-4 pt-2 bg-gradient-to-r from-green-800 via-green-600 to-amber-600 border-t border-white/20">
+          <div className="space-y-1 px-4 pb-4 pt-2 bg-amber-600 border-t border-white/20">
             {navigation.map(item => (
               item.submenu ? (
                 <div key={item.name}>
@@ -183,10 +183,10 @@ const Header = () => {
                   href="https://www.facebook.com/HCMouscron" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-white hover:bg-white/20 hover:scale-110 drop-shadow-md p-2 rounded-full transition-all duration-300" 
+                  className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full" 
                   aria-label="Facebook"
                 >
-                  <img src="/lovable-uploads/b2e8bfa2-ec84-4d63-8d58-503664da7229.png" alt="Facebook" className="h-8 w-8" />
+                  <img src="/lovable-uploads/b2e8bfa2-ec84-4d63-8d58-503664da7229.png" alt="Facebook" className="h-6 w-6" />
                 </a>
               </Button>
               <Button variant="ghost" size="sm" asChild>
@@ -194,10 +194,10 @@ const Header = () => {
                   href="https://www.instagram.com/hcmouscron/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-white hover:bg-white/20 hover:scale-110 drop-shadow-md p-2 rounded-full transition-all duration-300" 
+                  className="text-white hover:bg-white/10 drop-shadow-md p-2 rounded-full" 
                   aria-label="Instagram"
                 >
-                  <img src="/lovable-uploads/e132c7e8-e206-404e-b6fb-60edb8e0d181.png" alt="Instagram" className="h-8 w-8" />
+                  <img src="/lovable-uploads/e132c7e8-e206-404e-b6fb-60edb8e0d181.png" alt="Instagram" className="h-6 w-6" />
                 </a>
               </Button>
             </div>
