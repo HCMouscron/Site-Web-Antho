@@ -1,15 +1,25 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isCompetitionOpen, setIsCompetitionOpen] = useState(false);
   const location = useLocation();
 
   const navigation = [
     { name: 'Accueil', href: '/' },
     { name: 'Équipe', href: '/equipe' },
+    { 
+      name: 'Compétition', 
+      href: '#',
+      submenu: [
+        { name: 'Classement', href: '/classement' },
+        { name: 'Scorers', href: '/scorers' }
+      ]
+    },
+    { name: 'Actualités', href: '/actualites' },
     { name: 'Partenaires', href: '/partenaires' },
     { name: 'Infos', href: '/infos' },
     { name: 'Contact', href: '/contact' }
@@ -22,16 +32,45 @@ const Header = () => {
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
         {/* Navigation gauche - Desktop */}
         <div className="hidden lg:flex lg:gap-x-8 lg:flex-1">
-          {navigation.slice(0, 2).map(item => (
-            <Link 
-              key={item.name} 
-              to={item.href} 
-              className={`text-white font-bold text-lg hover:text-yellow-200 transition-colors drop-shadow-md px-2 py-1 rounded ${
-                isActive(item.href) ? 'text-yellow-200 bg-white/10' : ''
-              }`}
-            >
-              {item.name}
-            </Link>
+          {navigation.slice(0, 4).map(item => (
+            item.submenu ? (
+              <div 
+                key={item.name} 
+                className="relative"
+                onMouseEnter={() => setIsCompetitionOpen(true)}
+                onMouseLeave={() => setIsCompetitionOpen(false)}
+              >
+                <button className="flex items-center text-white font-bold text-lg hover:text-yellow-200 transition-colors drop-shadow-md px-2 py-1 rounded">
+                  {item.name}
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+                {isCompetitionOpen && (
+                  <div className="absolute top-full left-0 mt-1 bg-white rounded-md shadow-lg border border-gray-200 py-2 w-48 z-50">
+                    {item.submenu.map(subItem => (
+                      <Link
+                        key={subItem.name}
+                        to={subItem.href}
+                        className={`block px-4 py-2 text-gray-800 hover:bg-amber-50 hover:text-amber-600 transition-colors ${
+                          isActive(subItem.href) ? 'bg-amber-50 text-amber-600' : ''
+                        }`}
+                      >
+                        {subItem.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link 
+                key={item.name} 
+                to={item.href} 
+                className={`text-white font-bold text-lg hover:text-yellow-200 transition-colors drop-shadow-md px-2 py-1 rounded ${
+                  isActive(item.href) ? 'text-yellow-200 bg-white/10' : ''
+                }`}
+              >
+                {item.name}
+              </Link>
+            )
           ))}
         </div>
 
@@ -49,7 +88,7 @@ const Header = () => {
         {/* Navigation droite - Desktop */}
         <div className="hidden lg:flex lg:gap-x-8 lg:flex-1 lg:justify-end lg:items-center">
           <div className="flex gap-x-8">
-            {navigation.slice(2).map(item => (
+            {navigation.slice(4).map(item => (
               <Link 
                 key={item.name} 
                 to={item.href} 
@@ -107,16 +146,36 @@ const Header = () => {
         <div className="lg:hidden animate-slide-in">
           <div className="space-y-1 px-4 pb-4 pt-2 bg-gradient-to-r from-green-800 via-green-600 to-amber-600 border-t border-white/20">
             {navigation.map(item => (
-              <Link 
-                key={item.name} 
-                to={item.href} 
-                className={`block px-3 py-2 text-base font-bold transition-colors hover:text-yellow-200 drop-shadow-md ${
-                  isActive(item.href) ? 'text-yellow-200 bg-white/10 rounded' : 'text-white'
-                }`} 
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
+              item.submenu ? (
+                <div key={item.name}>
+                  <div className="px-3 py-2 text-base font-bold text-white drop-shadow-md">
+                    {item.name}
+                  </div>
+                  {item.submenu.map(subItem => (
+                    <Link 
+                      key={subItem.name} 
+                      to={subItem.href} 
+                      className={`block pl-6 pr-3 py-2 text-base font-medium transition-colors hover:text-yellow-200 drop-shadow-md ${
+                        isActive(subItem.href) ? 'text-yellow-200 bg-white/10 rounded' : 'text-white'
+                      }`} 
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {subItem.name}
+                    </Link>
+                  ))}
+                </div>
+              ) : (
+                <Link 
+                  key={item.name} 
+                  to={item.href} 
+                  className={`block px-3 py-2 text-base font-bold transition-colors hover:text-yellow-200 drop-shadow-md ${
+                    isActive(item.href) ? 'text-yellow-200 bg-white/10 rounded' : 'text-white'
+                  }`} 
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
             <div className="flex gap-x-4 px-3 py-2">
               <Button variant="ghost" size="sm" asChild>
