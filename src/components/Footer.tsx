@@ -58,21 +58,6 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/classement" className="text-white hover:text-yellow-200 transition-colors drop-shadow-md">
-                  Classement
-                </a>
-              </li>
-              <li>
-                <a href="/scorers" className="text-white hover:text-yellow-200 transition-colors drop-shadow-md">
-                  Scorers
-                </a>
-              </li>
-              <li>
-                <a href="/actualites" className="text-white hover:text-yellow-200 transition-colors drop-shadow-md">
-                  Actualités
-                </a>
-              </li>
-              <li>
                 <a href="/partenaires" className="text-white hover:text-yellow-200 transition-colors drop-shadow-md">
                   Partenaires
                 </a>
