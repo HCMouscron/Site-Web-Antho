@@ -68,11 +68,6 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/actualites" className="text-white hover:text-yellow-200 transition-colors drop-shadow-md">
-                  Actualités
-                </a>
-              </li>
-              <li>
                 <a href="/partenaires" className="text-white hover:text-yellow-200 transition-colors drop-shadow-md">
                   Partenaires
                 </a>
@@ -98,7 +93,14 @@ const Footer = () => {
                 <MapPin className="h-4 w-4 flex-shrink-0 mt-1" />
                 <div className="text-sm drop-shadow-md">
                   <div className="font-medium">Hall Max Lessines</div>
-                  <div>Rue des Prés 84B, 7700 Mouscron</div>
+                  <a 
+                    href="https://www.google.com/maps/search/?api=1&query=Rue+des+Prés+84B,+7700+Mouscron"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-yellow-200 transition-colors cursor-pointer"
+                  >
+                    Rue des Prés 84B, 7700 Mouscron
+                  </a>
                 </div>
               </li>
               <li className="flex items-center space-x-2 text-white">
@@ -107,7 +109,12 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-2 text-white">
                 <Mail className="h-4 w-4 flex-shrink-0" />
-                <span className="text-sm drop-shadow-md">handballmouscron@gmail.com</span>
+                <a 
+                  href="mailto:handballmouscron@gmail.com"
+                  className="text-sm drop-shadow-md hover:text-yellow-200 transition-colors"
+                >
+                  handballmouscron@gmail.com
+                </a>
               </li>
             </ul>
           </div>
@@ -115,7 +122,7 @@ const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-white/30">
           <p className="text-center text-sm text-white drop-shadow-md">
-            © 2024 HC Mouscron. Tous droits réservés.
+            © 2025 HC Mouscron. Tous droits réservés.
           </p>
         </div>
       </div>

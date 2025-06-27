@@ -21,18 +21,18 @@ const Home = () => {
               HC Mouscron
             </h1>
             <p className="text-xl sm:text-2xl mb-8 font-medium text-white drop-shadow-md">
-              Passion • Équipe • Excellence
+              Esprit d'équipe • Respect • Convivialité
             </p>
             <p className="text-lg mb-10 max-w-2xl mx-auto text-white drop-shadow-md">
-              Rejoignez le plus dynamique club de handball de Mouscron. 
+              Rejoignez le club de sport le plus accueillant de Mouscron. 
               Découvrez l'esprit d'équipe et la passion du handball dans une ambiance conviviale.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://drive.google.com/file/d/1Z5f29NA636bP7u8egB8dI44vWgYCAQN2/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+              <Link to="/contact">
                 <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-white shadow-lg w-full sm:w-auto border-2 border-white/20">
                   Nous rejoindre
                 </Button>
-              </a>
+              </Link>
               <Link to="/equipe">
                 <Button size="lg" variant="outline" className="bg-white/90 text-green-800 hover:bg-white border-2 border-white shadow-lg font-semibold w-full sm:w-auto">
                   Découvrir l'équipe

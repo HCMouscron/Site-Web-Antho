@@ -1,6 +1,7 @@
 import { ExternalLink } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Partners = () => {
   const partners = [
@@ -100,9 +101,9 @@ const Partners = () => {
             Contactez-nous pour découvrir nos offres de partenariat.
           </p>
           <Button asChild size="lg" className="bg-white text-green-800 hover:bg-gray-100 font-semibold shadow-lg">
-            <a href="/contact">
+            <Link to="/contact">
               Nous contacter
-            </a>
+            </Link>
           </Button>
         </div>
       </section>

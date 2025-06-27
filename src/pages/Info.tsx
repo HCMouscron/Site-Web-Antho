@@ -52,7 +52,7 @@ const registrationSteps = [{
 }, {
   step: 2,
   title: "Séance d'essai",
-  description: "Venez essayer gratuitement lors d'un entraînement"
+  description: "Venez essayer gratuitement pendant 3 entraînements"
 }, {
   step: 3,
   title: "Inscription",
@@ -109,12 +109,12 @@ const Info = () => {
               <div className="flex flex-col md:flex-row gap-8 md:items-stretch">
                 {/* Infos salle - à gauche sur desktop */}
                 <div className="flex-1 flex flex-col justify-center">
-                  <h3 className="text-xl font-semibold mb-4">Hall Max Lessines de Mouscron</h3>
+                  <h3 className="text-xl font-semibold mb-4">Hall Max Lessines de Mouscron</h3>
                   <div className="space-y-2 text-muted-foreground">
                     <p>📍 Rue des Prés 84B, 7700 Mouscron</p>
                     <p>🚗 Parking gratuit sur place</p>
                     <p>🚿 Vestiaires avec douches</p>
-                    <p>☕ Cafétéria ouverte les soirs d'entraînement</p>
+                    <p>☕ Cafétéria avec Wifi ouverte les soirs d'entraînement</p>
                   </div>
                 </div>
                 {/* Image du hall - au centre à droite sur desktop */}
@@ -128,9 +128,10 @@ const Info = () => {
 
         {/* Training Schedule */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12 text-hc-green">
+          <h2 className="text-3xl font-bold text-center mb-4 text-hc-green">
             Horaires d'entraînement
           </h2>
+          <p className="text-center text-muted-foreground mb-12">Saison 2024 - 2025</p>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {trainingSchedule.map((training, index) => <Card key={index} className="hover:shadow-md transition-shadow">
                 <CardContent className="p-6">
@@ -200,7 +201,7 @@ const Info = () => {
         </section>
 
         {/* Registration Process */}
-        <section>
+        <section className="mb-8">
           <h2 className="text-3xl font-bold text-center mb-12 text-hc-green">
             Procédure d'inscription
           </h2>
@@ -240,7 +241,7 @@ const Info = () => {
         </section>
 
         {/* Téléchargements utiles */}
-        <section className="mt-16 mb-24">
+        <section className="mt-8 mb-24">
           <h2 className="text-3xl font-bold text-center mb-8 text-hc-orange">
             Téléchargements utiles
           </h2>
