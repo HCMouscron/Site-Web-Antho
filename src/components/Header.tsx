@@ -35,13 +35,13 @@ const Header = () => {
           ))}
         </div>
 
-        {/* Logo centré avec nouveau logo 2025 */}
+        {/* Logo centré avec fond blanc */}
         <div className="flex-shrink-0">
           <Link to="/" className="flex items-center">
             <img 
               src="/HCM_Logo_2025_fond_transparent.png" 
               alt="HC Mouscron logo" 
-              className="h-24 w-24 sm:h-28 sm:w-28 lg:h-32 lg:w-32 rounded-full shadow-xl" 
+              className="h-24 w-24 sm:h-28 sm:w-28 lg:h-32 lg:w-32 rounded-full shadow-xl bg-white p-1" 
             />
           </Link>
         </div>
