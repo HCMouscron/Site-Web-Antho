@@ -14,7 +14,7 @@ const PartnersCarousel = () => {
       logo: '/lovable-uploads/f847fff1-a2e3-4717-b1d4-85fe3bebe9f7.png'
     },
     { 
-      name: 'Holebecque', 
+      name: 'Hollebeke', 
       logo: '/lovable-uploads/3e0d607f-5f42-442c-927b-96d9671ee3cf.png'
     },
     { 

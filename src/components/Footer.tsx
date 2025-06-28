@@ -58,16 +58,6 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/classement" className="text-white hover:text-yellow-200 transition-colors drop-shadow-md">
-                  Classement
-                </a>
-              </li>
-              <li>
-                <a href="/scorers" className="text-white hover:text-yellow-200 transition-colors drop-shadow-md">
-                  Scorers
-                </a>
-              </li>
-              <li>
                 <a href="/partenaires" className="text-white hover:text-yellow-200 transition-colors drop-shadow-md">
                   Partenaires
                 </a>
@@ -105,7 +95,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-2 text-white">
                 <Phone className="h-4 w-4 flex-shrink-0" />
-                <span className="text-sm drop-shadow-md">+XX XX XX XX XX</span>
+                <span className="text-sm drop-shadow-md">+32 (0)467 32 84 24</span>
               </li>
               <li className="flex items-center space-x-2 text-white">
                 <Mail className="h-4 w-4 flex-shrink-0" />

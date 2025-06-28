@@ -1,4 +1,3 @@
-
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -6,7 +5,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Téléphone",
-    details: ["+XX XX XX XX XX"],
+    details: ["+32 (0)467 32 84 24"],
     color: "text-hc-green"
   },
   {

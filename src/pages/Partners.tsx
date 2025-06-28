@@ -18,7 +18,7 @@ const Partners = () => {
       description: 'Solutions électriques professionnelles'
     },
     {
-      name: 'Holebecque',
+      name: 'Hollebeke',
       logo: '/lovable-uploads/3e0d607f-5f42-442c-927b-96d9671ee3cf.png',
       website: 'https://pneus-hollebeke.be/index.html',
       description: 'Pneus Hollebeke - Votre spécialiste pneumatiques'

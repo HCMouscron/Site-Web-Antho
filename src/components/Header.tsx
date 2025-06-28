@@ -10,8 +10,6 @@ const Header = () => {
   const navigation = [
     { name: 'Accueil', href: '/' },
     { name: 'Équipe', href: '/equipe' },
-    { name: 'Classement', href: '/classement' },
-    { name: 'Scorers', href: '/scorers' },
     { name: 'Partenaires', href: '/partenaires' },
     { name: 'Infos', href: '/infos' },
     { name: 'Contact', href: '/contact' }
@@ -51,7 +49,7 @@ const Header = () => {
         {/* Navigation droite - Desktop */}
         <div className="hidden lg:flex lg:gap-x-8 lg:flex-1 lg:justify-end lg:items-center">
           <div className="flex gap-x-8">
-            {navigation.slice(3, 6).map(item => (
+            {navigation.slice(3, 5).map(item => (
               <Link 
                 key={item.name} 
                 to={item.href} 
@@ -62,14 +60,6 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <Link 
-              to="/contact" 
-              className={`text-white font-bold text-lg hover:text-yellow-200 transition-colors drop-shadow-md px-2 py-1 rounded ${
-                isActive('/contact') ? 'text-yellow-200 bg-white/10' : ''
-              }`}
-            >
-              Contact
-            </Link>
           </div>
           
           {/* Social Links */}

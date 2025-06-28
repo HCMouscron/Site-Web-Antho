@@ -48,7 +48,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Téléphone",
-      details: ["+XX XX XX XX XX"],
+      details: ["+32 (0)467 32 84 24"],
       color: "text-hc-green"
     },
     {
@@ -70,19 +70,19 @@ const Contact = () => {
     {
       name: "David Macarez",
       role: "Secrétaire",
-      phone: "+XX XX XX XX XX",
+      phone: "+32 (0)467 32 84 24",
       email: "handballmouscron@gmail.com"
     },
     {
       name: "Damien Cockenpot",
       role: "Trésorier",
-      phone: "+XX XX XX XX XX",
+      phone: "+32 (0)467 32 84 24",
       email: "handballmouscron@gmail.com"
     },
     {
       name: "Joaquim Vercruysse",
       role: "Trésorier",
-      phone: "+XX XX XX XX XX",
+      phone: "+32 (0)467 32 84 24",
       email: "handballmouscron@gmail.com"
     },
   ];
@@ -97,7 +97,7 @@ const Contact = () => {
             Contactez-nous
           </h1>
           <p className="text-xl text-hc-orange max-w-3xl mx-auto">
-            Une question ? Envie de nous rejoindre ? Notre équipe vous répond rapidement pour tout renseignement sur le club ou le handball à Mouscron !
+            Une question ? Envie de nous rejoindre ? Notre équipe vous répond rapidement pour tout renseignement sur le club ou le handball à Mouscron !
           </p>
         </div>
         <div className="grid gap-8 lg:grid-cols-2">
