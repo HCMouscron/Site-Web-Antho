@@ -1,5 +1,6 @@
 import { Card, CardHeader, CardContent, CardTitle } from '@/components/ui/card';
-import { MapPin } from 'lucide-react';
+import { MapPin, ExternalLink } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const MapSection = () => (
   <Card>
@@ -9,17 +10,24 @@ const MapSection = () => (
       </CardTitle>
     </CardHeader>
     <CardContent>
-      <div className="h-64 rounded-lg overflow-hidden mb-4">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2530.289896374582!2d3.2086744!3d50.7455833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2f6b0b0b0b0b1%3A0x1234567890abcdef!2sRue%20des%20Pr%C3%A9s%2084B%2C%207700%20Mouscron%2C%20Belgium!5e0!3m2!1sfr!2sus!4v1704067200000!5m2!1sfr!2sus"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          title="Hall Max Lessines - Mouscron"
-        />
+      <div className="h-64 rounded-lg overflow-hidden mb-4 bg-gradient-to-br from-green-50 to-amber-50 flex items-center justify-center border-2 border-gray-200">
+        <div className="text-center p-8">
+          <MapPin className="h-16 w-16 text-hc-green mx-auto mb-4" />
+          <h3 className="text-xl font-semibold text-gray-800 mb-2">Hall Max Lessines</h3>
+          <p className="text-gray-600 mb-4">Rue des Prés 84B, 7700 Mouscron</p>
+          <Button asChild className="bg-hc-green hover:bg-hc-green-light text-white">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Rue+des+Prés+84B,+7700+Mouscron,+Belgium"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2"
+            >
+              <MapPin className="h-4 w-4" />
+              Ouvrir dans Google Maps
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          </Button>
+        </div>
       </div>
       <div className="text-sm text-muted-foreground space-y-1">
         <p>
@@ -27,6 +35,9 @@ const MapSection = () => (
         </p>
         <p>
           <strong>Parking :</strong> Gratuit sur place
+        </p>
+        <p>
+          <strong>Accès :</strong> Cliquez sur le bouton ci-dessus pour obtenir l'itinéraire
         </p>
       </div>
     </CardContent>
