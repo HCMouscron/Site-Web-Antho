@@ -35,13 +35,13 @@ const Header = () => {
           ))}
         </div>
 
-        {/* Logo centré */}
+        {/* Logo centré avec fond blanc */}
         <div className="flex-shrink-0">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/7f5485a2-eaa0-4a73-8e50-8de5813ec2f3.png" 
+              src="/lovable-uploads/0f13e7ea-f993-46dc-8267-95ee2db25886.png" 
               alt="HC Mouscron logo" 
-              className="h-24 w-24 sm:h-28 sm:w-28 lg:h-32 lg:w-32 rounded-full shadow-xl" 
+              className="h-24 w-24 sm:h-28 sm:w-28 lg:h-32 lg:w-32 rounded-full shadow-xl bg-white p-1" 
             />
           </Link>
         </div>
