@@ -21,7 +21,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-gradient-to-r from-green-800 via-green-600 to-amber-600 backdrop-blur shadow-lg">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
         {/* Navigation gauche - Desktop */}
-        <div className="hidden lg:flex lg:gap-x-8 lg:flex-1">
+        <div className="hidden lg:flex lg:gap-x-8 lg:flex-1 lg:justify-start">
           {navigation.slice(0, 3).map(item => (
             <Link 
               key={item.name} 
