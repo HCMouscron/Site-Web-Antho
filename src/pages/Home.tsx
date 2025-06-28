@@ -46,152 +46,136 @@ const Home = () => {
       {/* Partners Carousel - Placé après le hero */}
       <PartnersCarousel />
 
-      {/* Handball Field Section - Nouvelle section avec votre terrain */}
+      {/* Handball Field Section - Version horizontale */}
       <section className="py-20 relative overflow-hidden">
-        {/* Background terrain de handball - Votre nouvelle image */}
+        {/* Background terrain de handball horizontal */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/lovable-uploads/Terrain_de_hand_vert.png')"
+            backgroundImage: "url('/lovable-uploads/Terrain_de_hand_vert.png')",
+            transform: "rotate(90deg) scale(1.5)",
+            transformOrigin: "center center"
           }}
         ></div>
-        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0 bg-black/15"></div>
         
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-8 items-center min-h-[600px]">
+          {/* Layout horizontal avec le terrain en arrière-plan */}
+          <div className="grid lg:grid-cols-5 gap-6 items-stretch min-h-[500px]">
             
-            {/* Colonne gauche */}
-            <div className="space-y-6">
-              {/* Un sport dynamique et spectaculaire */}
-              <div className="bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-xl border-l-4 border-green-600 transform hover:scale-105 transition-transform">
-                <h3 className="text-xl font-bold text-green-800 mb-3">
-                  Un sport dynamique et spectaculaire
+            {/* Colonne 1 - Gauche */}
+            <div className="lg:col-span-1 space-y-4">
+              <div className="bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-xl border-l-4 border-green-600 transform hover:scale-105 transition-transform h-full">
+                <h3 className="text-lg font-bold text-green-800 mb-2">
+                  Un sport dynamique
                 </h3>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  Le handball est un sport rythmé et captivant, tant pour les joueurs que pour les spectateurs. 
-                  Il repose sur des enchaînements rapides et une participation active de tous les joueurs en attaque comme en défense, 
-                  dans un esprit de respect et de fair-play.
+                <p className="text-gray-700 text-xs leading-relaxed">
+                  Le handball est un sport rythmé et captivant, tant pour les joueurs que pour les spectateurs.
                 </p>
-                {/* Photo d'équipe intégrée */}
-                <div className="mt-4">
+                <div className="mt-3">
                   <img 
                     src="/lovable-uploads/33033b5b-5d7a-464e-9eb2-7894f00e2b26.png" 
-                    alt="Mini handball HC Mouscron" 
-                    className="w-full h-24 object-cover rounded-lg shadow-md"
+                    alt="Mini handball" 
+                    className="w-full h-16 object-cover rounded-lg shadow-md"
                   />
                 </div>
-              </div>
-
-              {/* Convivialité et respect */}
-              <div className="bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-xl border-l-4 border-amber-600 transform hover:scale-105 transition-transform">
-                <h3 className="text-xl font-bold text-amber-700 mb-3">
-                  Convivialité et respect
-                </h3>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  Le HC Mouscron accueille filles et garçons dans une ambiance familiale. 
-                  Débutants ou confirmés s'y entraînent sans pression, dans un climat de respect et de convivialité.
-                </p>
-              </div>
-
-              {/* Un sport accessible à tous */}
-              <div className="bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-xl border-l-4 border-green-600 transform hover:scale-105 transition-transform">
-                <h3 className="text-xl font-bold text-green-800 mb-3">
-                  Un sport accessible à tous
-                </h3>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  Le club, en tant qu'ASBL, vise à rendre le handball abordable : 
-                  cotisation annuelle modérée (max. 150€ pour les jeunes), 
-                  aides financières possibles, et paiements échelonnés jusqu'à trois mois.
-                </p>
               </div>
             </div>
 
-            {/* Colonne centrale - Logo */}
-            <div className="flex justify-center items-center">
+            {/* Colonne 2 */}
+            <div className="lg:col-span-1 space-y-4">
+              <div className="bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-xl border-l-4 border-amber-600 transform hover:scale-105 transition-transform h-full">
+                <h3 className="text-lg font-bold text-amber-700 mb-2">
+                  Convivialité
+                </h3>
+                <p className="text-gray-700 text-xs leading-relaxed">
+                  Le HC Mouscron accueille dans une ambiance familiale, sans pression.
+                </p>
+                <div className="mt-3">
+                  <img 
+                    src="/lovable-uploads/faeb26b4-5b82-49e1-8fb0-69a10700de49.png" 
+                    alt="U16" 
+                    className="w-full h-16 object-cover rounded-lg shadow-md"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Colonne 3 - Centre avec logo */}
+            <div className="lg:col-span-1 flex justify-center items-center">
               <div className="relative">
-                <div className="w-72 h-72 bg-gradient-to-br from-green-600 via-green-500 to-amber-500 rounded-full flex items-center justify-center shadow-2xl border-8 border-white/50 transform hover:scale-110 transition-transform duration-300">
+                <div className="w-48 h-48 bg-gradient-to-br from-green-600 via-green-500 to-amber-500 rounded-full flex items-center justify-center shadow-2xl border-6 border-white/70 transform hover:scale-110 transition-transform duration-300">
                   <img 
                     src="/lovable-uploads/7f5485a2-eaa0-4a73-8e50-8de5813ec2f3.png" 
                     alt="HC Mouscron Logo" 
-                    className="w-56 h-56 object-contain drop-shadow-2xl"
+                    className="w-36 h-36 object-contain drop-shadow-2xl"
                   />
                 </div>
                 {/* Texte autour du logo */}
-                <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-green-600 text-white px-6 py-3 rounded-full text-lg font-bold shadow-xl border-2 border-white">
-                    HANDBALL CLUB
+                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-xl border-2 border-white">
+                    HANDBALL
                   </span>
                 </div>
-                <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-amber-600 text-white px-6 py-3 rounded-full text-lg font-bold shadow-xl border-2 border-white">
+                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-amber-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-xl border-2 border-white">
                     MOUSCRON
                   </span>
                 </div>
               </div>
             </div>
 
-            {/* Colonne droite */}
-            <div className="space-y-6">
-              {/* Un esprit d'équipe fort et soudé */}
-              <div className="bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-xl border-r-4 border-green-600 transform hover:scale-105 transition-transform">
-                <h3 className="text-xl font-bold text-green-800 mb-3">
-                  Un esprit d'équipe fort et soudé
+            {/* Colonne 4 */}
+            <div className="lg:col-span-1 space-y-4">
+              <div className="bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-xl border-r-4 border-green-600 transform hover:scale-105 transition-transform h-full">
+                <h3 className="text-lg font-bold text-green-800 mb-2">
+                  Esprit d'équipe
                 </h3>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  Chaque joueur a un rôle essentiel, sans poste "mineur". 
-                  Les rotations fréquentes renforcent la coopération et valorisent tous les profils physiques. 
-                  La réussite repose sur le collectif.
+                <p className="text-gray-700 text-xs leading-relaxed">
+                  Chaque joueur a un rôle essentiel. La réussite repose sur le collectif.
                 </p>
-                {/* Photo d'équipe intégrée */}
-                <div className="mt-4">
+                <div className="mt-3">
                   <img 
                     src="/lovable-uploads/a4551830-cf39-4d58-bf31-7325e3117da5.png" 
-                    alt="Équipe Seniors HC Mouscron" 
-                    className="w-full h-24 object-cover rounded-lg shadow-md"
+                    alt="Seniors" 
+                    className="w-full h-16 object-cover rounded-lg shadow-md"
                   />
                 </div>
               </div>
+            </div>
 
-              {/* En été comme en hiver */}
-              <div className="bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-xl border-r-4 border-amber-600 transform hover:scale-105 transition-transform">
-                <h3 className="text-xl font-bold text-amber-700 mb-3">
-                  En été comme en hiver...
+            {/* Colonne 5 - Droite */}
+            <div className="lg:col-span-1 space-y-4">
+              <div className="bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-xl border-r-4 border-amber-600 transform hover:scale-105 transition-transform h-full">
+                <h3 className="text-lg font-bold text-amber-700 mb-2">
+                  Toute l'année
                 </h3>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  Le handball se pratique toute l'année, quelle que soit la météo. 
-                  Les entraînements ont lieu en intérieur au Hall Max Lessines, 
-                  équipé d'une cafétéria conviviale avec wifi pour les parents.
+                <p className="text-gray-700 text-xs leading-relaxed">
+                  Le handball se pratique en intérieur, quelle que soit la météo.
                 </p>
-              </div>
-
-              {/* Photo d'équipe supplémentaire */}
-              <div className="bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-xl transform hover:scale-105 transition-transform">
-                <img 
-                  src="/lovable-uploads/faeb26b4-5b82-49e1-8fb0-69a10700de49.png" 
-                  alt="Équipe U16 HC Mouscron" 
-                  className="w-full h-32 object-cover rounded-lg shadow-md"
-                />
-                <p className="text-center text-sm text-gray-600 mt-2 font-medium">Équipe U16 - Saison 2024</p>
+                <div className="mt-3">
+                  <img 
+                    src="/lovable-uploads/2c5565cf-f45d-4d43-b901-68086906cbad.png" 
+                    alt="U18" 
+                    className="w-full h-16 object-cover rounded-lg shadow-md"
+                  />
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Section finale avec slogan */}
-          <div className="mt-20 text-center">
-            <div className="bg-gradient-to-r from-green-600 to-amber-600 text-white p-8 rounded-2xl shadow-2xl border-4 border-white/50 transform hover:scale-105 transition-transform">
-              <h2 className="text-3xl font-bold mb-4 drop-shadow-lg">
-                Pratiquer le handball au HC Mouscron,
+          {/* Section finale avec slogan - Version compacte */}
+          <div className="mt-12 text-center">
+            <div className="bg-gradient-to-r from-green-600 to-amber-600 text-white p-6 rounded-2xl shadow-2xl border-4 border-white/50 transform hover:scale-105 transition-transform">
+              <h2 className="text-2xl font-bold mb-2 drop-shadow-lg">
+                Pratiquer le handball au HC Mouscron, c'est plus qu'un sport !
               </h2>
-              <h3 className="text-2xl font-bold mb-4 drop-shadow-lg">
-                c'est plus qu'un sport !
-              </h3>
-              <p className="text-lg italic drop-shadow-md mb-6">
+              <p className="text-lg italic drop-shadow-md mb-4">
                 Possibilité de faire plusieurs séances d'essai sans engagement
               </p>
               <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-bold">
                 <div>
-                  <p>HALL MAX LESSINES</p>
-                  <p>RUE DES PRÉS 84B, MOUSCRON</p>
+                  <p>HALL MAX LESSINES - RUE DES PRÉS 84B, MOUSCRON</p>
                 </div>
                 <div>
                   <p>
