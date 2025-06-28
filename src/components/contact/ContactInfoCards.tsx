@@ -33,7 +33,16 @@ const ContactInfoCards = () => (
               <h3 className="font-semibold mb-2">{info.title}</h3>
               {info.details.map((detail, detailIndex) => (
                 <p key={detailIndex} className="text-sm text-muted-foreground">
-                  {detail}
+                  {detail === "handballmouscron@gmail.com" ? (
+                    <a 
+                      href="mailto:handballmouscron@gmail.com"
+                      className="hover:text-hc-orange transition-colors cursor-pointer"
+                    >
+                      {detail}
+                    </a>
+                  ) : (
+                    detail
+                  )}
                 </p>
               ))}
             </div>

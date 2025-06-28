@@ -14,7 +14,14 @@ const StaffContacts = () => (
           </div>
           <div className="text-right text-sm text-muted-foreground">
             <p>+32 (0)467 32 84 24</p>
-            <p>handballmouscron@gmail.com</p>
+            <p>
+              <a 
+                href="mailto:handballmouscron@gmail.com"
+                className="hover:text-hc-orange transition-colors cursor-pointer"
+              >
+                handballmouscron@gmail.com
+              </a>
+            </p>
           </div>
         </div>
       </div>
