@@ -50,9 +50,9 @@ const Home = () => {
       {/* Partners Carousel - Placé après le hero */}
       <PartnersCarousel />
 
-      {/* Section Terrain de Handball Horizontal - Style spectaculaire */}
+      {/* Section Terrain de Handball - Style spectaculaire */}
       <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-green-800 via-green-700 to-green-900">
-        {/* Terrain de handball horizontal en arrière-plan */}
+        {/* Terrain de handball en arrière-plan */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -60,9 +60,7 @@ const Home = () => {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            opacity: 0.7,
-            transform: "rotate(90deg) scale(1.4)",
-            transformOrigin: "center center"
+            opacity: 0.7
           }}
         ></div>
         
