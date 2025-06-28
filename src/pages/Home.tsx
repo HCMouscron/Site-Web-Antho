@@ -50,28 +50,30 @@ const Home = () => {
       {/* Partners Carousel - Placé après le hero */}
       <PartnersCarousel />
 
-      {/* Section Terrain de Handball Complet - Style de votre image */}
+      {/* Section Terrain de Handball Horizontal - Style spectaculaire */}
       <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-green-800 via-green-700 to-green-900">
-        {/* Terrain de handball complet en arrière-plan */}
+        {/* Terrain de handball horizontal en arrière-plan */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: "url('/lovable-uploads/Terrain_de_hand_vert.png')",
-            backgroundSize: "contain",
+            backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            opacity: 0.8
+            opacity: 0.7,
+            transform: "rotate(90deg) scale(1.4)",
+            transformOrigin: "center center"
           }}
         ></div>
         
-        {/* Overlay léger pour la lisibilité */}
-        <div className="absolute inset-0 bg-green-900/20"></div>
+        {/* Overlay pour la lisibilité */}
+        <div className="absolute inset-0 bg-gradient-to-br from-green-900/40 via-green-800/30 to-amber-900/40"></div>
         
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8 py-20">
           
           {/* Zone supérieure gauche - Sport dynamique */}
           <div className="absolute top-20 left-8 max-w-sm">
-            <div className="bg-white/95 backdrop-blur-lg p-6 rounded-2xl shadow-2xl border-4 border-white/80">
+            <div className="bg-white/95 backdrop-blur-lg p-6 rounded-2xl shadow-2xl border-4 border-white/80 animate-fade-in">
               <h3 className="text-xl font-bold text-green-800 mb-3">
                 Un sport dynamique et spectaculaire
               </h3>
@@ -92,7 +94,7 @@ const Home = () => {
 
           {/* Zone supérieure droite - Esprit d'équipe */}
           <div className="absolute top-20 right-8 max-w-sm">
-            <div className="bg-white/95 backdrop-blur-lg p-6 rounded-2xl shadow-2xl border-4 border-white/80">
+            <div className="bg-white/95 backdrop-blur-lg p-6 rounded-2xl shadow-2xl border-4 border-white/80 animate-fade-in delay-200">
               <h3 className="text-xl font-bold text-amber-700 mb-3">
                 Un esprit d'équipe fort et soudé
               </h3>
@@ -122,11 +124,11 @@ const Home = () => {
                 <div className="w-72 h-72 border-2 border-orange-500/40 rounded-full"></div>
               </div>
               
-              {/* Logo principal avec design de votre image */}
-              <div className="relative w-64 h-64 bg-gradient-to-br from-green-600 via-green-700 to-amber-600 rounded-full flex items-center justify-center shadow-2xl border-8 border-white/90 transform group-hover:scale-110 transition-all duration-500">
+              {/* Logo principal avec design spectaculaire */}
+              <div className="relative w-64 h-64 bg-gradient-to-br from-green-600 via-green-700 to-amber-600 rounded-full flex items-center justify-center shadow-2xl border-8 border-white/90 transform group-hover:scale-110 transition-all duration-500 animate-glow">
                 {/* Texte HANDBALL CLUB en cercle */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <svg className="w-full h-full" viewBox="0 0 200 200">
+                  <svg className="w-full h-full animate-spin-slow" viewBox="0 0 200 200">
                     <defs>
                       <path id="circle" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
                     </defs>
@@ -142,7 +144,7 @@ const Home = () => {
                 <img 
                   src="/lovable-uploads/7f5485a2-eaa0-4a73-8e50-8de5813ec2f3.png" 
                   alt="HC Mouscron Logo" 
-                  className="w-32 h-32 object-contain drop-shadow-2xl z-10 relative"
+                  className="w-32 h-32 object-contain drop-shadow-2xl z-10 relative animate-float"
                 />
                 
                 {/* Texte MOUSCRON en bas */}
@@ -167,7 +169,7 @@ const Home = () => {
 
           {/* Zone inférieure gauche - Convivialité */}
           <div className="absolute bottom-32 left-8 max-w-sm">
-            <div className="bg-white/95 backdrop-blur-lg p-6 rounded-2xl shadow-2xl border-4 border-white/80">
+            <div className="bg-white/95 backdrop-blur-lg p-6 rounded-2xl shadow-2xl border-4 border-white/80 animate-fade-in delay-400">
               <h3 className="text-xl font-bold text-green-800 mb-3">
                 Convivialité et respect
               </h3>
@@ -187,7 +189,7 @@ const Home = () => {
 
           {/* Zone inférieure droite - Sport accessible */}
           <div className="absolute bottom-32 right-8 max-w-sm">
-            <div className="bg-white/95 backdrop-blur-lg p-6 rounded-2xl shadow-2xl border-4 border-white/80">
+            <div className="bg-white/95 backdrop-blur-lg p-6 rounded-2xl shadow-2xl border-4 border-white/80 animate-fade-in delay-600">
               <h3 className="text-xl font-bold text-amber-700 mb-3">
                 En été comme en hiver...
               </h3>
@@ -208,7 +210,7 @@ const Home = () => {
 
           {/* Zone sport accessible en bas à gauche */}
           <div className="absolute bottom-8 left-8 max-w-xs">
-            <div className="bg-white/95 backdrop-blur-lg p-4 rounded-2xl shadow-2xl border-4 border-white/80">
+            <div className="bg-white/95 backdrop-blur-lg p-4 rounded-2xl shadow-2xl border-4 border-white/80 animate-fade-in delay-800">
               <h3 className="text-lg font-bold text-green-800 mb-2">
                 Un sport accessible à tous
               </h3>
@@ -223,7 +225,7 @@ const Home = () => {
 
           {/* Call to action final en bas */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-            <div className="bg-gradient-to-r from-yellow-400 via-orange-500 to-amber-600 p-1 rounded-3xl shadow-2xl">
+            <div className="bg-gradient-to-r from-yellow-400 via-orange-500 to-amber-600 p-1 rounded-3xl shadow-2xl animate-fade-in delay-1000">
               <div className="bg-white/95 backdrop-blur-lg p-6 rounded-3xl text-center">
                 <h2 className="text-2xl font-black mb-2">
                   <span className="bg-gradient-to-r from-green-600 to-amber-600 bg-clip-text text-transparent">
@@ -268,6 +270,48 @@ const Home = () => {
                     </Button>
                   </Link>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-20 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-2 items-center">
+            <div>
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
+                Bienvenue au <span className="text-green-800">HC Mouscron</span>
+              </h2>
+              <p className="text-lg text-gray-700 mb-6">
+                Notre club de handball vous accueille dans une ambiance chaleureuse et dynamique. 
+                Que vous soyez débutant ou confirmé, jeune ou adulte, nous avons une place pour vous !
+              </p>
+              <p className="text-lg text-gray-700 mb-8">
+                Venez découvrir la passion du handball avec nous et rejoignez une équipe qui partage 
+                les valeurs de solidarité, de respect et de dépassement de soi.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/contact" onClick={handleLinkClick}>
+                  <Button size="lg" className="bg-green-800 hover:bg-green-700 text-white w-full sm:w-auto">
+                    Nous contacter
+                  </Button>
+                </Link>
+                <Link to="/infos" onClick={handleLinkClick}>
+                  <Button size="lg" variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white w-full sm:w-auto">
+                    Voir nos tarifs
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            <div className="relative flex flex-col items-center justify-center">
+              <img src="/lovable-uploads/5842efea-481a-4242-9f84-4a04bd55c7f6.png" alt="Logo HC Mouscron" className="w-72 h-72 object-contain rounded-2xl shadow-xl bg-white" style={{
+                border: '4px solid hsl(150 100% 30%)'
+              }} />
+              <div className="absolute -bottom-6 -right-6 bg-amber-600 text-white p-6 rounded-xl shadow-lg">
+                <div className="text-2xl font-bold">10 ans</div>
+                <div className="text-sm">d'expérience</div>
               </div>
             </div>
           </div>
