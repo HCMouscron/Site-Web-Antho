@@ -32,6 +32,10 @@ const PartnersCarousel = () => {
     return () => clearInterval(interval);
   }, [partners.length]);
 
+  const handleClick = () => {
+    // Scroll to top will be handled by ScrollToTop component
+  };
+
   return (
     <section className="py-12 bg-white border-t border-b border-gray-200">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -41,7 +45,7 @@ const PartnersCarousel = () => {
           </h3>
         </div>
         
-        <Link to="/partenaires" className="block group cursor-pointer">
+        <Link to="/partenaires" className="block group cursor-pointer" onClick={handleClick}>
           <div className="overflow-hidden bg-gradient-to-r from-gray-50 to-white rounded-lg border-2 border-gray-100 group-hover:border-green-600 transition-colors p-8">
             <div className="flex justify-center items-center space-x-12 animate-fade-in">
               {partners.map((partner, index) => (

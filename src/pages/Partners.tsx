@@ -31,6 +31,10 @@ const Partners = () => {
     }
   ];
 
+  const handleLinkClick = () => {
+    // Scroll to top will be handled by ScrollToTop component
+  };
+
   return (
     <div className="w-full min-h-screen bg-gradient-to-br from-green-50 via-white to-amber-50">
       {/* Hero Section */}
@@ -101,7 +105,7 @@ const Partners = () => {
             Contactez-nous pour découvrir nos offres de partenariat.
           </p>
           <Button asChild size="lg" className="bg-white text-green-800 hover:bg-gray-100 font-semibold shadow-lg">
-            <Link to="/contact">
+            <Link to="/contact" onClick={handleLinkClick}>
               Nous contacter
             </Link>
           </Button>

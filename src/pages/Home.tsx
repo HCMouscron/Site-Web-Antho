@@ -5,6 +5,10 @@ import { Link } from "react-router-dom";
 import PartnersCarousel from '@/components/PartnersCarousel';
 
 const Home = () => {
+  const handleLinkClick = () => {
+    // Scroll to top will be handled by ScrollToTop component
+  };
+
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -28,12 +32,12 @@ const Home = () => {
               Découvrez l'esprit d'équipe et la passion du handball dans une ambiance conviviale.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
+              <Link to="/contact" onClick={handleLinkClick}>
                 <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-white shadow-lg w-full sm:w-auto border-2 border-white/20">
                   Nous rejoindre
                 </Button>
               </Link>
-              <Link to="/equipe">
+              <Link to="/equipe" onClick={handleLinkClick}>
                 <Button size="lg" variant="outline" className="bg-white/90 text-green-800 hover:bg-white border-2 border-white shadow-lg font-semibold w-full sm:w-auto">
                   Découvrir l'équipe
                 </Button>
@@ -255,12 +259,12 @@ const Home = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link to="/contact">
+                  <Link to="/contact" onClick={handleLinkClick}>
                     <Button size="lg" className="bg-gradient-to-r from-green-600 to-green-800 hover:from-green-700 hover:to-green-900 text-white shadow-xl border-4 border-white/50 text-lg px-8 py-4 rounded-2xl transform hover:scale-105 transition-all duration-300">
                       🏐 Nous rejoindre
                     </Button>
                   </Link>
-                  <Link to="/infos">
+                  <Link to="/infos" onClick={handleLinkClick}>
                     <Button size="lg" variant="outline" className="bg-white border-4 border-amber-500 text-amber-700 hover:bg-amber-50 shadow-xl text-lg px-8 py-4 rounded-2xl transform hover:scale-105 transition-all duration-300">
                       📋 Voir nos tarifs
                     </Button>
@@ -331,7 +335,7 @@ const Home = () => {
               <div className="absolute inset-0 bg-green-800/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
             <div className="relative group flex items-center justify-center bg-gradient-to-br from-green-100 to-amber-100 rounded-lg shadow-lg">
-              <Link to="/equipe" className="text-center p-6">
+              <Link to="/equipe" className="text-center p-6" onClick={handleLinkClick}>
                 <Button size="lg" className="bg-green-800 hover:bg-amber-600 text-white shadow-lg border-2 border-white/20">
                   Découvrir l'équipe
                 </Button>
@@ -353,12 +357,12 @@ const Home = () => {
               il y a une place pour vous au HC Mouscron.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/infos">
+              <Link to="/infos" onClick={handleLinkClick}>
                 <Button size="lg" variant="secondary" className="bg-white text-green-800 hover:bg-gray-100 shadow-lg font-semibold w-full sm:w-auto border-2 border-white/20">
                   Découvrir nos tarifs
                 </Button>
               </Link>
-              <Link to="/contact">
+              <Link to="/contact" onClick={handleLinkClick}>
                 <Button size="lg" variant="outline" className="bg-white/10 text-white hover:bg-white hover:text-green-800 shadow-lg font-semibold w-full sm:w-auto border-2 border-white">
                   Nous contacter
                 </Button>
