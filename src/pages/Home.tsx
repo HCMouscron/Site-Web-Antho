@@ -47,12 +47,12 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Partners Carousel - Placé après le hero */}
+      {/* Partners Carousel */}
       <PartnersCarousel />
 
-      {/* Section Terrain de Handball - Style spectaculaire */}
-      <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-green-800 via-green-700 to-green-900">
-        {/* Terrain de handball en arrière-plan */}
+      {/* Section Terrain de Handball - ULTRA SPECTACULAIRE */}
+      <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-green-900 via-green-800 to-green-700">
+        {/* Terrain de handball en arrière-plan - VERTICAL */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -60,158 +60,206 @@ const Home = () => {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            opacity: 0.7
+            opacity: 0.8
           }}
         ></div>
         
-        {/* Overlay pour la lisibilité */}
-        <div className="absolute inset-0 bg-gradient-to-br from-green-900/40 via-green-800/30 to-amber-900/40"></div>
+        {/* Overlay gradient spectaculaire */}
+        <div className="absolute inset-0 bg-gradient-to-br from-green-900/50 via-transparent to-amber-900/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-green-800/60 via-transparent to-green-800/60"></div>
         
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8 py-20">
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8 py-20 min-h-screen flex items-center justify-center">
           
           {/* Zone supérieure gauche - Sport dynamique */}
-          <div className="absolute top-20 left-8 max-w-sm">
-            <div className="bg-white/95 backdrop-blur-lg p-6 rounded-2xl shadow-2xl border-4 border-white/80 animate-fade-in">
-              <h3 className="text-xl font-bold text-green-800 mb-3">
-                Un sport dynamique et spectaculaire
-              </h3>
+          <div className="absolute top-16 left-4 max-w-sm animate-fade-in">
+            <div className="bg-white/95 backdrop-blur-xl p-6 rounded-3xl shadow-2xl border-4 border-white/90 transform hover:scale-105 transition-all duration-500">
+              <div className="flex items-center mb-3">
+                <div className="w-3 h-3 bg-green-600 rounded-full mr-2 animate-pulse"></div>
+                <h3 className="text-xl font-bold text-green-800">
+                  Un sport dynamique et spectaculaire
+                </h3>
+              </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-4">
                 Le handball est un sport rythmé et captivant, tant pour les joueurs que pour les spectateurs. 
                 Il repose sur des enchaînements rapides et une participation active de tous les joueurs en attaque comme en défense, 
                 dans un esprit de respect et de fair-play.
               </p>
-              <div className="relative overflow-hidden rounded-xl shadow-lg">
+              <div className="relative overflow-hidden rounded-xl shadow-xl border-2 border-green-200">
                 <img 
                   src="/lovable-uploads/33033b5b-5d7a-464e-9eb2-7894f00e2b26.png" 
                   alt="Mini handball en action" 
-                  className="w-full h-24 object-cover"
+                  className="w-full h-28 object-cover transform hover:scale-110 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-green-600/20 to-transparent"></div>
               </div>
             </div>
           </div>
 
           {/* Zone supérieure droite - Esprit d'équipe */}
-          <div className="absolute top-20 right-8 max-w-sm">
-            <div className="bg-white/95 backdrop-blur-lg p-6 rounded-2xl shadow-2xl border-4 border-white/80 animate-fade-in delay-200">
-              <h3 className="text-xl font-bold text-amber-700 mb-3">
-                Un esprit d'équipe fort et soudé
-              </h3>
+          <div className="absolute top-16 right-4 max-w-sm animate-fade-in delay-200">
+            <div className="bg-white/95 backdrop-blur-xl p-6 rounded-3xl shadow-2xl border-4 border-white/90 transform hover:scale-105 transition-all duration-500">
+              <div className="flex items-center mb-3">
+                <div className="w-3 h-3 bg-amber-600 rounded-full mr-2 animate-pulse delay-300"></div>
+                <h3 className="text-xl font-bold text-amber-700">
+                  Un esprit d'équipe fort et soudé
+                </h3>
+              </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-4">
                 Chaque joueur a un rôle essentiel, sans poste "mineur". 
                 Les rotations fréquentes renforcent la coopération et valorisent tous les profils physiques. 
                 La réussite repose sur le collectif.
               </p>
-              <div className="relative overflow-hidden rounded-xl shadow-lg">
+              <div className="relative overflow-hidden rounded-xl shadow-xl border-2 border-amber-200">
                 <img 
                   src="/lovable-uploads/a4551830-cf39-4d58-bf31-7325e3117da5.png" 
                   alt="Équipe seniors unie" 
-                  className="w-full h-24 object-cover"
+                  className="w-full h-28 object-cover transform hover:scale-110 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-amber-600/20 to-transparent"></div>
               </div>
             </div>
           </div>
 
-          {/* Logo central avec effet spectaculaire */}
+          {/* LOGO CENTRAL ULTRA SPECTACULAIRE */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <div className="relative group">
-              {/* Cercles animés en arrière-plan */}
+              {/* Cercles animés multiples */}
               <div className="absolute inset-0 animate-spin-slow">
-                <div className="w-80 h-80 border-4 border-dashed border-yellow-400/60 rounded-full"></div>
+                <div className="w-96 h-96 border-4 border-dashed border-yellow-400/70 rounded-full"></div>
               </div>
-              <div className="absolute inset-4 animate-spin-reverse">
-                <div className="w-72 h-72 border-2 border-orange-500/40 rounded-full"></div>
+              <div className="absolute inset-6 animate-spin-reverse">
+                <div className="w-84 h-84 border-3 border-dotted border-orange-500/60 rounded-full"></div>
+              </div>
+              <div className="absolute inset-12 animate-spin-slow">
+                <div className="w-72 h-72 border-2 border-solid border-green-400/50 rounded-full"></div>
               </div>
               
-              {/* Logo principal avec design spectaculaire */}
-              <div className="relative w-64 h-64 bg-gradient-to-br from-green-600 via-green-700 to-amber-600 rounded-full flex items-center justify-center shadow-2xl border-8 border-white/90 transform group-hover:scale-110 transition-all duration-500 animate-glow">
-                {/* Texte HANDBALL CLUB en cercle */}
+              {/* Logo principal MEGA spectaculaire */}
+              <div className="relative w-80 h-80 bg-gradient-to-br from-green-600 via-green-700 to-amber-600 rounded-full flex items-center justify-center shadow-2xl border-8 border-white/95 transform group-hover:scale-110 transition-all duration-700 animate-glow">
+                
+                {/* Texte HANDBALL CLUB en cercle rotatif */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <svg className="w-full h-full animate-spin-slow" viewBox="0 0 200 200">
+                  <svg className="w-full h-full animate-spin-slow" viewBox="0 0 320 320">
                     <defs>
-                      <path id="circle" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
+                      <path id="circle-text" d="M 160, 160 m -120, 0 a 120,120 0 1,1 240,0 a 120,120 0 1,1 -240,0" />
                     </defs>
-                    <text className="text-lg font-black fill-white" style={{ fontSize: '16px' }}>
-                      <textPath href="#circle" startOffset="0%">
-                        HANDBALL CLUB • HANDBALL CLUB • 
+                    <text className="text-2xl font-black fill-white drop-shadow-lg" style={{ fontSize: '20px' }}>
+                      <textPath href="#circle-text" startOffset="0%">
+                        ⚡ HANDBALL CLUB MOUSCRON ⚡ HANDBALL CLUB MOUSCRON ⚡ 
                       </textPath>
                     </text>
                   </svg>
                 </div>
                 
-                {/* Logo central */}
-                <img 
-                  src="/lovable-uploads/7f5485a2-eaa0-4a73-8e50-8de5813ec2f3.png" 
-                  alt="HC Mouscron Logo" 
-                  className="w-32 h-32 object-contain drop-shadow-2xl z-10 relative animate-float"
-                />
+                {/* Logo central avec effet float */}
+                <div className="relative z-20">
+                  <img 
+                    src="/lovable-uploads/7f5485a2-eaa0-4a73-8e50-8de5813ec2f3.png" 
+                    alt="HC Mouscron Logo" 
+                    className="w-40 h-40 object-contain drop-shadow-2xl animate-float"
+                  />
+                  
+                  {/* Effet de brillance */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent rounded-full animate-pulse"></div>
+                </div>
                 
-                {/* Texte MOUSCRON en bas */}
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                  <span className="text-white font-black text-2xl drop-shadow-2xl">MOUSCRON</span>
+                {/* Texte MOUSCRON stylisé */}
+                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+                  <span className="text-white font-black text-3xl drop-shadow-2xl tracking-wider">
+                    MOUSCRON
+                  </span>
+                </div>
+                
+                {/* Étoiles décoratives */}
+                <div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-yellow-300 text-2xl animate-bounce">
+                  ⭐
+                </div>
+                <div className="absolute bottom-4 left-1/4 text-yellow-300 text-xl animate-bounce delay-500">
+                  ✨
+                </div>
+                <div className="absolute bottom-4 right-1/4 text-yellow-300 text-xl animate-bounce delay-700">
+                  ✨
                 </div>
               </div>
               
-              {/* Badges flottants */}
-              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 animate-bounce">
-                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-3 rounded-full text-lg font-black shadow-xl border-4 border-white">
-                  HANDBALL
-                </span>
+              {/* Badges flottants spectaculaires */}
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <div className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-white px-8 py-4 rounded-full text-xl font-black shadow-2xl border-4 border-white transform hover:scale-110 transition-transform">
+                  🏐 HANDBALL
+                </div>
               </div>
-              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce delay-300">
-                <span className="bg-gradient-to-r from-green-600 to-green-800 text-white px-6 py-3 rounded-full text-lg font-black shadow-xl border-4 border-white">
-                  CLUB
-                </span>
+              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce delay-300">
+                <div className="bg-gradient-to-r from-green-600 via-green-700 to-green-800 text-white px-8 py-4 rounded-full text-xl font-black shadow-2xl border-4 border-white transform hover:scale-110 transition-transform">
+                  🏆 CLUB
+                </div>
               </div>
+              
+              {/* Particules flottantes */}
+              <div className="absolute -top-16 -left-16 w-4 h-4 bg-yellow-400 rounded-full animate-ping"></div>
+              <div className="absolute -top-20 -right-12 w-3 h-3 bg-orange-500 rounded-full animate-ping delay-1000"></div>
+              <div className="absolute -bottom-16 -left-12 w-5 h-5 bg-green-400 rounded-full animate-ping delay-500"></div>
+              <div className="absolute -bottom-20 -right-16 w-3 h-3 bg-amber-400 rounded-full animate-ping delay-1500"></div>
             </div>
           </div>
 
           {/* Zone inférieure gauche - Convivialité */}
-          <div className="absolute bottom-32 left-8 max-w-sm">
-            <div className="bg-white/95 backdrop-blur-lg p-6 rounded-2xl shadow-2xl border-4 border-white/80 animate-fade-in delay-400">
-              <h3 className="text-xl font-bold text-green-800 mb-3">
-                Convivialité et respect
-              </h3>
+          <div className="absolute bottom-40 left-4 max-w-sm animate-fade-in delay-400">
+            <div className="bg-white/95 backdrop-blur-xl p-6 rounded-3xl shadow-2xl border-4 border-white/90 transform hover:scale-105 transition-all duration-500">
+              <div className="flex items-center mb-3">
+                <div className="w-3 h-3 bg-green-600 rounded-full mr-2 animate-pulse delay-600"></div>
+                <h3 className="text-xl font-bold text-green-800">
+                  Convivialité et respect
+                </h3>
+              </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-4">
                 Le HC Mouscron accueille filles et garçons dans une ambiance familiale. 
                 Débutants ou confirmés s'y entraînent sans pression, dans un climat de respect et de convivialité.
               </p>
-              <div className="relative overflow-hidden rounded-xl shadow-lg">
+              <div className="relative overflow-hidden rounded-xl shadow-xl border-2 border-green-200">
                 <img 
                   src="/lovable-uploads/faeb26b4-5b82-49e1-8fb0-69a10700de49.png" 
                   alt="U16 conviviale" 
-                  className="w-full h-24 object-cover"
+                  className="w-full h-28 object-cover transform hover:scale-110 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-green-600/20 to-transparent"></div>
               </div>
             </div>
           </div>
 
           {/* Zone inférieure droite - Sport accessible */}
-          <div className="absolute bottom-32 right-8 max-w-sm">
-            <div className="bg-white/95 backdrop-blur-lg p-6 rounded-2xl shadow-2xl border-4 border-white/80 animate-fade-in delay-600">
-              <h3 className="text-xl font-bold text-amber-700 mb-3">
-                En été comme en hiver...
-              </h3>
+          <div className="absolute bottom-40 right-4 max-w-sm animate-fade-in delay-600">
+            <div className="bg-white/95 backdrop-blur-xl p-6 rounded-3xl shadow-2xl border-4 border-white/90 transform hover:scale-105 transition-all duration-500">
+              <div className="flex items-center mb-3">
+                <div className="w-3 h-3 bg-amber-600 rounded-full mr-2 animate-pulse delay-900"></div>
+                <h3 className="text-xl font-bold text-amber-700">
+                  En été comme en hiver...
+                </h3>
+              </div>
               <p className="text-gray-700 text-sm leading-relaxed mb-4">
                 Le handball se pratique toute l'année, quelle que soit la météo. 
                 Les entraînements ont lieu en intérieur au Hall Max Lessines, 
                 équipé d'une cafétéria conviviale avec wifi pour les parents.
               </p>
-              <div className="relative overflow-hidden rounded-xl shadow-lg">
+              <div className="relative overflow-hidden rounded-xl shadow-xl border-2 border-amber-200">
                 <img 
                   src="/lovable-uploads/2c5565cf-f45d-4d43-b901-68086906cbad.png" 
                   alt="U18 unie" 
-                  className="w-full h-24 object-cover"
+                  className="w-full h-28 object-cover transform hover:scale-110 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-amber-600/20 to-transparent"></div>
               </div>
             </div>
           </div>
 
           {/* Zone sport accessible en bas à gauche */}
-          <div className="absolute bottom-8 left-8 max-w-xs">
-            <div className="bg-white/95 backdrop-blur-lg p-4 rounded-2xl shadow-2xl border-4 border-white/80 animate-fade-in delay-800">
-              <h3 className="text-lg font-bold text-green-800 mb-2">
-                Un sport accessible à tous
-              </h3>
+          <div className="absolute bottom-12 left-4 max-w-xs animate-fade-in delay-800">
+            <div className="bg-white/95 backdrop-blur-xl p-5 rounded-3xl shadow-2xl border-4 border-white/90 transform hover:scale-105 transition-all duration-500">
+              <div className="flex items-center mb-2">
+                <div className="w-3 h-3 bg-green-600 rounded-full mr-2 animate-pulse delay-1200"></div>
+                <h3 className="text-lg font-bold text-green-800">
+                  Un sport accessible à tous
+                </h3>
+              </div>
               <p className="text-gray-700 text-xs leading-relaxed">
                 Le club, en tant qu'ASBL, vise à rendre le handball abordable : 
                 cotisation annuelle modérée (max. 150 € pour les jeunes), 
@@ -221,11 +269,11 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Call to action final en bas */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-            <div className="bg-gradient-to-r from-yellow-400 via-orange-500 to-amber-600 p-1 rounded-3xl shadow-2xl animate-fade-in delay-1000">
-              <div className="bg-white/95 backdrop-blur-lg p-6 rounded-3xl text-center">
-                <h2 className="text-2xl font-black mb-2">
+          {/* Call to action MEGA spectaculaire en bas */}
+          <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-fade-in delay-1000">
+            <div className="bg-gradient-to-r from-yellow-400 via-orange-500 to-amber-600 p-2 rounded-3xl shadow-2xl transform hover:scale-105 transition-all duration-500">
+              <div className="bg-white/98 backdrop-blur-xl p-8 rounded-3xl text-center border-2 border-white/50">
+                <h2 className="text-3xl font-black mb-3">
                   <span className="bg-gradient-to-r from-green-600 to-amber-600 bg-clip-text text-transparent">
                     Pratiquer le handball au HC Mouscron,
                   </span>
@@ -234,41 +282,72 @@ const Home = () => {
                     c'est plus qu'un sport !
                   </span>
                 </h2>
-                <p className="text-sm italic text-gray-700 mb-4 font-medium">
-                  Possibilité de faire plusieurs séances d'essai sans engagement
+                <p className="text-base italic text-gray-700 mb-6 font-medium">
+                  ✨ Possibilité de faire plusieurs séances d'essai sans engagement ✨
                 </p>
                 
-                <div className="grid grid-cols-2 gap-4 mb-4 text-xs">
-                  <div className="bg-gradient-to-r from-green-600 to-green-800 text-white p-3 rounded-xl shadow-lg">
-                    <p className="font-bold">HALL MAX LESSINES</p>
-                    <p className="text-green-100">RUE DES PRÉS 84B, MOUSCRON</p>
+                <div className="grid grid-cols-2 gap-6 mb-6">
+                  <div className="bg-gradient-to-r from-green-600 to-green-800 text-white p-4 rounded-2xl shadow-xl transform hover:scale-105 transition-transform">
+                    <p className="font-bold text-lg">🏟️ HALL MAX LESSINES</p>
+                    <p className="text-green-100 text-sm">RUE DES PRÉS 84B, MOUSCRON</p>
                   </div>
-                  <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white p-3 rounded-xl shadow-lg">
-                    <p className="font-bold">
+                  <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white p-4 rounded-2xl shadow-xl transform hover:scale-105 transition-transform">
+                    <p className="font-bold text-lg">
                       <a 
                         href="mailto:handballmouscron@gmail.com"
                         className="hover:text-yellow-200 transition-colors"
                       >
-                        HANDBALLMOUSCRON
+                        📧 HANDBALLMOUSCRON
                       </a>
                     </p>
-                    <p className="text-orange-100">@GMAIL.COM</p>
+                    <p className="text-orange-100 text-sm">@GMAIL.COM</p>
                   </div>
                 </div>
 
-                <div className="flex gap-3 justify-center">
+                <div className="flex gap-4 justify-center">
                   <Link to="/contact" onClick={handleLinkClick}>
-                    <Button size="sm" className="bg-gradient-to-r from-green-600 to-green-800 hover:from-green-700 hover:to-green-900 text-white shadow-xl border-2 border-white/50 px-6 py-2 rounded-xl">
+                    <Button size="lg" className="bg-gradient-to-r from-green-600 to-green-800 hover:from-green-700 hover:to-green-900 text-white shadow-2xl border-4 border-white/50 px-8 py-3 rounded-2xl text-lg font-bold transform hover:scale-110 transition-all">
                       🏐 Nous rejoindre
                     </Button>
                   </Link>
                   <Link to="/infos" onClick={handleLinkClick}>
-                    <Button size="sm" variant="outline" className="bg-white border-2 border-amber-500 text-amber-700 hover:bg-amber-50 shadow-xl px-6 py-2 rounded-xl">
+                    <Button size="lg" variant="outline" className="bg-white border-4 border-amber-500 text-amber-700 hover:bg-amber-50 shadow-2xl px-8 py-3 rounded-2xl text-lg font-bold transform hover:scale-110 transition-all">
                       📋 Nos tarifs
                     </Button>
                   </Link>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 bg-gradient-to-r from-amber-600 via-amber-500 to-green-800">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 place-items-center max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-xl mb-6 shadow-lg mx-auto">
+                <Users className="h-8 w-8 text-green-800" />
+              </div>
+              <div className="text-4xl font-bold text-white mb-2 drop-shadow-lg">65</div>
+              <div className="text-white drop-shadow-md">Affiliés</div>
+            </div>
+            
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-xl mb-6 shadow-lg mx-auto">
+                <Calendar className="h-8 w-8 text-amber-600" />
+              </div>
+              <div className="text-4xl font-bold text-white mb-2 drop-shadow-lg">10</div>
+              <div className="text-white drop-shadow-md">Années</div>
+            </div>
+            
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-xl mb-6 shadow-lg mx-auto">
+                <MapPin className="h-8 w-8 text-green-800" />
+              </div>
+              <div className="text-4xl font-bold text-white mb-2 drop-shadow-lg">1</div>
+              <div className="text-white drop-shadow-md">Salle</div>
             </div>
           </div>
         </div>
@@ -311,37 +390,6 @@ const Home = () => {
                 <div className="text-2xl font-bold">10 ans</div>
                 <div className="text-sm">d'expérience</div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-amber-600 via-amber-500 to-green-800">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 place-items-center max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-xl mb-6 shadow-lg mx-auto">
-                <Users className="h-8 w-8 text-green-800" />
-              </div>
-              <div className="text-4xl font-bold text-white mb-2 drop-shadow-lg">65</div>
-              <div className="text-white drop-shadow-md">Affiliés</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-xl mb-6 shadow-lg mx-auto">
-                <Calendar className="h-8 w-8 text-amber-600" />
-              </div>
-              <div className="text-4xl font-bold text-white mb-2 drop-shadow-lg">10</div>
-              <div className="text-white drop-shadow-md">Années</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-xl mb-6 shadow-lg mx-auto">
-                <MapPin className="h-8 w-8 text-green-800" />
-              </div>
-              <div className="text-4xl font-bold text-white mb-2 drop-shadow-lg">1</div>
-              <div className="text-white drop-shadow-md">Salle</div>
             </div>
           </div>
         </div>
