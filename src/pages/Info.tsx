@@ -8,19 +8,14 @@ const trainingSchedule = [
     time: "10:30 - 12:00"
   },
   {
-    category: "U14",
+    category: "U14 / U16",
     day: "Lundi",
     time: "17:30 - 18:45"
   },
   {
-    category: "U14 / U16 / U18",
+    category: "U14 / U16",
     day: "Vendredi",
     time: "17:30 - 19:00"
-  },
-  {
-    category: "U16",
-    day: "Lundi",
-    time: "17:30 - 18:45"
   },
   {
     category: "U18",
