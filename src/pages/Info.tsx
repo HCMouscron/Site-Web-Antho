@@ -34,7 +34,7 @@ const trainingSchedule = [
   },
   {
     category: "Équipe Loisir",
-    day: "Vendredi",
+    day: "Vendredi (2/mois)",
     time: "20:30 - 21:30"
   }
 ];
