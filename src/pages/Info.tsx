@@ -4,25 +4,49 @@ import { Badge } from '@/components/ui/badge';
 const trainingSchedule = [{
   category: "U16 & U18",
   day: "Lundi",
-  time: "18:00 - 19:30"
+  time: "17:30 - 18:45"
 }, {
-  category: "Seniors & U18",
+  category: "U18",
   day: "Mercredi",
-  time: "19:30 - 21:00"
+  time: "18:30 - 20:00"
 }, {
   category: "U16 & U18",
   day: "Vendredi",
   time: "17:30 - 19:00"
 }, {
-  category: "Seniors & U18",
+  category: "U18",
+  day: "Lundi",
+  time: "18:30 - 20:00"
+}, {
+  category: "U18",
+  day: "Mercredi",
+  time: "19:30 - 21:00"
+}, {
+  category: "U18",
   day: "Vendredi",
   time: "19:00 - 20:30"
 }, {
-  category: "Loisirs",
+  category: "Seniors",
+  day: "Mercredi",
+  time: "19:30 - 21:00"
+}, {
+  category: "Seniors",
+  day: "Vendredi",
+  time: "19:00 - 20:30"
+}, {
+  category: "U14",
+  day: "Lundi",
+  time: "17:30 - 18:45"
+}, {
+  category: "U14",
+  day: "Vendredi",
+  time: "17:30 - 19:00"
+}, {
+  category: "Équipe Loisir",
   day: "Vendredi",
   time: "20:30 - 21:30"
 }, {
-  category: "Mini handball",
+  category: "Mini-handball",
   day: "Samedi",
   time: "10:30 - 12:00"
 }];
