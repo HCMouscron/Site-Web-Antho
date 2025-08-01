@@ -1,55 +1,48 @@
 import { Clock, MapPin, Euro, Calendar, UserPlus, FileText } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-const trainingSchedule = [{
-  category: "U16 & U18",
-  day: "Lundi",
-  time: "17:30 - 18:45"
-}, {
-  category: "U18",
-  day: "Mercredi",
-  time: "18:30 - 20:00"
-}, {
-  category: "U16 & U18",
-  day: "Vendredi",
-  time: "17:30 - 19:00"
-}, {
-  category: "U18",
-  day: "Lundi",
-  time: "18:30 - 20:00"
-}, {
-  category: "U18",
-  day: "Mercredi",
-  time: "19:30 - 21:00"
-}, {
-  category: "U18",
-  day: "Vendredi",
-  time: "19:00 - 20:30"
-}, {
-  category: "Seniors",
-  day: "Mercredi",
-  time: "19:30 - 21:00"
-}, {
-  category: "Seniors",
-  day: "Vendredi",
-  time: "19:00 - 20:30"
-}, {
-  category: "U14",
-  day: "Lundi",
-  time: "17:30 - 18:45"
-}, {
-  category: "U14",
-  day: "Vendredi",
-  time: "17:30 - 19:00"
-}, {
-  category: "Équipe Loisir",
-  day: "Vendredi",
-  time: "20:30 - 21:30"
-}, {
-  category: "Mini-handball",
-  day: "Samedi",
-  time: "10:30 - 12:00"
-}];
+const trainingSchedule = [
+  {
+    category: "Mini-handball",
+    day: "Samedi",
+    time: "10:30 - 12:00"
+  },
+  {
+    category: "U14",
+    day: "Lundi",
+    time: "17:30 - 18:45"
+  },
+  {
+    category: "U14 / U16 / U18",
+    day: "Vendredi",
+    time: "17:30 - 19:00"
+  },
+  {
+    category: "U16",
+    day: "Lundi",
+    time: "17:30 - 18:45"
+  },
+  {
+    category: "U18",
+    day: "Lundi",
+    time: "18:30 - 20:00"
+  },
+  {
+    category: "U18 / Seniors",
+    day: "Mercredi",
+    time: "19:30 - 21:00"
+  },
+  {
+    category: "U18 / Seniors",
+    day: "Vendredi",
+    time: "19:00 - 20:30"
+  },
+  {
+    category: "Équipe Loisir",
+    day: "Vendredi",
+    time: "20:30 - 21:30"
+  }
+];
 const seasonEvents = [{
   date: "Septembre 2024",
   event: "Début de saison - Inscriptions"
